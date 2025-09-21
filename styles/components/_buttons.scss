@@ -16,10 +16,6 @@ button {
         background-color: var(--secondary-color);
     }
 
-    &--navbar {
-        width: 80%;
-    }
-
     &--proto {
         width: 40%;
         margin: var(--small-space);
@@ -42,6 +38,10 @@ button {
     .button {
         &--light {
             width: 25%;
+        }
+
+        &--navbar {
+            width: 80%;
         }
 
         &--proto {

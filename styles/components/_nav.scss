@@ -9,6 +9,7 @@
         background: none;
         border: none;
         font-size: var(--step-3);
+        color: var(--text-color);
     }
 
     &__list {
@@ -38,7 +39,7 @@
     }
 
     &__logo {
-        width: 25%;
+        width: 30%;
     }
 }
 

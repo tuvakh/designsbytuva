@@ -41,9 +41,9 @@ table {
   /* @link https://utopia.fyi/type/calculator?c=320,16,1.2,1240,20,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
   --step--1: clamp(0.85rem, 0.5677rem + 0.1836vw, 0.9rem);
   --step-0: clamp(0.9rem, 0.7754rem + 0.2899vw, 1rem);
-  --step-1: clamp(1rem, 0.913rem + 0.4348vw, 1.25rem);
-  --step-2: clamp(1.2rem, 1.0739rem + 0.6304vw, 1.5rem);
-  --step-3: clamp(1.44rem, 1.2615rem + 0.8924vw, 1.7rem);
+  --step-1: clamp(1.2rem, 1.0739rem + 0.6304vw, 1.5rem);
+  --step-2: clamp(1.44rem, 1.2615rem + 0.8924vw, 1.7rem);
+  --step-3: clamp(1.6rem, 1.6615rem + 1.124vw, 2rem);
   --font-weight-medium: 500;
   --font-weight-bold: bold;
   --line-height-small: 1.2;
@@ -89,11 +89,11 @@ body {
 }
 
 h1 {
-  font-size: var(--step-3);
+  font-size: var(--step-2);
 }
 
 h2 {
-  font-size: var(--step-2);
+  font-size: var(--step-1);
   line-height: var(--line-height-small);
 }
 
@@ -228,9 +228,6 @@ button {
 .button--light {
   background-color: var(--secondary-color);
 }
-.button--navbar {
-  width: 80%;
-}
 .button--proto {
   width: 40%;
   margin: var(--small-space);
@@ -251,6 +248,9 @@ button {
   .button--light {
     width: 25%;
   }
+  .button--navbar {
+    width: 80%;
+  }
   .button--proto {
     width: 20%;
   }
@@ -266,6 +266,7 @@ button {
   background: none;
   border: none;
   font-size: var(--step-3);
+  color: var(--text-color);
 }
 .navbar__list {
   display: none;
@@ -291,7 +292,7 @@ button {
   display: block;
 }
 .navbar__logo {
-  width: 25%;
+  width: 30%;
 }
 
 @media (min-width: 600px) {
@@ -566,7 +567,7 @@ figcaption {
   display: grid;
   justify-items: center;
   margin: 0 auto var(--mini-space);
-  font-size: var(--step-2);
+  font-size: var(--step-1);
 }
 
 @media (min-width: 600px) {

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="no">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="author" content="Tuva Konstanse Hansen">
+        <meta name="description" content="Designs by Tuva - A portfolio for Graphic design">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="../styles/style.css" rel="stylesheet">
+        <link rel="icon" href="../images/heart.png">
+
+        <title>Om Designs by Tuva</title>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const menuToggle = document.querySelector('.navbar__menu');
+                const menu = document.querySelector('.navbar__list');
+
+                // Toggle menu on click
+                menuToggle.addEventListener('click', () => {
+                    const isOpen = menu.classList.toggle('open');
+                    menuToggle.setAttribute('aria-expanded', isOpen);
+                });
+
+                // Close menu when clicking a link
+                menu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        menu.classList.remove('open');
+                    });
+                });
+
+                // Toggle menu on keyboard (Enter or Space)
+                menuToggle.addEventListener('keypress', (e) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                        e.preventDefault();
+                        const isOpen = menu.classList.toggle('open');
+                        menuToggle.setAttribute('aria-expanded', isOpen);
+                    }
+                });
+            });
+        </script>
+    </head>
+
+    <body>
+        <header>
+            <a href="#main" class="skip">Skip to main content</a>
+
+            <nav class="navbar mobile-flex">
+                <!-- Logo on all screens -->
+                <div class="navbar__logo">
+                    <a href="../index.html"><img src="../images/logo.png" alt="Logo for designs by Tuva"></a>
+                </div>
+
+                <div>
+                    <button class="navbar__menu" aria-controls="navbarMenu" aria-expanded="false">☰</button>
+                    <ul id="navbarMenu" class="navbar__list">
+                        <li class="navbar__items"><a href="../index.html#work-process">Prosess</a></li>
+                        <li class="navbar__items"><a href="../index.html#projects">Alle prosjekter</a></li>
+                        <li class="navbar__items active" aria-current="page"><a href="#">Om meg</a></li>
+                        <li class="navbar__items"><a class="button button--navbar background" href="mailto:contact@designsbytuva.no">Kontakt meg</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <main id="main">
+            <article class="about grid" aria-label="Informasjon om Tuva">
+                <div class="grid__right grid__right--about">
+                    <div class="background">
+                        <div class="about__intro mobile-flex ">
+                            <h1>Hei, jeg heter Tuva!</h1>
+                            <p>Jeg er en 22 år gammel nyutdanna designer med bachelor i grafisk design, og er for tiden bosatt i Gjøvik. 
+                                Høsten 2024 startet jeg på en ny bachelor i webutvikling på NTNU Gjøvik, og planen er å kunne jobbe med både grafisk 
+                                design og utvikling av nettsider i fremtiden.</p>
+                            <p>Jeg har en spesiell lidenskap for farger, typografi og lekent design, 
+                                og elsker å drive med prosjekter hvor jeg har mulighet til å være så kreativ som mulig, men setter også 
+                                pris på mer enkelt og rent design.</p>
+                    
+                            <a class="button button--light mobile-flex" href="mailto:contact@designsbytuva.no">Kontakt meg</a>
+
+                            <figure class="about__some mobile-flex">
+                                <div>
+                                    <a href="https://www.instagram.com/designsbytuva/" target="_blank" aria-label="Åpner i ny fane"><img src="../images/icons/ig-white.png" alt="Besøk Instagrammen til Designs by tuva"></a>
+                                    <p class="username">@designsbytuva</p>
+                                </div>
+                                <div>
+                                    <a href="mailto:contact@designsbytuva.no" target="_blank" aria-label="Åpner i ny fane"><img src="../images/icons/mail-white.png" alt="Send meg en epost"></a>
+                                    <p class="username">contact@designsbytuva.no</p>
+                                </div>
+                                <div>
+                                    <a href="https://www.linkedin.com/in/tuvahansen/" target="_blank" aria-label="Åpner i ny fane"><img src="../images/icons/in-white.png" alt="Besøk LinkedIn profilen min"></a>
+                                    <p class="username">@tuvahansen</p>
+                                </div>
+                            </figure>
+                        </div>
+                    </div>
+
+                    <div class="about__cv content-box">
+                        <div>
+                            <h2>ERFARING</h2>
+                            <p>Her kan du lese litt om erfaringen jeg har innenfor grafisk design, eller trykke på knappen
+                                for å se fullstendig CV.</p>
+
+                            <a class="button button--cv mobile-flex background" href="../cv-tuvahansen.pdf" target="_blank" aria-label="Åpner i ny fane">Min CV</a>
+                        </div>
+
+                        <h2>Bachelor i grafisk design</h2>
+                        <h3 class="pink">August 2021 - Juni 2024</h3>
+                        <p>Tok en bachelor i grafisk design ved NTNU Gjøvik. Her lærte jeg blant annet mye om typografi, designprinsipper, 
+                            universell utforming, informasjonsarkitektur, digital prototyping og visuelt design.</p>
+                        
+                        <h2>Frivillig i Darling linjeforening sin PR-komité</h2>
+                        <h3 class="pink">September 2022 - Desember 2023</h3>
+                        <p>I en periode i løpet av studietiden var jeg en del av 
+                            Darling linjeforening sin PR-komité. Dette vil si at jeg hjalp til 
+                            med å designe plakater og brosjyrer til ulike 
+                            arrangementer basert på den visuelle identiteten 
+                            til Darling, og postet innhold på instagram og 
+                            facebook.</p>
+                    
+                        <h2>Grafisk ansvarlig i fadderstyret</h2>
+                        <h3 class="pink"> April 2023 - August 2023</h3>
+                        <p>I 2023 var jeg med å planlegge Fadderuka på Gjøvik 
+                            som en del av fadderstyret. Her hjalp jeg til 
+                            som grafisk og SoMe ansvarlig, og videreutviklet den 
+                            visuelle profilen til fadderuka ved å designe en ny logo, 
+                            instagram innlegg, plakater og lignende. I tillegg hadde jeg 
+                            ansvar på et par av arrangementene vi arrangerte.</p>
+                    
+                        <h2>Grafisk ansvarlig i UKA-styret</h2>
+                        <h3 class="pink">August 2023 - Februar 2024</h3>
+                        <p>Fra høsten 2023 og fram til februar 2024 var jeg en del 
+                            av UKA-styret og hjalp til med å arrangere UKA på 
+                            Gjøvik 2024. Jeg var grafisk ansvarlig med <a class="pink" href="https://www.bygiortz.no/" target="_blank" aria-label="Åpner i ny fane">Tiril 
+                            Victoria Wessel-Berg Giørtz</a>. Sammen utviklet vi en 
+                            grafisk profil som blant annet inneholdt logo, 
+                            fargepallett, ulike plakater, flere Instagram innlegg 
+                            og ulike typer merch.</p>
+                
+                        <h2>Visuell profil for «Studiehjelp»</h2>
+                        <h3 class="pink">November 2023 - Januar 2024</h3>
+                        <p>Jeg fikk betalt for å utvikle den visuelle profilen 
+                            til nettsiden <a class="pink" href="https://www.studiehjelp.no/" target="_blank" aria-label="Åpner i ny fane">«Studiehjelp»</a>. 
+                            Her utviklet jeg designet til hovedsiden på nettsiden, og lagde en 
+                            designmanual. </p>
+                
+                        <h2>Visuell profil for avgangsutstillingen på NTNU Gjøvik</h2>
+                        <h3 class="pink">Januar 2024 - Mai 2024</h3>
+                        <p>Jeg var med på å utvikle den visuelle profilen til avgangsutstillingen 
+                            til designstudentene på NTNU Gjøvik i 2024. Her jobbet jeg sammen 
+                            med <a class="pink" href="https://thormv.myportfolio.com/" target="_blank" aria-label="Åpner i ny fane">Thor Magnus Vathne</a>, 
+                            <a class="pink" href="https://www.instagram.com/vildevisuals/" target="_blank" aria-label="Åpner i ny fane">Vilde Ylvisåker Førre</a> 
+                            og <a class="pink" href="https://www.instagram.com/graphicdesignbyingrid" target="_blank" aria-label="Åpner i ny fane">Ingrid Eggen 
+                            Vårvik</a> for å utvikle en designmanual som skulle gi utstillingen et 
+                            helhetlig uttrykk. </p> 
+
+                        <h2>Promomateriell for Hardstlye DNA</h2>
+                        <h3 class="pink">Juni 2024 - Oktober 2024</h3>
+                        <p>Jeg jobbet med å lage promomateriell til "Halloween madness 2024" som er et musikkarrangement, 
+                            og arrangeres av Hardstyle DNA i Oslo en gang i året. Dette var mitt første betalte prosjekt 
+                            som grafisk designer for en etablert bedrift, og jeg fikk masse erfaring. Jeg lagde blant annet 
+                            artistinnlegg, plakater og facebook banner.
+                        </p>
+
+                        <h2>Innholdsprodusent for NTNU</h2>
+                        <h3 class="pink">August 2024 - Nå</h3>
+                        <p>Jeg er en del av NTNU sin studentredaksjon i Gjøvik. Her jobber jeg med videoproduksjon i et team 
+                            med 4 andre studenter. Vi driver hovedsakelig med idémyldring, filming og redigering. Dette er noe 
+                            som egentlig er veldig utenfor min komfortsone, så jeg har merker jeg vokser mye av å drive med dette.
+                        </p> 
+
+                        <h2>PR-ansvarlig for Darling linjeforening</h2>
+                        <h3 class="pink">Mars 2025 - Nå</h3>
+                        <p>Etter å ha vært aktivt medlem i linjeforeningen min i 2023, valgte jeg i 2025 å melde meg inn i styret som
+                            PR-ansvarlig! Her hadde jeg hovedansvar for å promotere arrangementene våre, svare på mails og videre formidle 
+                            stillingsutlysninger fra bedrifter, ta bilder på arrangementene og delegere oppgaver til de aktive medlemene i 
+                            PR-komitéen vår. Promoteringsdelen gikk for det meste ut på å designe innlegg og plakater, og distribuere disse 
+                            både på sosiale medier og fysisk på campus. 
+                        </p>
+                    </div>
+                </div>
+                <div class="grid__left grid__left--about">
+                    <figure>
+                        <img src="../images/me.webp" alt="Et speilbilde av meg i en lilla kjole">
+                    </figure>
+                    <figure>
+                        <img src="../images/stand.webp" alt="">
+                        <figcaption class="stand pink">Standen min på avgangsutstillinga til NTNU i 2024</figcaption>                       
+                    </figure>
+                </div>
+            </article>
+        </main>
+
+        <footer class="footer">
+            <figure class="footer__some mobile-flex">
+                <div>
+                    <a href="https://www.instagram.com/designsbytuva/" target="_blank" aria-label="Åpner i ny fane"><img src="../images/icons/ig-white.png" alt="Besøk Instagrammen til Designs by tuva"></a>
+                    <p class="username">@designsbytuva</p>
+                </div>
+                <div>
+                    <a href="mailto:contact@designsbytuva.no" target="_blank" aria-label="Åpner i ny fane"><img src="../images/icons/mail-white.png" alt="Send meg en epost"></a>
+                    <p class="username">contact@designsbytuva.no</p>
+                </div>
+                <div>
+                    <a href="https://www.linkedin.com/in/tuvahansen/" target="_blank" aria-label="Åpner i ny fane"><img src="../images/icons/in-white.png" alt="Besøk LinkedIn profilen min"></a>
+                    <p class="username">@tuvahansen</p>
+                </div>
+            </figure>
+            <p>&copy;2024 - Alt laget av Tuva Konstanse Hansen</p>
+        </footer>
+    </body>
+</html>

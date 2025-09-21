@@ -1,0 +1,73 @@
+/* PROJECTS INFO */
+.project-img {
+    height: 25vh;
+    object-fit: cover;
+}
+
+.project {
+    &__intro:nth-child(2) p:nth-child(3) {
+        border-top: 1px solid #fff;
+        padding-block-start: var(--big-space);
+    }
+    &__intro:nth-child(2) {
+        padding-block-end: var(--small-space);
+    }
+    &__intro a {
+        font-weight: var(--font-weight-bold);
+        color: var(--text-color-light);
+    }
+
+    &__type {
+        padding-block-end: var(--mini-space);
+        font-weight: var(--font-weight-medium);
+    }
+    
+    h2 {
+        margin: 0;
+        padding: 0;
+    }
+    
+    &__next {
+        border-top: 1px solid #fff;
+        padding-block-start: var(--normal-space);
+        justify-content: space-between;
+        &--bottom {
+            padding-bottom: var(--normal-space);
+        }
+    }
+}
+
+#resultPage, #processPage {
+    font-size: var(--step-0);
+    padding-inline-end: var(--small-space);
+}
+
+#process {
+    h3 {
+        padding-block-start: var(--small-space);
+    }
+}
+
+#result > div:not(:last-child.mobile-flex) img, #process img {
+    margin-bottom: 5px;
+}
+
+/* 'Box' for pototype buttons */
+.proto {
+    display: grid;
+    justify-items: center;
+}
+
+/* Newspaper process */
+.arrow-down {
+    display: grid;
+    justify-items: center;
+    margin: 0 auto var(--mini-space);
+    font-size: var(--step-2);
+}
+
+@media (min-width: 600px) {
+    .project-img {
+        height: 35vh;
+    }
+}

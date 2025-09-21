@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="no">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="author" content="Tuva Konstanse Hansen">
+        <meta name="description" content="Designs by Tuva - A portfolio for Graphic design">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="../styles/style.css" rel="stylesheet">
+        <link rel="icon" href="../images/heart.png">
+
+        <title>Prosjekter - Hello Titty 2024</title>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const menuToggle = document.querySelector('.navbar__menu');
+                const menu = document.querySelector('.navbar__list');
+
+                // Toggle menu on click
+                menuToggle.addEventListener('click', () => {
+                    const isOpen = menu.classList.toggle('open');
+                    menuToggle.setAttribute('aria-expanded', isOpen);
+                });
+
+                // Close menu when clicking a link
+                menu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        menu.classList.remove('open');
+                    });
+                });
+
+                // Toggle menu on keyboard (Enter or Space)
+                menuToggle.addEventListener('keypress', (e) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                        e.preventDefault();
+                        const isOpen = menu.classList.toggle('open');
+                        menuToggle.setAttribute('aria-expanded', isOpen);
+                    }
+                });
+            });
+        </script>
+    </head>
+
+    <body>
+        <header>
+            <a href="#main" class="skip">Skip to main content</a>
+
+            <nav class="navbar mobile-flex">
+                <!-- Logo on all screens -->
+                <div class="navbar__logo">
+                    <a href="../index.html"><img src="../images/logo.png" alt="Logo for designs by Tuva"></a>
+                </div>
+
+                <div>
+                    <button class="navbar__menu" aria-controls="navbarMenu" aria-expanded="false">☰</button>
+                    <ul id="navbarMenu" class="navbar__list">
+                        <li class="navbar__items"><a href="../index.html#work-process">Prosess</a></li>
+                        <li class="navbar__items"><a href="../index.html#projects">Alle prosjekter</a></li>
+                        <li class="navbar__items"><a href="about.html">Om meg</a></li>
+                        <li class="navbar__items"><a class="button button--navbar background" href="mailto:contact@designsbytuva.no">Kontakt meg</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <main id="main">
+            <article class="grid" aria-label="Informasjon om prosjektet">
+                <div class="grid__left background">
+                    <img class="project-img" src="../images/projects/russelogo/russelogo-section.webp" alt="Prosjektbilde - Svart bakgrunn med russelogoen til Hello Titty 2024">
+               
+                    <div class="content-box project mobile-flex">
+                        <div>
+                            <p class="project__type">Russelogo</p>
+                            <h1>Hallo Titty 2024</h1>
+                            <p>Frivilligarbeid</p>
+                        </div>
+
+                        <div class="project__intro">
+                            <p>I 2024 designet jeg en russelogo for lillesøsteren min sin russegruppe «Hello Titty». De hadde hverken buss eller van, så det eneste de ønsket fra meg var en logo 
+                                til å bruke på gensere, pannebånd og klistremerker. </p>
+                            <p>Resultatet ble en relativt enkel logo som består av en Hello Kitty inspirert jente, et stjernemønster og rød tekst, som passer på ulike flater og fungerer bra sammen med flere bakgrunnsfarger. 
+                                Prosjektet er utenom det jeg vanligvis driver med, men jeg synes det var en gøy oppgave!</p>
+                            <p>Verktøy: Procreate & Illustrator</p>
+                        </div>
+
+                        <div class="project__next mobile-flex">
+                            <div>
+                                <a class="background" href="converse.html">&#x2190; Converse skopleie</a>
+                            </div>
+                            <div>
+                                <a class="background" href="fadderuka.html">Fadderuka 23 &#x2192;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid__right">
+                    <div class="switch-btn mobile-flex">
+                        <button id="resultPage" class="btn active">Resultat</button>
+                        <button id="processPage" class="btn">Prosess</button>
+                    </div>
+                
+                    <section role="region" aria-label="Informasjon om prosessen og resultatet til russelogoen">
+                        <div id="result">
+                            <img src="../images/projects/russelogo/result/different-colors.webp" alt="Ferdig logo med ulike bakgrunnsfarger">                        
+                            <img src="../images/projects/russelogo/result/hoodie-mockup.webp" alt="Mockup av en svart hettegenser med logoen på">
+                            <img src="../images/projects/russelogo/result/headband-mockup.webp" alt="Mockup av et svart hårbånd med logoen på">  
+                            <img src="../images/projects/russelogo/result/stickers-mockup.webp" alt="Mockup av svarte, runde klistremerker med logoen på">                  
+                        </div>
+
+                        <div id="process" class="content-box">
+                            <h2>Innsiktsarbeid</h2>
+                            <p>Før jeg startet selve designprosessen med logoen, brukte jeg litt tid på innsiktsarbeid. Russegruppa ønska seg en logo med en tegning, 
+                                istedenfor bare tekst, så jeg så gjennom mange tidligere russelogoer med denne typen stil, for å skjønne hva slags uttrykk de var ute etter. 
+                                I tillegg fant jeg inspirasjon til selve tegningen på Pinterest.</p>
+                            
+                            <figure>
+                                <img src="../images/projects/russelogo/process/inspiration.webp" alt="Mange tegninger av jenter - Inspirasjon fra Pinterest">
+                                <figcaption>Inspirasjonen jeg hentet fra <a href="https://pin.it/E4nwwqOzJ" target="_blank" aria-label="Åpner i ny fane">Pinterest</a></figcaption>
+                            </figure>
+
+                            <h2>Designprosess</h2>
+                            <p>Når jeg starta selve designprosessen, var det første jeg gjorde å bestemme hva slags skrifttype som passet best sammen med navnet. Jeg endte 
+                                opp med skrifttypen nederst til venstre, som heter «Double Bubble».</p>
+                            <img src="../images/projects/russelogo/process/fonts.png" alt="Testing av skrifttyper til logoen">
+
+                            <h3>Utvikling</h3>
+                            <p>Deretter gikk jeg videre til selve tegningen. Jeg starta først med å lage en tegning av den ekte Hello Kitty, men fikk vite at de heller ville 
+                                ha en jente med litt samme type vibe. Derfor endret jeg tegningen og la til flere detaljer for å gjøre logoen komplett.
+                            </p>
+                            <div class="flex">
+                                <div class="mobile-flex">
+                                    <div>
+                                        <img src="../images/projects/russelogo/process/draft1.png" alt="Første utkast logo">
+                                    </div>
+                                    <div>
+                                        <img src="../images/projects/russelogo/process/draft3.png" alt="Tredje utkast logo">
+                                    </div>
+                                </div>
+                                <div class="mobile-flex">
+                                    <div>
+                                        <img src="../images/projects/russelogo/process/draft2.png" alt="Andre utkast logo">
+                                    </div>
+                                    <div>
+                                        <img src="../images/projects/russelogo/result/logo.png" alt="Ferdig logo">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="project__next project__next--bottom mobile-flex">
+                                <div>
+                                    <a href="converse.html">&#x2190; Converse skopleie</a>
+                                </div>
+                                <div>
+                                    <a href="fadderuka.html">Fadderuka 23 &#x2192;</a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </article>
+        </main>
+
+        <footer class="footer">
+            <figure class="footer__some mobile-flex">
+                <div>
+                    <a href="https://www.instagram.com/designsbytuva/" target="_blank" aria-label="Åpner i ny fane"><img src="../images/icons/ig-white.png" alt="Besøk Instagrammen til Designs by tuva"></a>
+                    <p class="username">@designsbytuva</p>
+                </div>
+                <div>
+                    <a href="mailto:contact@designsbytuva.no" target="_blank" aria-label="Åpner i ny fane"><img src="../images/icons/mail-white.png" alt="Send meg en epost"></a>
+                    <p class="username">contact@designsbytuva.no</p>
+                </div>
+                <div>
+                    <a href="https://www.linkedin.com/in/tuvahansen/" target="_blank" aria-label="Åpner i ny fane"><img src="../images/icons/in-white.png" alt="Besøk LinkedIn profilen min"></a>
+                    <p class="username">@tuvahansen</p>
+                </div>
+            </figure>
+            <p>&copy;2024 - Alt laget av Tuva Konstanse Hansen</p>
+        </footer>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', (event) => {
+            const buttons = document.querySelectorAll('.btn');
+            const resultDiv = document.getElementById('result');
+            const processDiv = document.getElementById('process');
+
+                // Initialize to show 'Resultat' by default
+                resultDiv.style.display = 'block';
+                processDiv.style.display = 'none';
+
+                buttons.forEach(button => {
+                    button.addEventListener('click', () => {
+                        // Remove 'active' class from all buttons
+                        buttons.forEach(btn => btn.classList.remove('active'));
+                        // Add 'active' class to the clicked button
+                        button.classList.add('active');
+
+                        // Toggle content based on which button is clicked
+                        if (button.id === 'resultPage') {
+                            resultDiv.style.display = 'block';
+                            processDiv.style.display = 'none';
+                        } else if (button.id === 'processPage') {
+                            resultDiv.style.display = 'none';
+                            processDiv.style.display = 'block';
+                        }
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>

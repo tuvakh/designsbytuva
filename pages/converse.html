@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="no">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="author" content="Tuva Konstanse Hansen">
+        <meta name="description" content="Designs by Tuva - A portfolio for Graphic design">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="../styles/style.css" rel="stylesheet">
+        <link rel="icon" href="../images/heart.png">
+
+        <title>Prosjekter - Converse skopleie</title>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const menuToggle = document.querySelector('.navbar__menu');
+                const menu = document.querySelector('.navbar__list');
+
+                // Toggle menu on click
+                menuToggle.addEventListener('click', () => {
+                    const isOpen = menu.classList.toggle('open');
+                    menuToggle.setAttribute('aria-expanded', isOpen);
+                });
+
+                // Close menu when clicking a link
+                menu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        menu.classList.remove('open');
+                    });
+                });
+
+                // Toggle menu on keyboard (Enter or Space)
+                menuToggle.addEventListener('keypress', (e) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                        e.preventDefault();
+                        const isOpen = menu.classList.toggle('open');
+                        menuToggle.setAttribute('aria-expanded', isOpen);
+                    }
+                });
+            });
+        </script>
+    </head>
+
+    <body>
+        <header>
+            <a href="#main" class="skip">Skip to main content</a>
+
+            <nav class="navbar mobile-flex">
+                <!-- Logo on all screens -->
+                <div class="navbar__logo">
+                    <a href="../index.html"><img src="../images/logo.png" alt="Logo for designs by Tuva"></a>
+                </div>
+
+                <div>
+                    <button class="navbar__menu" aria-controls="navbarMenu" aria-expanded="false">☰</button>
+                    <ul id="navbarMenu" class="navbar__list">
+                        <li class="navbar__items"><a href="../index.html#work-process">Prosess</a></li>
+                        <li class="navbar__items"><a href="../index.html#projects">Alle prosjekter</a></li>
+                        <li class="navbar__items"><a href="about.html">Om meg</a></li>
+                        <li class="navbar__items"><a class="button button--navbar background" href="mailto:contact@designsbytuva.no">Kontakt meg</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <main id="main">
+            <article class="grid" aria-label="Informasjon om prosjektet">
+                <div class="grid__left background">
+                    <img class="project-img" src="../images/projects/converse.webp" alt="Prosjektbilde - Lilla bakgrunn med mockup av Converse skopleie produkter">
+       
+                    <div class="content-box project mobile-flex">
+                        <div>
+                            <p class="project__type">Emballasjedesign</p>
+                            <h1>Converse skopleie</h1>
+                            <p>Skoleprosjekt</p>
+                        </div>
+
+                        <div class="project__intro">
+                            <p>Denne fiktive oppgaven gikk ut på å designe fire skopleieprodukter for Converse. Produktene måtte ha ulike proporsjoner 
+                                og areal for å vise designprinsippene i sin fulle bredde, og relatere seg til verdiene til Converse.</p>
+                            <p>Underveis i oppgaven hentet jeg inspirasjon fra Converse sitt varemerke og deres sosiale medier. Jeg endte til slutt opp med
+                                en løsning som består av sterke farger og en mørk bakgrunn, som sammen skaper en fin kontrast.</p>
+                            <p>Verktøy: Illustrator, InDesign & Dimension</p>
+                        </div>
+
+                        <div class="project__next mobile-flex">
+                            <div>
+                                <a class="background" href="vardal.html">&#x2190; Vardal Turnforening</a>
+                            </div>
+                            <div>
+                                <a class="background" href="russelogo.html">Hello Titty &#x2192;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid__right">
+                    <div class="switch-btn mobile-flex">
+                        <button id="resultPage" class="btn active">Resultat</button>
+                        <button id="processPage" class="btn">Prosess</button>
+                    </div>
+
+                    <section role="region" aria-label="Informasjon om prosessen og resultatet til skopleieproduktene">
+                        <div id="result">
+                            <div>
+                                <img class="white-img" src="../images/projects/converse/result/cleaner-flat.webp" alt="Flat versjon av «Shoe cleaner» esken">
+                                <img class="white-img" src="../images/projects/converse/result/cloth-flat.jpg" alt="Flat versjon av «Microfiber cloths» esken"> 
+                                <img class="white-img" src="../images/projects/converse/result/sole-bonder-flat.jpg" alt="Flat versjon av «Sole bonder» esken">     
+                                <img class="white-img" src="../images/projects/converse/result/wax-flat.jpg" alt="Flat versjon av «Shoe wax» esken"> 
+                            </div>
+                            <div class="mobile-flex">
+                                <div>
+                                    <img src="../images/projects/converse/result/cleaner.webp" alt="Lilla bakgrunn med mockup av «Shoe cleaner» esken og beholderen">
+                                    <img src="../images/projects/converse/result/sole-bonder.webp" alt="Lilla bakgrunn med mockup av «Sole bonder» esken og beholderen">
+                                </div>
+
+                                <div>
+                                    <img src="../images/projects/converse/result/cloth.webp" alt="Lilla bakgrunn med mockup av «Microfiber cloths» esken og beholderen"> 
+                                    <img src="../images/projects/converse/result/wax.webp" alt="Lilla bakgrunn med mockup av «Shoe wax» esken og beholderen">       
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="process" class="content-box">
+                            <h2>Innsiktsarbeid</h2>
+                            <p>Converse er en veldig populær merkevare som de aller fleste kjenner til. De fokuserer veldig på kreativitet, individualitet og det 
+                                å kunne uttrykke seg selv slik man selv ønsker. De har en veldig sterk identitet som gjenspeiler fokuset deres godt, og som gjør at 
+                                mange føler en sterk tilknytning til både merkevaren og produktene deres.
+                            </p>
+
+                            <h3>Konkurrentanalyse</h3>
+                            <p>Før jeg startet på designprosessen utførte jeg en kjapp konkurrentanalyse. Noen av konkurrenten har et ganske enkelt og rent uttrykk, 
+                                samtidig som de bruker farger noe som gir mer liv til produktene, mens andre virker litt rotete og kanskje litt utdaterte visuelt sett.</p>
+                            <p>Målet mitt er å lage et produkt som skiller seg ut og som virker mer spennende enn konkurrentene. I tillegg burde designet ha en mer moderne 
+                                stil, for å få flere unge til å ville kjøpe produktene.</p>
+                                
+                            <img src="../images/projects/converse/process/inspiration/inspo.webp" alt="Konkurrentanalyse">
+                            
+                            <h2>Designprosess - Eske</h2>
+                            <p>Designprosessen min var veldig lang, og besto for det meste av å teste ut ulike ting på «Shoe Cleaner» boksen, før designet ble overført til de
+                                tre andre boksene.
+                            </p>
+
+                            <h3>Eske mal</h3>
+                            <p>Jeg brukte nettsiden <a href="https://www.sneakerser.com/" target="_blank" aria-label="Åpner i ny fane">Sneakerser.com</a> for å finne ut hvilke produkter jeg skulle designe, og endte opp med «Shoe Cleaner», 
+                                «Sole bonder», «Shoe wax» og «Microfiber cloth». Deretter brukte jeg målene fra nettsiden som inspirasjon, og satt opp 4 maler til eskene.</p>
+                            
+                            <div class="flex">
+                                <div class="mobile-flex">
+                                    <div>
+                                        <img src="../images/projects/converse/process/packaging/tempalte/cleaner-solution-template.png" alt="«Shoe cleaner» eske mal">
+                                    </div>
+
+                                    <div>
+                                        <img src="../images/projects/converse/process/packaging/tempalte/sole-bonder-template.png" alt="«Sole bonder» eske mal">
+                                    </div>
+                                </div>
+                                
+                                <div class="mobile-flex">
+                                    <div>
+                                        <img src="../images/projects/converse/process/packaging/tempalte/wax-template.png" alt="«Shoe wax» eske mal">
+                                    </div>
+
+                                    <div>
+                                        <img src="../images/projects/converse/process/packaging/tempalte/cloth-template.png" alt="«Microfiber cloth» eske mal">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3>Plassering av tekst</h3>
+                            <p>Jeg var innom veldig mange versjoner av hvordan teksten kunne plasseres på «Shoe cleaner» esken før jeg kom fram til resultatet, men her ser dere de tre beste løsningene.</p>
+                            <div class="flex mobile-flex">
+                                <div>
+                                    <img src="../images/projects/converse/process/packaging/cleaner-text1.webp" alt="Første utkast av tekstoppsett på eksen til 'Shoe cleaner'">
+                                </div>
+
+                                <div>
+                                    <img src="../images/projects/converse/process/packaging/cleaner-text2.webp" alt="Andre utkast av tekstoppsett på eksen til 'Shoe cleaner'">
+                                </div>
+
+                                <div>
+                                    <img src="../images/projects/converse/process/packaging/cleaner-text-correct.webp" alt="Ferdig tekstoppsett på 'Shoe cleaner' esken">
+                                </div>
+                            </div>
+
+                            <h4>Endelig plassering av tekst</h4>
+                            <img src="../images/projects/converse/process/packaging/cleaner-text-correct.webp" alt="Ferdig tekstoppsett på 'Shoe cleaner' esken">
+                                
+                            <h3>Plassering av tekst på alle esker</h3>
+                            <p>Deretter overførte jeg tekst oppsettet jeg endte opp med til resten av eskene.</p>
+                            <div class="flex">
+                                <div>
+                                    <img src="../images/projects/converse/process/packaging/sole-bonder-text.webp" alt="Ferdig tekstoppsett på 'Sole bonder' esken">
+                                </div>
+                                <div>
+                                    <img src="../images/projects/converse/process/packaging/wax-text.webp" alt="Ferdig tekstoppsett på 'Show wax' esken">
+                                </div>
+                                <div>
+                                    <img src="../images/projects/converse/process/packaging/cloth-text.webp" alt="Ferdig tekstoppsett på 'Microfiber cloth' esken">
+                                </div>
+                            </div>
+
+                            <h3>Valg av mønster</h3>
+                            <p>Når teksten var satt opp gikk jeg videre til mønster. Designet med stjerner og striper er veldig typisk for Converse, men jeg ønsket å gjøre 
+                                designet mitt litt mer moderne, og teste ut noe nytt. Derfor endte jeg opp med å videreutvikle versjonen med svarte firkanter.</p>
+                            <div class="flex mobile-flex">
+                                <div>
+                                    <img src="../images/projects/converse/process/packaging/cleaner-pattern1.webp" alt="Første utkast av mønster på 'shoe cleaner' esken">
+                                </div>
+
+                                <div>
+                                    <img src="../images/projects/converse/process/packaging/cleaner-pattern2.webp" alt="Andre utkast av mønster på 'shoe cleaner' esken">
+                                </div>
+
+                                <div>
+                                    <img src="../images/projects/converse/process/packaging/cleaner-pattern-correct.webp" alt="Ferdig mønster på 'Shoe Cleaner' esken">
+                                </div>
+                            </div>
+
+                            <h3>Testing av farger</h3>
+                            <p>Jeg testet deretter ut ulike farger, men fant fort ut at den rosa passa best.</p>
+                            <div class="flex">
+                                <div class="mobile-flex">
+                                    <div>
+                                        <img src="../images/projects/converse/process/packaging/cleaner-test-blue.png" alt="Test av mørkblå 'Shoe cleaner' eske">
+                                    </div>
+                                    <div>
+                                        <img src="../images/projects/converse/process/packaging/cleaner-test-cyan.png" alt="Test av cyan 'Shoe cleaner' eske">
+                                    </div>
+                                </div>
+                                <div class="mobile-flex">
+                                    <div>
+                                        <img src="../images/projects/converse/process/packaging/cleaner-test-green.png" alt="Test av lysgrønn 'Shoe cleaner' eske">
+                                    </div>
+                                    <div>
+                                        <img src="../images/projects/converse/process/packaging/cleaner-test-pink.png" alt="Test av rosa 'Shoe cleaner' eske">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3>Plassering av farger</h3>
+                            <p>Deretter testet jeg ut hvordan fargene burde brukes.</p>
+                            <div class="flex">
+                                <div class="mobile-flex">
+                                    <div>
+                                        <img src="../images/projects/converse/process/packaging/cleaner-color1.png" alt="Første utkast av plassering av farger på 'shoe cleaner' esken">
+                                    </div>
+
+                                    <div>
+                                        <img src="../images/projects/converse/process/packaging/cleaner-color2.webp" alt="Andre utkast av plassering av farger på 'shoe cleaner' esken">
+                                    </div>
+                                </div>
+                                <div class="mobile-flex">
+                                    <div>
+                                        <img src="../images/projects/converse/process/packaging/cleaner-color3.webp" alt="Tredje utkast av plassering av farger på 'shoe cleaner' esken">
+                                    </div>
+                                    <div>
+                                        <img src="../images/projects/converse/process/packaging/cleaner-color-correct.webp" alt="Ferdig plassering av farger på 'Shoe Cleaner' esken">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3>Fysisk testing</h3>
+                            <p>Underveis i prosessen testet jeg også å printe ut designet mitt for å se hva som funker best i praksis.</p>
+                            <div class="flex">
+                                <div>
+                                    <img src="../images/projects/converse/process/fysical-testing/prototypes1.webp" alt="Fysisk testing av 'shoe cleaner' eske versjonene 1">
+                                </div>
+                                <div>
+                                    <img src="../images/projects/converse/process/fysical-testing/prototypes2.webp" alt="Fysisk testing av 'shoe cleaner' eske versjonene 2">
+                                </div>
+                            </div>
+
+                            <h3>Testing av effekter</h3>
+                            <p>Jeg følte designet mitt trengte litt flere designet, og valgte å teste ut ulike effekter fra illustrator. Til slutt endte jeg opp med
+                                effekten «Graphic pen».
+                            </p>
+                            <div class="flex">
+                                <div class="mobile-flex">
+                                    <div>
+                                        <img src="../images/projects/converse/process/packaging/cleaner-effect1.png" alt="Første utkast av testing av effekter på 'shoe cleaner' esken">
+                                    </div>
+                                    <div>
+                                        <img src="../images/projects/converse/process/packaging/cleaner-effect2.png" alt="Andre utkast av testing av effekter på 'shoe cleaner' esken">
+                                    </div>
+                                </div>
+
+                                <div class="mobile-flex">
+                                    <div>
+                                        <img src="../images/projects/converse/process/packaging/cleaner-effect3.webp" alt="Tredje utkast av testing av effekter på 'shoe cleaner' esken">
+                                    </div>
+                                    <div>
+                                        <img src="../images/projects/converse/process/packaging/cleaner-effect-correct.webp" alt="Ferdig versjon med effekter på 'shoe cleaner' esken">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3>Ferdigstilling</h3>
+                            <p>Til slutt valgte jeg også å legge til bilder og fikse litt på tekstoppsettet, før jeg overførte et lignende design til alle eskene.</p>
+                            <div class="flex">
+                                <div class="mobile-flex">
+                                    <div>
+                                        <img src="../images/projects/converse/result/packaging/cleaner-box-design.webp" alt="Ferdig «Sho Cleaner» eske med bilder">
+                                    </div>
+                                    <div>
+                                        <img src="../images/projects/converse/result/packaging/sole-bonder-box-design.webp" alt="Ferdig «Sole bonder» eske med bilder">
+                                    </div>
+                                </div>
+                                <div class="mobile-flex">
+                                    <div>
+                                        <img src="../images/projects/converse/result/packaging/wax-box-design.webp" alt="Ferdig «Shoe wax» eske med bilder">
+                                    </div>
+                                    <div>
+                                        <img src="../images/projects/converse/result/packaging/cloth-box-design.webp" alt="Ferdig «Microfiber cloth» eske med bilder">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3>Ferdige esker</h3>
+                            <p>Her ser dere det ferdige designet på utbretta esker.</p>
+                            <div class="flex">
+                                <div>
+                                    <img src="../images/projects/converse/result/packaging/cleaner-box.webp" alt="Ferdig «Shoe cleaner» utbretta eske">
+                                
+                                    <img src="../images/projects/converse/result/packaging/sole-bonder-box.webp" alt="Ferdig «Sole bonder» utbretta eske">
+                                </div>
+                                <div>
+                                    <img src="../images/projects/converse/result/packaging/cloth-box.webp" alt="Ferdig «Microfiber cloth» utbretta eske">
+                                
+                                    <img src="../images/projects/converse/result/packaging/wax-box.webp" alt="Ferdig «Shoe wax» utbretta eske">
+                               
+                                </div>
+                            </div>
+                            
+                            <h2>Designprosess - Etikett</h2>
+                            <p>Neste del var å designe etikettene til alle produktene. Dette var en enklere prosess enn designet på eskene, men jeg var 
+                                likevel innom et par idéer her også.</p>
+
+                            <h3>Produkter</h3>
+                            <p>Her ser dere produktene jeg skulle lage etikett for. Mikrofiber klutene hadde et veldig enkelt design hvor jeg bare la til logoen til Converse, og er derfor ikke med her.</p>
+                            <div class="flex">
+                                <div class="mobile-flex">
+                                    <div>
+                                        <img src="../images/projects/converse/process/original/shoe-cleaner.png" alt="«Shoe cleaner» original etikett og beholder">
+                                    </div>
+                                    <div>
+                                        <img src="../images/projects/converse/process/original/sole-bonder.png" alt="«Sole bonder» original etikett og beholder">
+                                    </div>
+                                </div>
+                                <div class="mobile-flex">
+                                    <div>
+                                        <img src="../images/projects/converse/process/original/wax.png" alt="«Shoe wax» original etikett og beholder">
+                                    </div>
+                                    <div>
+                                        <img src="../images/projects/converse/process/original/cloth.png" alt="«Microfiber cloth» original etikett og beholder">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3>«Cleaner solution» etikett</h3>
+                            <p>Jeg startet med «Cleaner solution» etiketten, og testet litt ulike ting for å få den til å passe til esken.</p>
+                            <div class="flex">
+                                <div>
+                                    <img src="../images/projects/converse/process/label/cleaner-label1.webp" alt="Første utkast 'shoe cleaner' etikett">
+                                </div>
+
+                                <div>
+                                    <img src="../images/projects/converse/process/label/cleaner-label2.webp" alt="Andre utkast 'shoe cleaner' etikett">
+                                </div>
+                            </div>
+
+                            <h4>Ferdig etikett:</h4>
+                            <img class="white-img" src="../images/projects/converse/result/label/cleaner-label.jpg" alt="Ferdig 'shoe cleaner' etikett">
+
+                            <h3>«Sole bonder» etikett</h3>
+                            <p>Deretter gikk jeg videre til «Sole bonder» etiketten. Prosessen her var ganske lik.</p>
+                            <div class="flex">
+                                <div>
+                                    <img src="../images/projects/converse/process/label/sole-bonder-label1.png" alt="Første utkast «Sole bonder» etikett">
+                                </div>
+
+                                <div>
+                                    <img src="../images/projects/converse/process/label/sole-bonder-label2.png" alt="Andre utkast «Sole bonder» etikett">
+                                </div>
+                            </div>
+
+                            <h4>Ferdig etikett:</h4>
+                            <img class="white-img" src="../images/projects/converse/result/label/sole-bonder-label.jpg" alt="Ferdig «Sole bonder» etikett">
+
+                            <h3>«Show wax» etikett</h3>
+                            <p>Til slutt lagde jeg «Show wax» etiketten. Her måtte jeg lage design både til lokket og selve beholderen, så 
+                                designprosessen her var litt lenger, men likevel ganske lik som de to andre produktene.</p>
+                            <div class="flex">
+                                <div>
+                                    <img src="../images/projects/converse/process/label/wax-label1.png" alt="Første utkast «Shoe wax» etikett">
+                                </div>
+
+                                <div>
+                                    <img src="../images/projects/converse/process/label/wax-label2.png" alt="Andre utkast «Shoe wax» etikett">
+                                </div>
+                            </div>
+
+                            <h4>Ferdig etikett:</h4>
+                            <img src="../images/projects/converse/result/label/wax-label.webp" alt="Ferdig «Shoe wax» etikett">
+                            
+                            <div class="project__next project__next--bottom mobile-flex">
+                                <div>
+                                    <a href="vardal.html">&#x2190; Vardal Turnforening</a>
+                                </div>
+                                <div>
+                                    <a href="russelogo.html">Hello Titty &#x2192;</a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </article>
+        </main>
+
+        <footer class="footer">
+            <figure class="footer__some mobile-flex">
+                <div>
+                    <a href="https://www.instagram.com/designsbytuva/" target="_blank" aria-label="Åpner i ny fane"><img src="../images/icons/ig-white.png" alt="Besøk Instagrammen til Designs by tuva"></a>
+                    <p class="username">@designsbytuva</p>
+                </div>
+                <div>
+                    <a href="mailto:contact@designsbytuva.no" target="_blank" aria-label="Åpner i ny fane"><img src="../images/icons/mail-white.png" alt="Send meg en epost"></a>
+                    <p class="username">contact@designsbytuva.no</p>
+                </div>
+                <div>
+                    <a href="https://www.linkedin.com/in/tuvahansen/" target="_blank" aria-label="Åpner i ny fane"><img src="../images/icons/in-white.png" alt="Besøk LinkedIn profilen min"></a>
+                    <p class="username">@tuvahansen</p>
+                </div>
+            </figure>
+            <p>&copy;2024 - Alt laget av Tuva Konstanse Hansen</p>
+        </footer>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', (event) => {
+            const buttons = document.querySelectorAll('.btn');
+            const resultDiv = document.getElementById('result');
+            const processDiv = document.getElementById('process');
+
+                // Initialize to show 'Resultat' by default
+                resultDiv.style.display = 'block';
+                processDiv.style.display = 'none';
+
+                buttons.forEach(button => {
+                    button.addEventListener('click', () => {
+                        // Remove 'active' class from all buttons
+                        buttons.forEach(btn => btn.classList.remove('active'));
+                        // Add 'active' class to the clicked button
+                        button.classList.add('active');
+
+                        // Toggle content based on which button is clicked
+                        if (button.id === 'resultPage') {
+                            resultDiv.style.display = 'block';
+                            processDiv.style.display = 'none';
+                        } else if (button.id === 'processPage') {
+                            resultDiv.style.display = 'none';
+                            processDiv.style.display = 'block';
+                        }
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>

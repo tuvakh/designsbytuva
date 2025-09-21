@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="no">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="author" content="Tuva Konstanse Hansen">
+        <meta name="description" content="Designs by Tuva - A portfolio for Graphic design">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="../styles/style.css" rel="stylesheet">
+        <link rel="icon" href="../images/heart.png">
+
+        <title>Prosjekter - Vardal Turnforening</title>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const menuToggle = document.querySelector('.navbar__menu');
+                const menu = document.querySelector('.navbar__list');
+
+                // Toggle menu on click
+                menuToggle.addEventListener('click', () => {
+                    const isOpen = menu.classList.toggle('open');
+                    menuToggle.setAttribute('aria-expanded', isOpen);
+                });
+
+                // Close menu when clicking a link
+                menu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        menu.classList.remove('open');
+                    });
+                });
+
+                // Toggle menu on keyboard (Enter or Space)
+                menuToggle.addEventListener('keypress', (e) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                        e.preventDefault();
+                        const isOpen = menu.classList.toggle('open');
+                        menuToggle.setAttribute('aria-expanded', isOpen);
+                    }
+                });
+            });
+        </script>
+    </head>
+
+    <body>
+        <header>
+            <a href="#main" class="skip">Skip to main content</a>
+
+            <nav class="navbar mobile-flex">
+                <!-- Logo on all screens -->
+                <div class="navbar__logo">
+                    <a href="../index.html"><img src="../images/logo.png" alt="Logo for designs by Tuva"></a>
+                </div>
+
+                <div>
+                    <button class="navbar__menu" aria-controls="navbarMenu" aria-expanded="false">☰</button>
+                    <ul id="navbarMenu" class="navbar__list">
+                        <li class="navbar__items"><a href="../index.html#work-process">Prosess</a></li>
+                        <li class="navbar__items"><a href="../index.html#projects">Alle prosjekter</a></li>
+                        <li class="navbar__items"><a href="about.html">Om meg</a></li>
+                        <li class="navbar__items"><a class="button button--navbar background" href="mailto:contact@designsbytuva.no">Kontakt meg</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <main id="main">
+            <article class="grid" aria-label="Informasjon om prosjektet">
+                <div class="grid__left background">
+                    <img class="project-img" src="../images/projects/vardal.webp" alt="Prosjektbilde - Blå bakgrunn med mockup av Vardal turnforening sin nettside på iPad og mobil">
+                    
+                    <div class="content-box project mobile-flex">  
+                        <div>
+                            <p class="project__type">Webdesign</p>
+                            <h1>Vardal turnforening</h1>
+                            <p>Skoleprosjekt</p>
+                        </div>
+
+                        <div class="project__intro">
+                            <p>Dette prosjektet gikk ut på å utvikle en ny digital plattform for Vardal Turnforening som fungerer både på desktop og mobil. For øyeblikket benytter Vardal Turnforening flere separate digitale plattformer, så målet var å lage én felles plattform for alt.</p>
+                            <p>Løsningen vår ble en nettside på desktop og app på telefon, med et blått/lilla fargepalett, en liten maskott kalt Turnus, alle funksjonene man trenger samlet på et sted, og en enkel layout. Løsningene er ganske like, men for å bruke appen må man være en del av foreningen.</p>
+
+                            <p>Dette prosjektet ble løst gruppevis, og jeg jobbet sammen med <a href="https://www.linkedin.com/in/hedda-saasen-undseth-5b872816b/">Hedda S. Undseth</a>, <a href="https://bygiortz.no/index.html">Tiril Victoria W.-B. Giørtz</a> og <a href="https://www.linkedin.com/in/man%C3%BA-ludena-medin-515b5a28b/">Manú L. Medin</a></p>
+                            <p>Verktøy: Figma & Illustrator</p>
+                        </div>
+
+                        <div class="project__next mobile-flex">
+                            <div>
+                                <a class="background" href="energize.html">&#x2190; Energize</a>
+                            </div>
+                            <div>
+                                <a class="background" href="converse.html">Converse skopleie &#x2192;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="grid__right">
+                    <div class="switch-btn mobile-flex">
+                        <button id="resultPage" class="btn active">Resultat</button>
+                        <button id="processPage" class="btn">Prosess</button>
+                    </div>
+
+                    <section role="region" aria-label="Informasjon om prosessen og resultatet til nettsiden">
+                        <div id="result">
+                            <div class="proto">
+                                <a class="button button--proto mobile-flex background mobile" target="_blank" aria-label="Åpner i ny fane" href="https://www.figma.com/proto/p05EZkrYYmGlde4T2Hm7qc/Vardal-turnforening?node-id=361-878&t=hZC1E8DdNIcbtp04-1&scaling=scale-down-width&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=361%3A878&show-proto-sidebar=1">Prøv prototype</a>
+                                <a class="button button--proto mobile-flex background desktop" target="_blank" aria-label="Åpner i ny fane" href="https://www.figma.com/proto/p05EZkrYYmGlde4T2Hm7qc/Vardal-turnforening?node-id=119-423&t=hZC1E8DdNIcbtp04-1&scaling=scale-down-width&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=119%3A423&show-proto-sidebar=1">Prøv prototype</a>
+                            </div>
+                            
+                            <img src="../images/projects/vardal/result/screen-mockup.webp" alt="Blå bakgrunn med en mockup av nettsiden til Vardal Turnforening på dektop og mobil">                        
+                            <img src="../images/projects/vardal/result/phones-mockup.webp" alt="Blå bakgrunn med seks telefoner som viser nettsiden til Vardal Turnforening">        
+                        </div>
+
+                        <div id="process" class="content-box">
+                            <h2>Innsiktsarbeid</h2>
+                            <p>Innsiktsarbeidet vårt besto av en analyse av den nåværende nettsiden, intervjuer, utvikling av et sitemap og utvikling av personas</p>
+
+                            <h3>Analyse av original nettside</h3>
+                            <p>Den nåværende nettsiden til Vardal Turnforening har et stort forbedringspotensiale. Den har et litt utdatert og rotete design og er bare tilpasset til bruk på desktop. Dette gjør at det blir vanskelig å finne all informasjonen man trenger.</p>
+                                    
+                            <div class="flex">
+                                <div>
+                                    <img class="white-img" src="../images/projects/vardal/process/original-mobile.webp" alt="Vardal Turnforening sin originale nettside på mobil">
+                                </div>
+                                <div>
+                                    <img class="white-img" src="../images/projects/vardal/process/original-pc.webp" alt="Vardal Turnforening sin originale nettside på desktop">
+                                </div>
+                            </div>
+
+                            <div>
+                                <h3>Innsikt fra intervjuer</h3>
+                                <p>Vi fikk mulighet til å intervjue trenere, foreldre og styremedlemmer hos Vardal Turnforening. Dette gjorde at vi fikk innblikk i hva 
+                                    som mangler av funksjoner i den nåværende løsningen og hva som kan bidra til å gjøre treningshverdagen litt enklere for alle.</p>
+                                <img src="../images/projects/vardal/process/affinity-diagram.jpg" alt="Affinity diagram">
+                            </div>
+
+                            <div>
+                                <h3>Sitemap</h3>
+                                <p>Etter å ha gått igjennom all dataen vi fikk fra intervjuene og analysert nettsiden, gikk vi videre til å utvikle et sitemap for å vise hvordan oppsettet og navigasjonen til den nye plattformen burde være.</p>
+                                <img src="../images/projects/vardal/process/sitemap.png" alt="Sitemap">
+                            </div>
+
+                            <h3>Personas</h3>
+                            <p>Deretter lagde vi to personas med utgangspunkt i intervjuene. Her har vi laget en passert på en trener som allerede er en del av foreningen, og en basert på en forelder som ønsker å melde på barnet sitt.</p>
+                            <div class="flex">
+                                <div>
+                                    <img class="white-img" src="../images/projects/vardal/process/personas/persona-parent.webp" alt="Persona forelder">
+                                </div>
+
+                                <div>
+                                    <img class="white-img" src="../images/projects/vardal/process/personas/persona-trainer.webp" alt="Persona trener">
+                                </div>
+                            </div>
+                        
+                            <h2>Designprosess</h2>
+                            <p>Designsprosessen vår var ganske lang, og besto av alt fra fysiske til digitale skisser, og lo-fi prototyping i Figma.</p>
+
+                            <h3>Skisser</h3>
+                            <p>De tidligste skissene våre ble laget med utgangspunkt i mobil, og viser et eksempel på hvordan man kan finne fram til kalenderen for å registrere oppmøte, og få mer info om utøveren.</p>
+                            <div>
+                                <img src="../images/projects/vardal/process/sketch.webp" alt="Tidlige skisser av layout på mobil">
+                            </div>
+                            
+                            <h3>Enkel lo-fi mobil</h3>
+                            <p>Vi gikk ganske raskt videre til å teste skissing digitalt isteden, og etter mye fram og tilbake kom vi fram til denne løsningen for mobil.</p>
+                            <img src="../images/projects/vardal/process/lo-fi/layout-mobile.png" alt="Enkel lo-fi mobil">
+                        
+                            <h3>Enkel lo-fi desktop</h3>
+                            <p>Vi gjorde det samme med desktop versjonen, og lagde veldig enkle skisser digitalt med utgangspunkt i skissene vi lagde for mobil.</p>
+                            <img src="../images/projects/vardal/process/lo-fi/layout-desktop.png" alt="Enkel lo-fi desktop">
+                        
+                            <h3>Utvikling av Turnus</h3>
+                            <p>Underveis i prosessen bestemte vi oss for å utvikle en slags maskott for turnforeningen, som ble kalt Turnus. Turnus ble designet av <a href="https://bygiortz.no/index.html">Tiril Victoria W.-B. Giørtz</a>
+                            og er en sentral detalj i designet vårt.</p>
+                            <img src="../images/projects/vardal/process/turnus.jpg" alt="Maskotten Turnus - En søt, blå figur som gjør turntriks">
+
+                            <h3>Detaljer lo-fi mobil</h3>
+                            <p>Deretter videreutviklet vi skissene til å bli mer detaljerte med farger, ordentlig tekst og bilder, og endte opp med dette som vår endelige løsning for appen på mobil.</p>
+                            <img src="../images/projects/vardal/result/mobile-result.webp" alt="Detaljert lo-fi mobil">
+                        
+                            <h3>Detaljer lo-fi desktop</h3>
+                            <p>Dette gjorde vi også på desktop, og her ser dere den endelige løsningen for nettsiden.</p>
+                            <img src="../images/projects/vardal/result/desktop-result.webp" alt="Detaljert lo-fi desktop">
+
+                            <div class="proto">
+                                <a class="button mobile-flex background mobile" target="_blank" aria-label="Åpner i ny fane" href="https://www.figma.com/proto/p05EZkrYYmGlde4T2Hm7qc/Vardal-turnforening?node-id=361-878&t=hZC1E8DdNIcbtp04-1&scaling=scale-down-width&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=361%3A878&show-proto-sidebar=1">Prøv prototype</a>
+                                <a class="button mobile-flex background desktop" target="_blank" aria-label="Åpner i ny fane" href="https://www.figma.com/proto/p05EZkrYYmGlde4T2Hm7qc/Vardal-turnforening?node-id=119-423&t=hZC1E8DdNIcbtp04-1&scaling=scale-down-width&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=119%3A423&show-proto-sidebar=1">Prøv prototype</a>
+                            </div>
+
+                            <div class="project__next project__next--bottom mobile-flex">
+                                <div>
+                                    <a href="energize.html">&#x2190; Energize</a>
+                                </div>
+                                <div>
+                                    <a href="converse.html">Converse skopleie &#x2192;</a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </article>
+        </main>
+
+        <footer class="footer">
+            <figure class="footer__some mobile-flex">
+                <div>
+                    <a href="https://www.instagram.com/designsbytuva/" target="_blank" aria-label="Åpner i ny fane"><img src="../images/icons/ig-white.png" alt="Besøk Instagrammen til Designs by tuva"></a>
+                    <p class="username">@designsbytuva</p>
+                </div>
+                <div>
+                    <a href="mailto:contact@designsbytuva.no" target="_blank" aria-label="Åpner i ny fane"><img src="../images/icons/mail-white.png" alt="Send meg en epost"></a>
+                    <p class="username">contact@designsbytuva.no</p>
+                </div>
+                <div>
+                    <a href="https://www.linkedin.com/in/tuvahansen/" target="_blank" aria-label="Åpner i ny fane"><img src="../images/icons/in-white.png" alt="Besøk LinkedIn profilen min"></a>
+                    <p class="username">@tuvahansen</p>
+                </div>
+            </figure>
+            <p>&copy;2024 - Alt laget av Tuva Konstanse Hansen</p>
+        </footer>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', (event) => {
+            const buttons = document.querySelectorAll('.btn');
+            const resultDiv = document.getElementById('result');
+            const processDiv = document.getElementById('process');
+
+                // Initialize to show 'Resultat' by default
+                resultDiv.style.display = 'block';
+                processDiv.style.display = 'none';
+
+                buttons.forEach(button => {
+                    button.addEventListener('click', () => {
+                        // Remove 'active' class from all buttons
+                        buttons.forEach(btn => btn.classList.remove('active'));
+                        // Add 'active' class to the clicked button
+                        button.classList.add('active');
+
+                        // Toggle content based on which button is clicked
+                        if (button.id === 'resultPage') {
+                            resultDiv.style.display = 'block';
+                            processDiv.style.display = 'none';
+                        } else if (button.id === 'processPage') {
+                            resultDiv.style.display = 'none';
+                            processDiv.style.display = 'block';
+                        }
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>

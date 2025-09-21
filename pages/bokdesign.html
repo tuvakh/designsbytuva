@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="no">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="author" content="Tuva Konstanse Hansen">
+        <meta name="description" content="Designs by Tuva - A portfolio for Graphic design">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="../styles/style.css" rel="stylesheet">
+        <link rel="icon" href="../images/heart.png">
+
+        <title>Prosjekter - Slottskrønikene</title>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const menuToggle = document.querySelector('.navbar__menu');
+                const menu = document.querySelector('.navbar__list');
+
+                // Toggle menu on click
+                menuToggle.addEventListener('click', () => {
+                    const isOpen = menu.classList.toggle('open');
+                    menuToggle.setAttribute('aria-expanded', isOpen);
+                });
+
+                // Close menu when clicking a link
+                menu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        menu.classList.remove('open');
+                    });
+                });
+
+                // Toggle menu on keyboard (Enter or Space)
+                menuToggle.addEventListener('keypress', (e) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                        e.preventDefault();
+                        const isOpen = menu.classList.toggle('open');
+                        menuToggle.setAttribute('aria-expanded', isOpen);
+                    }
+                });
+            });
+        </script>
+    </head>
+
+    <body>
+        <header>
+            <a href="#main" class="skip">Skip to main content</a>
+
+            <nav class="navbar mobile-flex">
+                <!-- Logo on all screens -->
+                <div class="navbar__logo">
+                    <a href="../index.html"><img src="../images/logo.png" alt="Logo for designs by Tuva"></a>
+                </div>
+
+                <div>
+                    <button class="navbar__menu" aria-controls="navbarMenu" aria-expanded="false">☰</button>
+                    <ul id="navbarMenu" class="navbar__list">
+                        <li class="navbar__items"><a href="../index.html#work-process">Prosess</a></li>
+                        <li class="navbar__items"><a href="../index.html#projects">Alle prosjekter</a></li>
+                        <li class="navbar__items"><a href="about.html">Om meg</a></li>
+                        <li class="navbar__items"><a class="button button--navbar background" href="mailto:contact@designsbytuva.no">Kontakt meg</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <main id="main">
+            <article class="grid" aria-label="Informasjon om prosjektet">
+                <div class="grid__left background">
+                    <img class="project-img" src="../images/projects/slottskronikene.webp" alt="Prosjektbilde - Lysblå bakgrunn med mockup av de tre første Slottskrønikene bøkene">
+           
+                    <div class="content-box project mobile-flex">
+                        <div>
+                            <p class="project__type">Redaksjonell design</p>
+                            <h1>Slottskrønikene</h1>
+                            <p>Skoleprosjekt</p>
+                        </div>
+                    
+                        <div class="project__intro">
+                            <p>Denne oppgaven gikk ut på å designe smussomslag, perm og forsats/baksats 
+                                til en skjønnlitterær bokserie for voksne bestående av tre bind. I tillegg skulle 
+                                vi velge papirkvalitet, innbindingsløsning og materiale.</p>
+                            <p>Jeg valgte å redesigne de første bøkene i serien «Slottskrønikene» som er skrevet av Santa Montefiore.
+                                De tre bøkene fikk hver sin pastell farge, hvert sitt mønster med blomster og hvert sitt 
+                                bilde av et slott.</p>
+                            <p>Verktøy: Procreate, InDesign & Photoshop</p>
+                        </div>
+
+                        <div class="project__next mobile-flex">
+                            <div>
+                                <a class="background" href="madness.html">&#x2190; Halloween Madness</a>
+                            </div>
+                            <div>
+                                <a class="background" href="samfundet.html">Samfundet Gjøvik &#x2192;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="grid__right">
+                    <div class="switch-btn mobile-flex">
+                        <button id="resultPage" class="btn active">Resultat</button>
+                        <button id="processPage" class="btn">Prosess</button>
+                    </div>
+
+                    <section role="region" aria-label="Informasjon om prosessen og resultatet til bokserien">
+                        <div id="result">
+                            <div class="">
+                                <div>
+                                    <img class="white-img" src="../images/projects/books/result/love-smuss.webp" alt="Ferdig rosa smussomslag for bok 1 i Slottskrønikene serien">
+                                    <img class="white-img" src="../images/projects/books/result/daughters-smuss.webp" alt="Ferdig lilla smussomslag for bok 2 i Slottskrønikene serien">                               
+                                    <img class="white-img" src="../images/projects/books/result/secret-smuss.webp" alt="Ferdig blå smussomslag for bok 3 i Slottskrønikene serien">
+                                </div>
+                                <div>
+                                    <img class="white-img" src="../images/projects/books/result/love-cover.webp" alt="Ferdig rosa perm for bok 1 i Slottskrønikene serien">
+                                    <img src="../images/projects/books/result/daughters-cover.webp" alt="Ferdig lilla perm for bok 2 i Slottskrønikene serien">                               
+                                    <img src="../images/projects/books/result/secret-cover.webp" alt="Ferdig blå perm for bok 1 i Slottskrønikene serien">
+                                </div>
+                            </div>
+
+                            <img src="../images/projects/books/result/book-mockup1.webp" alt="Lysblå bakgrunn med mockup av forsiden til bok 1 med rosa smussomslag, og ryggene til bok 1 og 2">                        
+                            <img src="../images/projects/books/result/multiple-books.webp" alt="Lysblå bakgrunn med mockup som viser mange bøker med lilla smussomslag">
+                            <img src="../images/projects/books/result/book-mockup2.webp" alt="Lysblå bakgrunn med mockup av alle tre bøkene i en bunke, med bok 3 øverst med blått smussomslag">                    
+                        </div>
+
+                        <div id="process" class="content-box">
+                            <h2>Innsiktsarbeid</h2>
+                            <p>Før jeg startet på designprosessen utførte jeg en del innsiktsarbeid for å finne ut hva slags design stil jeg burde gå for.</p>
+                        
+                            <h3>Ulike utgaver</h3>
+                            <p>Jeg startet med å se på hva slags utgaver som finnes av Slottskrønikene. Forsidene til bøkene endrer seg ut ifra hvilket 
+                                land de har blitt utgitt i, og det finnes derfor flere ulike design, men virker som alle har det samme typiske «dameroman»-designet med en dame som står med ryggen til.</p>
+                            
+                            <img src="../images/projects/books/process/different-editions.webp" alt="Ulike utgaver av bøkene i Slottskrønikene serien">
+                        
+                            <h3>Inspirasjon</h3>
+                            <p>Deretter prøvde jeg også å finne inspirasjon. Jeg visste allerede hvordan type design jeg 
+                                ønsket å lage, og prøvde å finne bilder på Pinterest som ga det samme uttrykket som målet mitt.</p>
+                            <img src="../images/projects/books/process/inspirationboard.webp" alt="Inspirasjon fra Pinterest">
+
+                            <h2>Designprosess</h2>
+                            <p>Designprosessen til dette prosjektet var ganske rett fram siden jeg allerede hadde en relativt klar idé fra starten av på hva jeg ville gjøre.</p>
+
+                            <h3>Testing av skrift på forsiden</h3>
+                            <p>Det første jeg gjorde var å teste ut ulike skrifttyper og oppsett på forsiden til den første boka.</p>
+                                    
+                            <div class="flex">
+                                <div class="mobile-flex">
+                                    <div>
+                                        <img class="white-img" src="../images/projects/books/process/1.love-and-war/text/text1.png" alt="Første utkast av tekstoppsettet">
+                                    </div>
+                                    <div>
+                                        <img class="white-img" src="../images/projects/books/process/1.love-and-war/text/text2.png" alt="Femte utkast av tekstoppsettet">
+                                    </div>
+                                </div>
+
+                                <div class="mobile-flex">
+                                    <div>
+                                        <img class="white-img" src="../images/projects/books/process/1.love-and-war/text/text3.png" alt="Andre utkast av tekstoppsettet">
+                                    </div>
+                                    <div>
+                                        <img class="white-img" src="../images/projects/books/process/1.love-and-war/text/text4.png" alt="Sjette utkast av tekstoppsettet">
+                                    </div>
+                                </div>
+
+                                <div class="mobile-flex">
+                                    <div>
+                                        <img class="white-img" src="../images/projects/books/process/1.love-and-war/text/text5.png" alt="Tredje utkast av tekstoppsettet">
+                                    </div>
+                                    <div>
+                                        <img class="white-img" src="../images/projects/books/process/1.love-and-war/text/text6.png" alt="Syvende utkast av tekstoppsettet ">
+                                    </div>
+                                </div>
+                                <div class="mobile-flex">
+                                    <div>
+                                        <img class="white-img" src="../images/projects/books/process/1.love-and-war/text/text7.png" alt="Fjerde utkast av tekstoppsettet">
+                                    </div>
+                                    <div>
+                                        <img class="white-img" src="../images/projects/books/process/1.love-and-war/text/text8.png" alt="Åttende utkast av tekstoppsettet">
+                                    </div>
+                                </div>
+                            </div>
+                                
+                            <h3>Plassering av tekstinnhold</h3>
+                            <p>Jeg endte tilslutt opp med å bruke skrifttypene «Snell Roundhand» og «Utopia Std» siden disse fungerte best sammen, og endte opp med å 
+                                sette opp teksten på alle bøkene på denne måten. 
+                            </p>
+                            <img src="../images/projects/books/process/1.love-and-war/text/text-right.webp" alt="Ferdig tekstoppsett">
+                            
+                            <h3>Utvikling av detaljer</h3>
+                            <p>Jeg visste fra starten av at jeg ønsket å inkludere et mønster laget av blomster i designet mitt, så jeg startet med å tegne opp et mønster av tulipaner til bok 1.</p>
+                            <div class="flex">
+                                <div class="mobile-flex">
+                                    <div>
+                                        <img src="../images/projects/books/process/1.love-and-war/background-test1.webp" alt="Første utkast av mønster">
+                                    </div>
+                                    <div>
+                                        <img src="../images/projects/books/process/1.love-and-war/background-test2.webp" alt="Fjerde utkast av mønster">
+                                    </div>
+                                </div>
+
+                                <div class="mobile-flex">
+                                    <div>
+                                        <img src="../images/projects/books/process/1.love-and-war/background-test3.webp" alt="Andre utkast av mønster">
+                                    </div>
+
+                                    <div>
+                                        <img src="../images/projects/books/process/1.love-and-war/background-test4.webp" alt="Femte utkast av mønster">
+                                    </div>
+                                </div>
+
+                                <div class="mobile-flex">
+                                    <div>
+                                        <img src="../images/projects/books/process/1.love-and-war/background-test5.png" alt="Tredje utkast av mønster">
+                                    </div>
+
+                                    <div>
+                                        <img src="../images/projects/books/process/1.love-and-war/background-test6.webp" alt="Sjette utkast av mønster">
+                                    </div>
+                                </div>
+                            </div>
+                                
+                            <h3>Ferdig resultat av detaljer</h3>
+                            <p>Underveis i prosessen innså jeg at mønsteret fungerer best som et ornament og ikke burde være hovedfokuset på bøkene. 
+                                Derfor endte jeg opp med et ensfarga mønster som enkelt kan blende inn med bakgrunnen. I tillegg fikk hver av bøkene hvert sitt mønster, 
+                                hvert sitt bilde av et slott og hvert sitt hjerte.</p>
+                            <div class="flex">
+                                <div>
+                                    <img src="../images/projects/books/process/1.love-and-war/love-background-cover.webp" alt="Ferdig rosa mønster til bok 1">
+                                </div>
+
+                                <div>
+                                    <img src="../images/projects/books/process/2.daughters/daughters-background-cover.webp" alt="Ferdig lilla mønster til bok 2">
+                                </div>
+
+                                <div>
+                                    <img src="../images/projects/books/process/3.secret/secret-background-cover.webp" alt="Ferdig blått mønster til bok 3">
+                                </div>
+                            </div>
+
+                            <div class="flex">
+                                <div class="mobile-flex">
+                                    <div>
+                                        <img src="../images/projects/books/process/1.love-and-war/castle1.png" alt="Slott med rosa fargefilter som brukes på bok 1">
+                                    </div>
+                                    <div>
+                                        <img src="../images/projects/books/process/2.daughters/castle2.png" alt="Slott med lilla fargefilter som brukes på bok 2">
+                                    </div>
+                                </div>
+                                <div class="mobile-flex">
+                                    <div>
+                                        <img src="../images/projects/books/process/3.secret/castle3.png" alt="Slott med blått fargefilter som brukes på bok 3">
+                                    </div>    
+                                    <div>
+                                        <img src="../images/projects/books/process/hearts.png" alt="3 hjerter i rosa, lilla og blå som viser hvilket nummer boken er">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="project__next project__next--bottom mobile-flex">
+                                <div>
+                                    <a href="madness.html">&#x2190; Halloween Madness</a>
+                                </div>
+                                <div>
+                                    <a href="samfundet.html">Samfundet Gjøvik &#x2192;</a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </article>
+        </main>
+
+        <footer class="footer">
+            <figure class="footer__some mobile-flex">
+                <div>
+                    <a href="https://www.instagram.com/designsbytuva/" target="_blank" aria-label="Åpner i ny fane"><img src="../images/icons/ig-white.png" alt="Besøk Instagrammen til Designs by tuva"></a>
+                    <p class="username">@designsbytuva</p>
+                </div>
+                <div>
+                    <a href="mailto:contact@designsbytuva.no" target="_blank" aria-label="Åpner i ny fane"><img src="../images/icons/mail-white.png" alt="Send meg en epost"></a>
+                    <p class="username">contact@designsbytuva.no</p>
+                </div>
+                <div>
+                    <a href="https://www.linkedin.com/in/tuvahansen/" target="_blank" aria-label="Åpner i ny fane"><img src="../images/icons/in-white.png" alt="Besøk LinkedIn profilen min"></a>
+                    <p class="username">@tuvahansen</p>
+                </div>
+            </figure>
+            <p>&copy;2024 - Alt laget av Tuva Konstanse Hansen</p>
+        </footer>
+        
+        <script>
+            document.addEventListener('DOMContentLoaded', (event) => {
+            const buttons = document.querySelectorAll('.btn');
+            const resultDiv = document.getElementById('result');
+            const processDiv = document.getElementById('process');
+
+                // Initialize to show 'Resultat' by default
+                resultDiv.style.display = 'block';
+                processDiv.style.display = 'none';
+
+                buttons.forEach(button => {
+                    button.addEventListener('click', () => {
+                        // Remove 'active' class from all buttons
+                        buttons.forEach(btn => btn.classList.remove('active'));
+                        // Add 'active' class to the clicked button
+                        button.classList.add('active');
+
+                        // Toggle content based on which button is clicked
+                        if (button.id === 'resultPage') {
+                            resultDiv.style.display = 'block';
+                            processDiv.style.display = 'none';
+                        } else if (button.id === 'processPage') {
+                            resultDiv.style.display = 'none';
+                            processDiv.style.display = 'block';
+                        }
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>

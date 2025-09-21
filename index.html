@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="no">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="author" content="Tuva Konstanse Hansen">
+        <meta name="description" content="Designs by Tuva - A portfolio for Graphic design">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="styles/style.css" rel="stylesheet">
+        <link rel="icon" href="images/heart.png">
+        
+        <title>Designs by Tuva - Grafisk design portfolio</title>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const menuToggle = document.querySelector('.navbar__menu');
+                const menu = document.querySelector('.navbar__list');
+
+                // Toggle menu on click
+                menuToggle.addEventListener('click', () => {
+                    const isOpen = menu.classList.toggle('open');
+                    menuToggle.setAttribute('aria-expanded', isOpen);
+                });
+
+                // Close menu when clicking a link
+                menu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        menu.classList.remove('open');
+                    });
+                });
+
+                // Toggle menu on keyboard (Enter or Space)
+                menuToggle.addEventListener('keypress', (e) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                        e.preventDefault();
+                        const isOpen = menu.classList.toggle('open');
+                        menuToggle.setAttribute('aria-expanded', isOpen);
+                    }
+                });
+            });
+        </script>
+    </head>
+
+    <body>
+        <header>
+            <a href="#main" class="skip">Skip to main content</a>
+
+            <nav class="navbar mobile-flex">
+                <!-- Logo on all screens -->
+                <div class="navbar__logo">
+                    <a href="index.html"><img src="images/logo.png" alt="Logo for designs by Tuva"></a>
+                </div>
+
+                <div>
+                    <button class="navbar__menu" aria-controls="navbarMenu" aria-expanded="false">☰</button>
+                    <ul id="navbarMenu" class="navbar__list">
+                        <li class="navbar__items"><a href="#work-process">Prosess</a></li>
+                        <li class="navbar__items"><a href="#projects">Alle prosjekter</a></li>
+                        <li class="navbar__items"><a href="pages/about.html">Om meg</a></li>
+                        <li class="navbar__items"><a class="button button--navbar background" href="mailto:contact@designsbytuva.no">Kontakt meg</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <main id="main">
+            <section class="background" role="region" aria-label="Velkommen til denne siden">
+                <div class="content-box content-box--home">
+                    <h1>Velkommen!</h1>
+                    <p>Trenger du en designer med lidenskap for farge, typografi og lekent design? Da har du kommet til riktig sted!</p>
+                    <p>Jeg er en nyutdanna grafisk designer som alltid er åpen for nye spennende utfordringer!</p>
+                 
+                    <a class="button button--light mobile-flex" href="mailto:contact@designsbytuva.no">Kontakt meg</a>
+                </div>
+            </section>
+
+            <section id="work-process" role="region" aria-label="Prosessen rundt prosjektene">
+                <div class="work-process content-box content-box--home">
+                    <h2>Hvordan jobber jeg?</h2>
+                    <p>Jeg deler inn arbeidsprosessen min i to faser: Fase en består av idémyldring og skissing, mens fase to består av design, farger, typografi og ferdigstilling</p>
+                    <p>Prisen varierer utfra hvor stort prosjektet er og hvor lang tid det kommer til å ta. Jeg tar betalt for halve beløpet før prosessen starter, og resten når prosjektet er ferdig. Dette er for å sikre for at jeg får betalt for arbeidet jeg gjør.</p>
+                    <p>Ta gjerne kontakt med meg for å få et uforpliktende prisanslag!</p>
+
+                    <hr>
+
+                    <p class="work-process__preferance pink">Jeg kan ta på meg det meste av designoppdrag, men nedenfor ser du de kategoriene jeg liker best.</p>
+                </div>
+            </section> 
+
+            <section class="background" role="region" aria-label="Oversikt over de prosjekttypene Tuva liker best">
+                <div class="flex project-types content-box content-box--home">
+                    <div class="project-types__description">
+                        <h3>Emballasjedesign</h3>
+                        <p>Emballasje er ofte det første man legger merke til ved et produkt. Jeg kan hjelpe til med emballasjedesign uansett hva slags produkter det er snakk om! Her er det kun snakk om selve designet, og ikke den fysiske produksjonen og trykkingen av disse.</p>
+                    </div>
+                    <div class="project-types__description">
+                        <h3>Redaksjonell design</h3>
+                        <p>Redaksjonell design handler om å sette opp tekst og innhold på en måte som virker forståelig og ryddig for leseren. Her kan jeg hjelpe til med alt fra omslagsdesign og ombrekking av bøker og magasiner, til invitasjoner og menyer som kan brukes i for eksempel bryllup eller lignende.</p>
+                    </div>
+                    <div class="project-types__description">
+                        <h3>Webdesign</h3>
+                        <p>Webdesign prosjektene tar ofte lenger tid fordi jeg både designer og koder selv. Jeg designer først en fungerende prototype, for så å kode selve nettsiden som kan publiserer. (Webdesign prosjektene dere finner her har jeg kun laget prototyper av i Figma, 
+                            men denne nettsiden har jeg kodet selv)</p>
+                    </div>
+                    <div class="project-types__description">
+                        <h3>Arrangementer</h3>
+                        <p>Når det gjelder promo materiell kan jeg hjelpe til med hva enn dere trenger innenfor grafisk design. Dette kan være for eksempel innhold på sosiale medier 
+                            (dere må ta bilder selv, men kan hjelpe til med design), brosjyrer, bordkort, menyer, invitasjoner, reklameplakater og design på diverse merch</p>
+                    </div>
+                </div>
+
+                <p class="project-types__info">Generelt kan jeg også hjelpe til med å designe en visuell identitet til bedriften hvis dere ikke allerede har en</p>
+            </section>
+
+            <section id="projects" role="region" aria-label="Oversikt over alt jeg har laget tidligere">
+                <div class="projects flex">
+                    <div class="projects__content">
+                        <a href="pages/madness.html">
+                            <img src="images/projects/madness.webp" alt="Prosjektbilde - Lilla bakgrunn med røyk, rosa strobelyd og logoen til Halloween Madness 2024">
+                            
+                            <div class="projects__caption">
+                                <p>Arrangement</p>
+                                <h2>Halloween Madness</h2>
+                                <p>Betalt arbeid</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="projects__content">
+                        <a href="pages/bokdesign.html">
+                            <img src="images/projects/slottskronikene.webp" alt="Prosjektbilde - Lysblå bakgrunn med mockup av de tre første Slottskrønikene bøkene">
+                            
+                            <div class="projects__caption">
+                                <p>Redaksjonell design</p>
+                                <h2>SLOTTSKRØNIKENE</h2>
+                                <p>Skoleprosjekt</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="projects__content">
+                        <a href="pages/samfundet.html">
+                            <img src="images/projects/samfundet.webp" alt="Prosjektbilde - Grønn bakgrunn med mockup av Samfundet Gjøvik sin nettside på desktop og mobil">
+
+                            <div class="projects__caption">
+                                <p>Webdesign</p>
+                                <h2>Samfundet Gjøvik</h2>
+                                <p>Skoleprosjekt</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="projects flex">
+                    <div class="projects__content">
+                        <a href="pages/avis.html">
+                            <img src="images/projects/oa.webp" alt="Prosjektbilde - Grå bakgrunn med mockup av forsiden til Oppland Arbeiderblad">
+
+                            <div class="projects__caption">
+                                <p>Redaksjonell design</p>
+                                <h2>OA - Avisdesign</h2>
+                                <p>Skoleprosjekt</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="projects__content">
+                        <a href="pages/energize.html">
+                            <img src="images/projects/energize.webp" alt="Prosjektbilde - Rosa bakgrunn med mockup av 5 Energize bokser">
+
+                            <div class="projects__caption">
+                                <p>Visuell identitet/Emballasje</p>
+                                <h2>Drømmeprosjekt</h2>
+                                <p>Skoleprosjekt</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="projects flex">
+                    <div class="projects__content">
+                        <a href="pages/vardal.html">
+                            <img src="images/projects/vardal.webp" alt="Prosjektbilde - Blå bakgrunn med mockup av Vardal turnforening sin nettside på iPad og mobil">
+
+                            <div class="projects__caption projects__caption--big">
+                                <p>Webdesign</p>
+                                <h2>Vardal Turnforening</h2>
+                                <p>Skoleprosjekt</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="projects flex">
+                    <div class="projects__content">
+                        <a href="pages/converse.html">
+                            <img src="images/projects/converse.webp" alt="Prosjektbilde - Lilla bakgrunn med mockup av Converse skopleie produkter">
+
+                            <div class="projects__caption">
+                                <p>Emballasjedesign</p>
+                                <h2>Converse skopleie</h2>
+                                <p>Skoleprosjekt</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="projects__content">
+                        <a href="pages/russelogo.html">
+                            <img src="images/projects/russelogo.webp" alt="Prosjektbilde - Svart bakgrunn med russelogoen til Hello Titty 2024">
+
+                            <div  class="projects__caption">
+                                <p>Russelogo</p>
+                                <h2>Hello Titty 2024</h2>
+                                <p>Frivilligarbeid</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="projects__content">
+                        <a href="pages/fadderuka.html">
+                            <img src="images/projects/fadderuka.png" alt="Prosjektbilde - Rosa bakgrunn med et firkantmønster og logoen til Fadderuka på Gjøvik 2023">
+
+                            <div class="projects__caption">
+                                <p>Arrangement</p>
+                                <h2>Fadderuka 2023</h2>
+                                <p>Frivilligarbeid</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <figure class="footer__some mobile-flex">
+                <div>
+                    <a href="https://www.instagram.com/designsbytuva/" target="_blank" aria-label="Åpner i ny fane"><img src="images/icons/ig-white.png" alt="Besøk Instagrammen til Designs by tuva"></a>
+                    <p class="username">@designsbytuva</p>
+                </div>
+                <div>
+                    <a href="mailto:contact@designsbytuva.no" target="_blank" aria-label="Åpner i ny fane"><img src="images/icons/mail-white.png" alt="Send meg en epost"></a>
+                    <p class="username">contact@designsbytuva.no</p>
+                </div>
+                <div>
+                    <a href="https://www.linkedin.com/in/tuvahansen/" target="_blank" aria-label="Åpner i ny fane"><img src="images/icons/in-white.png" alt="Besøk LinkedIn profilen min"></a>
+                    <p class="username">@tuvahansen</p>
+                </div>
+            </figure>
+            <p>&copy;2024 - Alt laget av Tuva Konstanse Hansen</p>
+        </footer>
+    </body>
+</html>

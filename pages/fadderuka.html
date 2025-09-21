@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="no">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="author" content="Tuva Konstanse Hansen">
+        <meta name="description" content="Designs by Tuva - A portfolio for Graphic design">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="../styles/style.css" rel="stylesheet">
+        <link rel="icon" href="../images/heart.png">
+
+        <title>Prosjekter - Fadderuka 2023</title>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const menuToggle = document.querySelector('.navbar__menu');
+                const menu = document.querySelector('.navbar__list');
+
+                // Toggle menu on click
+                menuToggle.addEventListener('click', () => {
+                    const isOpen = menu.classList.toggle('open');
+                    menuToggle.setAttribute('aria-expanded', isOpen);
+                });
+
+                // Close menu when clicking a link
+                menu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        menu.classList.remove('open');
+                    });
+                });
+
+                // Toggle menu on keyboard (Enter or Space)
+                menuToggle.addEventListener('keypress', (e) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                        e.preventDefault();
+                        const isOpen = menu.classList.toggle('open');
+                        menuToggle.setAttribute('aria-expanded', isOpen);
+                    }
+                });
+            });
+        </script>
+    </head>
+
+    <body>
+        <header>
+            <a href="#main" class="skip">Skip to main content</a>
+
+            <nav class="navbar mobile-flex">
+                <!-- Logo on all screens -->
+                <div class="navbar__logo">
+                    <a href="../index.html"><img src="../images/logo.png" alt="Logo for designs by Tuva"></a>
+                </div>
+
+                <div>
+                    <button class="navbar__menu" aria-controls="navbarMenu" aria-expanded="false">☰</button>
+                    <ul id="navbarMenu" class="navbar__list">
+                        <li class="navbar__items"><a href="../index.html#work-process">Prosess</a></li>
+                        <li class="navbar__items"><a href="../index.html#projects">Alle prosjekter</a></li>
+                        <li class="navbar__items"><a href="about.html">Om meg</a></li>
+                        <li class="navbar__items"><a class="button button--navbar background" href="mailto:contact@designsbytuva.no">Kontakt meg</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <main id="main">
+            <article class="grid" aria-label="Informasjon om prosjektet">
+                <div class="grid__left background">
+                    <img class="project-img" src="../images/projects/fadderuka.png" alt="Prosjektbilde - Rosa bakgrunn med et firkantmønster og logoen til Fadderuka på Gjøvik 2023">
+                
+                    <div class="content-box project mobile-flex">
+                        <div>
+                            <p class="project__type">Arrangement</p>
+                            <h1>Fadderuka 2023</h1>
+                            <p>Frivilligarbeid</p>
+                        </div>
+
+                        <div class="project__intro">
+                            <p>Våren 2023 fikk jeg prøve meg som grafisk ansvarlig som en del av fadderstyret til NTNU Gjøvik. Fadderuka på Gjøvik har allerede et fargepalett med regnbuens farger,
+                                og de ønsket å beholde disse fargene. Derfor brukte jeg det tidligere designet som utgangspunkt, men designet både en ny logo og et nytt firkantmønster.</p>
+                            <p>I løpet av prosjektet designet jeg blant annet flere typer instagram-innlegg, facebook bannere og noen plakater.</p>
+                            <p>Verktøy: Illustrator</p>
+                        </div>
+
+                        <div class="project__next mobile-flex">
+                            <div> 
+                                <a class="background" href="russelogo.html">&#x2190; Hello Titty</a>
+                            </div>
+                            <div>
+                                <a class="background" href="madness.html">Halloween Madness&#x2192;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid__right">
+                    <div class="switch-btn mobile-flex">
+                        <button id="resultPage" class="btn active">Resultat</button>
+                        <button id="processPage" class="btn">Prosess</button>
+                    </div>
+
+                    <section role="region" aria-label="Informasjon om prosessen og resultatet til Fadderuka">
+                        <div id="result">
+                            <div class="mobile-flex">
+                                <div>
+                                    <img class="white-img" src="../images/projects/fadderuka/result/application1.webp" alt="Ferdig innlegg med informasjon om at fadderuka søker faddere">
+                                    <img src="../images/projects/fadderuka/result/fastland_ig.webp" alt="Ferdig innlegg for arrangementet på Fastland">                        
+                                </div> 
+
+                                <div>   
+                                    <img class="white-img" src="../images/projects/fadderuka/result/plan-ig.webp" alt="Ferdig innlegg som viser Fadderuke planen">                 
+                                    <img src="../images/projects/fadderuka/result/stand-up-promo.webp" alt="Ferdig innlegg for Stand up arrangementet">
+                                </div>
+                            </div>
+
+                            <div class="flex">
+                                <div>
+                                    <img src="../images/projects/fadderuka/result/poster-tungevaag.webp" alt="Ferdig plakat for åpningskonsert med Tungevaag">
+                                </div>
+
+                                <div>
+                                    <img src="../images/projects/fadderuka/result/party-poster.webp" alt="Ferdig plakat for temafesten Wicked Wonderland">
+                                </div> 
+
+                                <div>                          
+                                    <img src="../images/projects/fadderuka/result/poster-arif.webp" alt="Ferdig plakat for avslutningskonsert med Arif">
+                                </div>
+                            </div>
+                            
+                            <div class="flex">
+                                <div>
+                                    <img src="../images/projects/fadderuka/result/fastland_fb.webp" alt="Ferdig facebook banner for arrangementet på Fastland">
+                                </div>
+
+                                <div>
+                                    <img src="../images/projects/fadderuka/result/arif-ticket.webp" alt="Ferdig Arif konsertbillett">                            
+                                </div>
+                            </div>
+
+                            <img src="../images/projects/fadderuka/result/feed-mockup.webp" alt="Lysrosa bakgrunn med mockup av en mobil som viser instagram feeden til Fadderuka på Gjøvik">                    
+                            <img src="../images/projects/fadderuka/result/posters-mockup.webp" alt="En mockup av alle de tre plakatene som henger innramma på en vegg">                        
+                            <img src="../images/projects/fadderuka/result/tickets-mockup.webp" alt="Rosa bakgrunn med mockup av Arif konsertbillettene">
+                        </div>
+
+                        <div id="process" class="content-box">
+                            <h2>Innsiktsarbeid</h2>
+                            <p>Innsiktsarbeidet til dette prosjektet gikk ganske raskt, og jeg brukte for det meste tid på å se på hvordan designet har sitt tidligere, og var også innom
+                                instagrammen til et par andre studiesteder, for å se hvordan andre pleier å gjøre det.
+                            </p>
+
+                            <h3>Tidligere design</h3>
+                            <p>Designet som fadderuka på Gjøvik brukte før jeg startet, har vært relativt lik alle de tidligere årene, og det virker ikke som at det ikke har vært en grafisk designer involvert med 
+                                tanke på luft og possisjonen av de ulike elementene i forhold til hverandre.</p>
+                            <div class="mobile-flex">
+                                <div>
+                                    <img class="white-img" src="../images/projects/fadderuka/process/original/info-post-original1.png" alt="Fjorårets innlegg med informasjon om at fadderuka søker faddere">                    
+                                    <img class="white-img" src="../images/projects/fadderuka/process/original/event-post-original.webp" alt="Fjorårets innlegg for karaoke arrangement">                        
+                                </div>
+                                <div>
+                                    <img class="white-img" src="../images/projects/fadderuka/process/original/info-post-original2.png" alt="Fjorårets innlegg med informasjon om hva fadderuka krever av gulfadderne">
+                                    <img class="white-img" src="../images/projects/fadderuka/process/original/info-post-original3.webp" alt="Fjorårets innlegg om at fadderuka står på stand ved studenttorget">
+                                </div>
+                            </div>
+
+                            <h2>Designprosess</h2>
+                            <p>Jeg startet selve designprosessen med å utvikle en logo, før jeg gikk videre til selve designet</p>
+
+                            <h3>Logo varianter</h3>
+                            <p>Når jeg drev med innsiktsarbeid la jeg merke til at logoen til fadderuka på Gjøvik har vært den samme veldig lenge, så jeg fikk tillatelse til å utvikle en ny versjon.
+                                Resultatet ble en logo med rundere kanter på bokstavene, og et hjerte inni alle a'ene.</p>
+                            <p>Her brukes logoen i alle fargene fra paletten, men alle tre versjonene kan også brukes i enten helt hvit eller sort.</p>
+                           
+                            <img src="../images/projects/fadderuka/process/logo-development.png" alt="Den nye logoen til fadderuka i 3 versjoner">
+                           
+                            <h3>Utvikling av profilbilde</h3>
+                            <p>I tillegg utviklet jeg et nytt profilbilde, fordi det gamle inneholdt den gamle logoen. Her testet jeg ut litt forskjellig, men fant fort ut at det var best å holde 
+                                det så enkelt som mulig, og bare bruke logoen uten altfor mange andre detaljer.
+                            </p>
+                            <div class="flex mobile-flex">
+                                <div>
+                                    <img src="../images/projects/fadderuka/process/pb-test1.png" alt="Første utkast profilbilde">
+                                </div>
+                                <div>
+                                    <img src="../images/projects/fadderuka/process/pb-test2.png" alt="Andre utkast profilbilde">
+                                </div>
+                                <div>
+                                    <img src="../images/projects/fadderuka/process/pb-test3.png" alt="Tredje utkast profilbilde">
+                                </div>
+                                <div>
+                                    <img src="../images/projects/fadderuka/result/pb.png" alt="Ferdig profilbilde">
+                                </div>
+                            </div>
+
+                            <h3>Utvikling av selve designet</h3>
+                            <p>Deretter startet jeg på selve designet. Her startet jeg med å teste designet på arrangement-innlegg, og testet ulike detaljer med rosa og hvit, fordi idéen min fra starten av var at 
+                                arrangement-innleggende skulle ha hvite detaljer og ulike bakgrunnsfarger basert på hvilken dag de foregikk.</p>
+                            <p>Som dere ser testet jeg også med hvit bakgrunn og farga detaljer, men jeg så for meg at dette kom til å bli litt kjedelig, ettersom det hadde 
+                                blitt mange hvite innlegg på rad, og dermed en litt kjedelig feed.</p>
+                            <div class="flex mobile-flex">
+                                <div>
+                                    <img class="white-img" src="../images/projects/fadderuka/process/design-test1.png" alt="Test av design 1">
+                                    <img class="white-img" src="../images/projects/fadderuka/process/design-test2.png" alt="Test av design 5">
+                                </div>
+                                <div>
+                                    <img class="white-img" src="../images/projects/fadderuka/process/design-test3.png" alt="Test av design 2">
+                                    <img class="white-img" src="../images/projects/fadderuka/process/design-test6.png" alt="Test av design 6">
+                                </div>
+
+                                <div>
+                                    <img class="white-img" src="../images/projects/fadderuka/process/design-test5.png" alt="Test av design 3">
+                                    <img class="white-img" src="../images/projects/fadderuka/process/design-test7.png" alt="Test av design 7">
+                                </div>
+                                <div>
+                                    <img class="white-img" src="../images/projects/fadderuka/process/design-test4.png" alt="Test av design 4">
+                                    <img class="white-img" src="../images/projects/fadderuka/process/design-test8.png" alt="Ferdig design">
+                                </div>
+                            </div>
+
+                            <h4>Ferdig design av arrangement-innlegg</h4>
+                            <div class="flex">
+                                <div>
+                                    <img class="white-img" src="../images/projects/fadderuka/process/fastland_ig.png" alt="Ferdig eksempel på arrangement-innlegg til instagram">
+                                </div>
+                                <div>
+                                    <img class="white-img" src="../images/projects/fadderuka/process/fastland_fb.png" alt="Ferdig eksempel på arrangement-innlegg til facebook">
+                                </div>
+                            </div>
+
+                            <h3>Utvikling av info-innlegg</h3>
+                            <p>Jeg tok utgangspunkt i firkantmønsteret jeg brukte på arrangement-innleggene, og prøvde å designe en løsning for hvordan info-innlegg burde se ut. 
+                                Disse bør skille seg fra arrangement-innleggene, slik at man lett ser forskjell på hva slags type innlegg det er. Derfor endte jeg opp 
+                                med å ha hvit bakgrunn, og bruke hele fargepalettet på mønsteret.
+                            </p>
+                            <div class="mobile-flex">
+                                <div>
+                                    <img class="white-img" src="../images/projects/fadderuka/process/application-test1.png" alt="Første test av design på informasjonsinnlegg">
+                                    <img class="white-img" src="../images/projects/fadderuka/process/application-test2.png" alt="Tredje test av design på informasjonsinnlegg">
+                                </div>
+                                <div>
+                                    <img class="white-img" src="../images/projects/fadderuka/process/application-test3.png" alt="Andre test av design på informasjonsinnlegg">
+                                    <img class="white-img" src="../images/projects/fadderuka/process/application-test4.png" alt="Ferdig eksempel på design på informasjonsinnlegg">
+                                </div>
+                            </div>
+
+                            <h4>Eksempel på hvordan et ferdig info-innlegg ser ut (instagram karusell)</h4>
+                            <div class="mobile-flex">
+                                <div>
+                                    <img class="white-img" src="../images/projects/fadderuka/result/application1.webp" alt="Ferdig eksempel på informasjon-innlegg til instagram 1">
+                                </div>
+                                <div>
+                                    <img class="white-img" src="../images/projects/fadderuka/result/application2.png" alt="Ferdig eksempel på informasjon-innlegg til instagram 2">
+                                </div>
+                                <div>
+                                    <img class="white-img" src="../images/projects/fadderuka/result/application3.png" alt="Ferdig eksempel på informasjon-innlegg til instagram 3">
+                                </div>
+                            </div>
+
+                            <h3>Utvikling av artist-innlegg</h3>
+                            <p>Styret ønsket også at artist-innleggene skulle skille seg fra de andre arrangementene, i et forsøk på å promotere konsertene bra. Jeg tok utgangspunkt
+                                i hvordan arrangement-innleggene ser ut, men la til et bilde av artisten, og prøvde å designe det på en litt annen måte med detaljer osv.
+                            </p>
+                            <div class="mobile-flex">
+                                <div>
+                                    <img class="white-img" src="../images/projects/fadderuka/process/artist-test1.webp" alt="Første utkast av Tungevaag innlegg">
+                                    <img class="white-img" src="../images/projects/fadderuka/process/artist-test3.webp" alt="Tredje utkast av Tungevaag innlegg">
+                                </div>
+                                <div>
+                                    <img class="white-img" src="../images/projects/fadderuka/process/artist-test2.webp" alt="Andre utkast av Tungevaag innlegg">
+                                    <img class="white-img" src="../images/projects/fadderuka/process/artist-test4.webp" alt="Ferdig Tungevaag innlegg">
+                                </div>
+                            </div>
+
+                            <h4>Ferdig design av artist-innlegg</h4>
+                            <div class="flex">
+                                <div>
+                                    <div>
+                                        <img class="white-img" src="../images/projects/fadderuka/process/tungevaag_ig.webp" alt="Ferdig design av instagram innlegg for åpningskonsert med Tungevaag">
+                                    </div>
+                                    <div>
+                                        <img class="white-img" src="../images/projects/fadderuka/process/arif_ig.webp" alt="Ferdig design av instagram innlegg for avslutningkonstert med Arif">
+                                    </div>
+                                </div>
+                                <div>
+                                    <div>
+                                        <img class="white-img" src="../images/projects/fadderuka/process/tungevaag_fb.webp" alt="Ferdig design av facebook banner for åpningskonsert med Tungevaag">
+                                    </div>
+                                    <div>
+                                        <img class="white-img" src="../images/projects/fadderuka/process/arif_fb.webp" alt="Ferdig design av facebook banner for avslutningkonstert med Arif">
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <h3>Utvikling av fadderukeplanen</h3>
+                            <p>Derett utviklet jeg en plan med oversikt over alt som skjer i løpet av Fadderuka på Gjøvik. Her har jeg valgt å fargekode de ulike dagene, for å gjøre det enklere å skille 
+                                mellom hvilke arrangementer som foregår på samme dag.</p>
+                            <div class="flex">
+                                <div>
+                                    <img class="white-img" src="../images/projects/fadderuka/result/plan-fb.webp" alt="Ferdig fadderukeplan for Facebook">
+                                </div>
+                                <div>
+                                    <img class="white-img" src="../images/projects/fadderuka/result/plan-ig.webp" alt="Ferdig fadderukeplan for Instagram">
+                                </div>
+                            </div>
+                            
+                            <h3>Utvikling av temafest plakaten</h3>
+                            <p>Til slutt utviklet jeg plakater til de to konsertene og temafesten vi skulle ha. Her ser dere prosessen med temafest plakaten. Temaet var Wicked Wonderland, så jeg prøvde 
+                                å være kreativ med bakgrunnen og prøvde å skape en slags «Alice in Wonderland» eller hyypnose vibe.</p>
+                            <div class="flex">
+                                <div class="mobile-flex">
+                                    <div>
+                                        <img src="../images/projects/fadderuka/process/party-poster-test1.webp" alt="Første utkast på temafest plakat">
+                                    </div>
+                                    <div>
+                                        <img src="../images/projects/fadderuka/process/party-poster-test2.webp" alt="Andre utkast på temafest plakat">
+                                    </div>
+                                </div>
+                                <div class="mobile-flex">
+                                    <div>
+                                        <img src="../images/projects/fadderuka/process/party-poster-test3.webp" alt="Tredje utkast på temafest plakat">
+                                    </div>
+                                    <div>
+                                        <img src="../images/projects/fadderuka/process/party-poster-test4.webp" alt="Fjerde utkast på temafest plakat">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h4>Ferdig design av temafest plakaten</h4>
+                            <p>Til slutt endte jeg opp med en blanding av fargene i fargepaletten i bakgrunn, og en lilla spiral over. Jeg la også til kostyme inspirasjon, for å gi plakaten en liten ekstra touch.</p>
+                            
+                            <img src="../images/projects/fadderuka/result/party-poster.webp" alt="Tredje utkast på temafest plakat">
+
+                            <h3>Ferdig konsert plakater</h3>
+                            <p>Jeg lagde også plakater for å promotere åpnings- og avslutningskonserten.</p>
+                            <div class="flex">
+                                <div>
+                                    <img class="white-img" src="../images/projects/fadderuka/result/poster-tungevaag.webp" alt="Ferdig plakat for åpningskonserten med Tungevaag">
+                                </div>
+                                <div>
+                                    <img class="white-img" src="../images/projects/fadderuka/result/poster-arif.webp" alt="Ferdig plakat for avslutningskonserten med Arif">
+                                </div>
+                            </div>
+
+                            <h3>Stand-up innlegg og billetter</h3>
+                            <p>Til slutt ønsket styret også å ha et innlegg som skilte seg ut for å promotere stand-up arrangementet i litt samme stil som artist-innleggene. Det var også et ønske om 
+                                fysiske billetter til avslutningskonserten med Arif, som kunne gis bort på konkurranser og lignende</p>
+                            <div class="flex">
+                                <div>
+                                    <img class="white-img" src="../images/projects/fadderuka/result/stand-up-promo.webp" alt="Ferdig stand-up innlegg">
+                                </div>
+                                <div>
+                                    <img class="white-img" src="../images/projects/fadderuka/result/arif-ticket.webp" alt="Ferdig designet arif billetter">
+                                </div>
+                            </div>
+
+                            <div class="project__next project__next--bottom mobile-flex">
+                                <div> 
+                                    <a href="russelogo.html">&#x2190; Hello Titty</a>
+                                </div>
+                                <div>
+                                    <a href="madness.html">Halloween Madness&#x2192;</a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </article>
+        </main>
+
+        <footer class="footer">
+            <figure class="footer__some mobile-flex">
+                <div>
+                    <a href="https://www.instagram.com/designsbytuva/" target="_blank" aria-label="Åpner i ny fane"><img src="../images/icons/ig-white.png" alt="Besøk Instagrammen til Designs by tuva"></a>
+                    <p class="username">@designsbytuva</p>
+                </div>
+                <div>
+                    <a href="mailto:contact@designsbytuva.no" target="_blank" aria-label="Åpner i ny fane"><img src="../images/icons/mail-white.png" alt="Send meg en epost"></a>
+                    <p class="username">contact@designsbytuva.no</p>
+                </div>
+                <div>
+                    <a href="https://www.linkedin.com/in/tuvahansen/" target="_blank" aria-label="Åpner i ny fane"><img src="../images/icons/in-white.png" alt="Besøk LinkedIn profilen min"></a>
+                    <p class="username">@tuvahansen</p>
+                </div>
+            </figure>
+            <p>&copy;2024 - Alt laget av Tuva Konstanse Hansen</p>
+        </footer>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', (event) => {
+            const buttons = document.querySelectorAll('.btn');
+            const resultDiv = document.getElementById('result');
+            const processDiv = document.getElementById('process');
+
+                // Initialize to show 'Resultat' by default
+                resultDiv.style.display = 'block';
+                processDiv.style.display = 'none';
+
+                buttons.forEach(button => {
+                    button.addEventListener('click', () => {
+                        // Remove 'active' class from all buttons
+                        buttons.forEach(btn => btn.classList.remove('active'));
+                        // Add 'active' class to the clicked button
+                        button.classList.add('active');
+
+                        // Toggle content based on which button is clicked
+                        if (button.id === 'resultPage') {
+                            resultDiv.style.display = 'block';
+                            processDiv.style.display = 'none';
+                        } else if (button.id === 'processPage') {
+                            resultDiv.style.display = 'none';
+                            processDiv.style.display = 'block';
+                        }
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>

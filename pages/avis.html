@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="no">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="author" content="Tuva Konstanse Hansen">
+        <meta name="description" content="Designs by Tuva - A portfolio for Graphic design">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="../styles/style.css" rel="stylesheet">
+        <link rel="icon" href="../images/heart.png">
+
+        <title>Prosjekter - Avisdesign</title>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const menuToggle = document.querySelector('.navbar__menu');
+                const menu = document.querySelector('.navbar__list');
+
+                // Toggle menu on click
+                menuToggle.addEventListener('click', () => {
+                    const isOpen = menu.classList.toggle('open');
+                    menuToggle.setAttribute('aria-expanded', isOpen);
+                });
+
+                // Close menu when clicking a link
+                menu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        menu.classList.remove('open');
+                    });
+                });
+
+                // Toggle menu on keyboard (Enter or Space)
+                menuToggle.addEventListener('keypress', (e) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                        e.preventDefault();
+                        const isOpen = menu.classList.toggle('open');
+                        menuToggle.setAttribute('aria-expanded', isOpen);
+                    }
+                });
+            });
+        </script>
+    </head>
+
+    <body>
+        <header>
+            <a href="#main" class="skip">Skip to main content</a>
+
+            <nav class="navbar mobile-flex">
+                <!-- Logo on all screens -->
+                <div class="navbar__logo">
+                    <a href="../index.html"><img src="../images/logo.png" alt="Logo for designs by Tuva"></a>
+                </div>
+
+                <div>
+                    <button class="navbar__menu" aria-controls="navbarMenu" aria-expanded="false">☰</button>
+                    <ul id="navbarMenu" class="navbar__list">
+                        <li class="navbar__items"><a href="../index.html#work-process">Prosess</a></li>
+                        <li class="navbar__items"><a href="../index.html#projects">Alle prosjekter</a></li>
+                        <li class="navbar__items"><a href="about.html">Om meg</a></li>
+                        <li class="navbar__items"><a class="button button--navbar background" href="mailto:contact@designsbytuva.no">Kontakt meg</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <main id="main">
+            <article class="grid" aria-label="Informasjon om prosjektet">
+                <div class="grid__left background">
+                    <img class="project-img" src="../images/projects/oa.webp" alt="Prosjektbilde - Grå bakgrunn med mockup av forsiden til Oppland Arbeiderblad">
+               
+                    <div class="content-box project mobile-flex">
+                        <div>
+                            <p class="project__type">Redaksjonell design</p>
+                            <h1>OA - Avisdesign</h1>
+                            <p>Skoleprosjekt</p>
+                        </div>
+                   
+                        <div class="project__intro">
+                            <p>I denne oppgaven skulle vi velge en norsk avis som vi ønsket å redesigne. Det kunne være enten en nasjonal, regional 
+                                eller lokal avis, men vi måtte designe den i tabloidformat. Vi måtte design et bladhode, en forside og tre ulike oppslag</p>
+                            <p>Jeg valgte å redesigne avisen «Oppland Arbeiderblad». Løsningen min har et moderne uttrykk, med et stilrent bladhode og en mer typografisk forside enn originalen. 
+                                I tillegg har oppslagene mine tre ulike oppsett med forskjellige farger for å skille de fra hverandre. </p>
+                            <p>Verktøy: InDesign & Photoshop</p>
+                        </div>
+
+                        <div class="project__next mobile-flex background">
+                            <div>
+                                <a class="background" href="samfundet.html">&#x2190; Samfundet Gjøvik</a>
+                            </div>
+                            <div>
+                                <a class="background" href="energize.html">Energize &#x2192;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               
+                <div class="grid__right">
+                    <div class="switch-btn mobile-flex">
+                        <button id="resultPage" class="btn active">Resultat</button>
+                        <button id="processPage" class="btn">Prosess</button>
+                    </div>
+                
+                    <section role="region" aria-label="Informasjon om prosessen og resultatet til avisen">
+                        <div id="result">
+                            <img class="white-img" src="../images/projects/newspaper/result/coverpage.webp" alt="Ferdig avis forside for Oppland Arbeiderblad"> 
+                            <img class="white-img" src="../images/projects/newspaper/result/opinion-pages.webp" alt="Ferdig meningsoppslag i Oppland Arbeiderblad"> 
+                            <img class="white-img" src="../images/projects/newspaper/result/news-pages.webp" alt="Ferdig nyhetsoppslag i Oppland Arbeiderblad"> 
+                            <img class="white-img" src="../images/projects/newspaper/result/sports-pages.webp" alt="Ferdig sportsoppslag i Oppland Arbeiderblad">                            
+
+                            <img src="../images/projects/newspaper/result/newspaper_mockup1.webp" alt="Grå bakgrunn med mockup av to aviser som begge viser forsiden til Oppland Arbeiderblad">                        
+                            <img src="../images/projects/newspaper/result/newspaper_mockup2.webp" alt="Grå bakgrunn med mockup av en bretta avis og åpent sportsoppslag i Oppland Arbeiderblad">
+                            <img src="../images/projects/newspaper/result/newspaper_mockup3.webp" alt="Grå bakgrunn med en oppslått avis som viser litt av både meningsoppslaget og nyhetsoppslaget">                    
+                        </div>
+
+                        <div id="process" class="content-box">
+                            <h2>Innsiktsarbeid</h2>
+                            <p>Jeg startet prosjektet med å analysere hvordan «Oppland Arbeiderblad» ser ut i dag, og innså fort at den har mye 
+                                forbedringspotensiale.</p> 
+                            <p>Et gjennomgående problem er at det er vanskelig å finne ut av grid systemet deres, noe som 
+                                kan tyde på at de kanskje ikke bruker et fungerende system. I tillegg er det ingen veldig tydelig skille mellom 
+                                kategoriene til de ulike oppslagene når det kommer til oppsettet.
+                            </p>
+
+                            <p>På bildene nedenfor ser man hvordan original utgaven ser ut i dag:</p>
+
+                            <img class="white-img" src="../images/projects/newspaper/process/original-edition/coverpage-original.webp" alt="Oppland Arbeiderblad sin forside i dag"> 
+                            <img class="white-img" src="../images/projects/newspaper/process/original-edition/pages-original.webp" alt="Eksempel på hvordan et oppslag i Oppland Arbeiderblad kan se ut i dag"> 
+
+                            <h2>Designprosess</h2>
+                            <p>Underveis i designprosessen min var jeg innom mange ulike forslag til oppsett. Noen prosesser vises mer enn andre, men hele avisen har vært 
+                                gjennom en lang prosess underveis med mye finpussing og pirking.
+                            </p>
+
+                            
+                            <h3>Bladhode</h3>
+                            <p>Jeg startet med å designe bladhodet. Det var gjennom en lang prosess, men jeg endte tilslutt opp med å bruke skrifttypen «Abril Display» 
+                                på logoen, og droppet rød fargen helt. I tillegg har jeg lagt til det gamle symbolet fra Opplands fylkes&shy;våpen som en liten detalj for 
+                                å vise enda tydeligere at det er «Oppland Arbeider&shy;blad». Resultatet ble et enkelt og stilrent bladhode.</p>
+                            <img src="../images/projects/newspaper/process/masthead.png" alt="Utvikling av bladhode">
+                        
+                            <h3>Utvikling av forside</h3>
+                            <p>Neste sted var å designe forsiden. Dette var den vanskeligste delen av prosessen, og det tok lang tid å bli fornøyd. Jeg ønsket å lage en forside som skilte seg fra de vanlige norske avisforsidene, 
+                                men som samtidig så ut som en avisforside og ikke et magasin.
+                                </p>
+
+                            <h4>Skissing av forsiden</h4>
+                            <p>Jeg startet med å tegne opp noen veldig enkle skisser av hvordan oppsettet av elementene på forsiden kunne være.</p>
+                            <div class="flex mobile-flex">
+                                <div>
+                                    <div>
+                                        <img class="white-img" src="../images/projects/newspaper/process/sketch/cover-sketch1.jpg" alt="Første skisse av forsiden">
+                                    </div>
+                                    <div>
+                                        <img class="white-img" src="../images/projects/newspaper/process/sketch/cover-sketch2.jpg" alt="Fjerde skisse av forsiden">
+                                    </div>
+                                </div>
+                                <div>
+                                    <div>
+                                        <img class="white-img" src="../images/projects/newspaper/process/sketch/cover-sketch3.jpg" alt="Andre skisse av forsiden">
+                                    </div>
+                                    <div>
+                                        <img class="white-img" src="../images/projects/newspaper/process/sketch/cover-sketch4.jpg" alt="Femte skisse av forsiden">
+                                    </div>
+                                </div>
+                                <div> 
+                                    <div>
+                                        <img class="white-img" src="../images/projects/newspaper/process/sketch/cover-sketch5.jpg" alt="Tredje skisse av forsiden">
+                                    </div>
+                                    <div>
+                                        <img class="white-img" src="../images/projects/newspaper/process/sketch/cover-sketch6.jpg" alt="Sjette skisse av forside">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h4>Digitalisering av skissene</h4>
+                            <p>Deretter gikk jeg over til å teste ut idéene mine digitalt. Her ser dere noen av dem.</p>
+                            <div class="flex mobile-flex">
+                                <div>
+                                    <div>
+                                        <img class="white-img" src="../images/projects/newspaper/process/drafts/cover-draft1.webp" alt="Første utkast av forsiden">
+                                    </div>
+                                    <div>
+                                        <img class="white-img" src="../images/projects/newspaper/process/drafts/cover-draft3.webp" alt="Fjerde utkast av forsiden">
+                                    </div>
+                                </div>
+                                <div>
+                                    <div>
+                                        <img class="white-img" src="../images/projects/newspaper/process/drafts/cover-draft5.webp" alt="Andre utkast av forsiden">
+                                    </div>
+                                    <div>
+                                        <img class="white-img" src="../images/projects/newspaper/process/drafts/cover-draft2.webp" alt="Femte utkast av forsiden">
+                                    </div>
+                                </div>
+                                <div> 
+                                    <div>
+                                        <img class="white-img" src="../images/projects/newspaper/process/drafts/cover-draft4.webp" alt="Tredje utkast av forsiden">
+                                    </div>
+                                    <div>
+                                        <img class="white-img" src="../images/projects/newspaper/result/coverpage.webp" alt="Ferdig forside">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h4>Ferdig forside</h4>
+                            <img class="white-img" src="../images/projects/newspaper/result/coverpage.webp" alt="Ferdig forside">
+
+                            <h3>Utvikling av andre oppslag</h3>
+                            <p>Når forsiden var klar gikk jeg videre til å teste oppsett på resten av oppslagene.</p>
+
+                            <div class="flex">
+                                <div>
+                                    <h4>Meningsoppslag:</h4>
+                                    <img class="white-img" src="../images/projects/newspaper/process/drafts/first-draft-opinions.webp" alt="Første utkast meningsoppslag">
+                                    <p class="arrow-down">l</p>
+                                    <img class="white-img" src="../images/projects/newspaper/process/drafts/second-draft-opinions.webp" alt="Andre utkast meningsoppslag">
+                                    <p class="arrow-down">&darr;</p>
+                                    <img class="white-img" src="../images/projects/newspaper/result/opinion-pages.webp" alt="Ferdig meningsoppslag">
+                                </div>
+
+                                <div>
+                                    <h4>Nyhetssoppslag:</h4>
+                                    <img class="white-img" src="../images/projects/newspaper/process/drafts/first-draft-news.webp" alt="Første utkast nyhetsoppslag">
+                                    <p class="arrow-down">l</p>
+                                    <img class="white-img" src="../images/projects/newspaper/process/drafts/second-draft-news.webp" alt="Andre utkast nyhetsoppslag">
+                                    <p class="arrow-down">&darr;</p>
+                                    <img class="white-img" src="../images/projects/newspaper/result/news-pages.webp" alt="Ferdig nyhetsoppslag">
+                                </div>
+
+                                <div>
+                                    <h4>Sportssoppslag:</h4>
+                                    <img class="white-img" src="../images/projects/newspaper/process/drafts/first-draft-sports.webp" alt="Første utkast sportsoppslag">
+                                    <p class="arrow-down">l</p>
+                                    <img class="white-img" src="../images/projects/newspaper/process/drafts/second-draft-sports.webp" alt="Andre utkast sportsoppslag">
+                                    <p class="arrow-down">&darr;</p>
+                                    <img class="white-img" src="../images/projects/newspaper/result/sports-pages.webp" alt="Ferdig sportsoppslag">
+                                </div>
+                            </div>
+
+                            <h3>Ferdig design med grid</h3>
+                            <p>Tilslutt endte jeg opp med disse sidene. Alle sidene har en grid på 20 spalter med 6mm mellomrom.</p>
+
+                            <img class="white-img" src="../images/projects/newspaper/result/with-grid/coverpage-grid.webp" alt="Ferdig forside med synlig grid"> 
+                            <img class="white-img" src="../images/projects/newspaper/result/with-grid/opinions-grid.webp" alt="Ferdig meningsoppslag med synlig grid"> 
+                            <img class="white-img" src="../images/projects/newspaper/result/with-grid/news-grid.webp" alt="Ferdig nyhetsoppslag med synlig grid"> 
+                            <img class="white-img" src="../images/projects/newspaper/result/with-grid/sports-grid.webp" alt="Ferdig sportsoppslag med synlig grid">                            
+                            
+                            <div class="project__next project__next--bottom mobile-flex">
+                                <div>
+                                    <a href="samfundet.html">&#x2190; Samfundet Gjøvik</a>
+                                </div>
+                                <div>
+                                    <a href="energize.html">Energize &#x2192;</a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </article>
+        </main>
+
+        <footer class="footer">
+            <figure class="footer__some mobile-flex">
+                <div>
+                    <a href="https://www.instagram.com/designsbytuva/" target="_blank" aria-label="Åpner i ny fane"><img src="../images/icons/ig-white.png" alt="Besøk Instagrammen til Designs by tuva"></a>
+                    <p class="username">@designsbytuva</p>
+                </div>
+                <div>
+                    <a href="mailto:contact@designsbytuva.no" target="_blank" aria-label="Åpner i ny fane"><img src="../images/icons/mail-white.png" alt="Send meg en epost"></a>
+                    <p class="username">contact@designsbytuva.no</p>
+                </div>
+                <div>
+                    <a href="https://www.linkedin.com/in/tuvahansen/" target="_blank" aria-label="Åpner i ny fane"><img src="../images/icons/in-white.png" alt="Besøk LinkedIn profilen min"></a>
+                    <p class="username">@tuvahansen</p>
+                </div>
+            </figure>
+            <p>&copy;2024 - Alt laget av Tuva Konstanse Hansen</p>
+        </footer>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', (event) => {
+            const buttons = document.querySelectorAll('.btn');
+            const resultDiv = document.getElementById('result');
+            const processDiv = document.getElementById('process');
+
+                // Initialize to show 'Resultat' by default
+                resultDiv.style.display = 'block';
+                processDiv.style.display = 'none';
+
+                buttons.forEach(button => {
+                    button.addEventListener('click', () => {
+                        // Remove 'active' class from all buttons
+                        buttons.forEach(btn => btn.classList.remove('active'));
+                        // Add 'active' class to the clicked button
+                        button.classList.add('active');
+
+                        // Toggle content based on which button is clicked
+                        if (button.id === 'resultPage') {
+                            resultDiv.style.display = 'block';
+                            processDiv.style.display = 'none';
+                        } else if (button.id === 'processPage') {
+                            resultDiv.style.display = 'none';
+                            processDiv.style.display = 'block';
+                        }
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>

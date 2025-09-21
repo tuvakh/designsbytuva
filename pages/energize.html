@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="no">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="author" content="Tuva Konstanse Hansen">
+        <meta name="description" content="Designs by Tuva - A portfolio for Graphic design">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="../styles/style.css" rel="stylesheet">
+        <link rel="icon" href="../images/heart.png">
+
+        <title>Prosjekter - Drømmeprosjekt</title>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const menuToggle = document.querySelector('.navbar__menu');
+                const menu = document.querySelector('.navbar__list');
+
+                // Toggle menu on click
+                menuToggle.addEventListener('click', () => {
+                    const isOpen = menu.classList.toggle('open');
+                    menuToggle.setAttribute('aria-expanded', isOpen);
+                });
+
+                // Close menu when clicking a link
+                menu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        menu.classList.remove('open');
+                    });
+                });
+
+                // Toggle menu on keyboard (Enter or Space)
+                menuToggle.addEventListener('keypress', (e) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                        e.preventDefault();
+                        const isOpen = menu.classList.toggle('open');
+                        menuToggle.setAttribute('aria-expanded', isOpen);
+                    }
+                });
+            });
+        </script>
+    </head>
+
+    <body>
+        <header>
+            <a href="#main" class="skip">Skip to main content</a>
+
+            <nav class="navbar mobile-flex">
+                <!-- Logo on all screens -->
+                <div class="navbar__logo">
+                    <a href="../index.html"><img src="../images/logo.png" alt="Logo for designs by Tuva"></a>
+                </div>
+
+                <div>
+                    <button class="navbar__menu" aria-controls="navbarMenu" aria-expanded="false">☰</button>
+                    <ul id="navbarMenu" class="navbar__list">
+                        <li class="navbar__items"><a href="../index.html#work-process">Prosess</a></li>
+                        <li class="navbar__items"><a href="../index.html#projects">Alle prosjekter</a></li>
+                        <li class="navbar__items"><a href="about.html">Om meg</a></li>
+                        <li class="navbar__items"><a class="button button--navbar background" href="mailto:contact@designsbytuva.no">Kontakt meg</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <main id="main">
+            <article class="grid" aria-label="Informasjon om prosjektet">
+               <div class="grid__left background">
+                    <img class="project-img" src="../images/projects/energize.webp" alt="Prosjektbilde - Rosa bakgrunn med mockup av 5 Energize bokser">
+
+                    <div class="content-box project mobile-flex">
+                        <div class="project__type">
+                            <p>Visuell identitet/emballasje</p>
+                            <h1>Drømmeprosjekt</h1>
+                            <p>Skoleprosjekt</p>
+                        </div>
+                    
+                        <div class="project__intro">
+                            <p>«Drømmeprosjektet» var en oppgave vi fikk på starten av mitt siste semester som grafisk design student. 
+                                Her kunne vi velge hva slags prosjekt vi ønsket å jobbe med, og måtte utvikle et fiktivt designbrief.</p>
+
+                            <p>Jeg valgte å utvikle en visuell identitet for et nytt energidrikk merke som fikk navnet «Energize». Jeg designet én logo, tre 
+                                energidrikkbokser og én reklameplakat, og hentet inspirasjon fra LED-lys og gaming. Resultatet ble en gradienteffekt med sterke farger, 
+                                små pixel-lignende former, og svarte detaljer som skaper en fin kontrast.</p>
+                            <p>Verktøy: Illustrator, InDesign & Photoshop</p>
+                        </div>
+
+                        <div class="project__next mobile-flex">
+                            <div>
+                                <a class="background" href="avis.html">&#x2190; OA - Avisdesign</a>
+                            </div>
+                            <div>
+                                <a class="background" href="vardal.html">Vardal Turnforening &#x2192;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid__right">
+                    <div class="switch-btn mobile-flex">
+                        <button id="resultPage" class="btn active">Resultat</button>
+                        <button id="processPage" class="btn">Prosess</button>
+                    </div>
+
+                    <section role="region" aria-label="Informasjon om prosessen og resultatet til Energize">
+                        <div id="result">
+                            <div class="flex">
+                                <div>
+                                    <img src="../images/projects/energize/result/peachy-paradise-flat.webp" alt="Flat versjon av Peachy paradise etiketten">
+                                </div>
+                                    <div>
+                                    <img src="../images/projects/energize/result/berry-blast-flat.webp" alt="Flat versjon av Berry Blast etiketten">
+                                </div>
+                                <div>
+                                    <img src="../images/projects/energize/result/apple-fresh-flat.webp" alt="Flat versjon av Apple Fresh etiketten">
+                                </div>
+                            </div>
+
+                            <img src="../images/projects/energize/result/boxes-mockup.webp" alt="Rosa bakgrunn med mockups av 5 Energize bokser">
+                            <img src="../images/projects/energize/result/poster-mockup.webp" alt="Utendørs mockup av reklameplakaten til Enerize">
+                            <img src="../images/projects/energize/result/three-boxes-mockup.webp" alt="Rosa bakgrunn med mockups av 3 Energize bokser">
+                        </div>
+
+                        <div id="process" class="content-box">
+                            <h2>Innsiktsarbeid</h2>
+                            <p>Før jeg startet på designprosessen utførte jeg en del innsiktsarbeid, for å finne ut hva slags design&shy;stil jeg burde går for.
+                                Energidrikk markedet er veldig stort og er mest populært blant unge i alderen 14–20 år. 
+                                Det finnes flere ulike energidrikk merker med mye ulikt design, noe som gjør at man som designer 
+                                har mulig&shy;het til å være veldig kreativ og utforske mange ulike ideer og design&shy;stiler når man skal 
+                                designe nye energidrikk bokser.</p>
+
+                            <h3>Posisjoneringskart</h3>
+                            <p>Jeg bestemte meg for å lage et posisjoner&shy;ingskart basert på hvordan konkurrent&shy;ene 
+                                mine har valgt å utvikle designet sitt. Noen bruker mange ulike farger og illustra&shy;sjoner, mens andre har et mer ensfarget og enkelt design. 
+                                Jeg ønsket at «Energize» skulle plassere seg blant de som har et mer lekent design, og en mellomting mellom maksimal&shy;istisk 
+                                og minimalistisk.</p>
+                            <img class="white-img" src="../images/projects/energize/process/research/competitive-analysis.webp" alt="Posisjoneringskart">
+                                
+                            <h3>Moodboard</h3>
+                            <p>Deretter satt jeg sammen et moodboard som består av to veldig forskjellige stiler. Den øverste delen er ganske 
+                                mørk og elegant, mens den nederste er mer søt og fargerik. Målet mitt var å kombinere disse to stilene 
+                                i designet mitt, og skape et design som både har den søte, fargerike stilen, men også de mørke detaljene. </p>
+                            <img src="../images/projects/energize/process/research/moodboard.webp" alt="Moodboard">
+
+                            <h3>Markedsstrategi</h3>
+                            <p>Jeg kom på navnet «Energize» ganske tidlig 
+                                i startfasen etter å ha vært innom et par andre navneforslag som ikke fungerte. «Energize» kan oversettes til 
+                                å gi energi eller å få noen til å føle seg energisk eller ivrig. Derfor er dette et navn som beskriver produktet 
+                                veldig bra</p>
+                                
+                            <p>Markedsføringen og designet til «Energize» kommer hovedsaklig til å være retta mot ungdom og unge voksne. Mer 
+                            spesifikt de som drikker energidrikk når de for eksempel gamer, eller trenger energi for å holde ut gjennom forelesningene.</p>
+                            
+                            <p>Slagordet til «Energize» er «Power up your passion!». Tanken bak slagordet er at energidrikken er retta mot de som ønsker å få mer 
+                            energi til å drive med lidenskapen sin. Uansett hva lidenskap&shy;en din er, så gir 
+                            «Energize» deg nok energi til å styrke den!</p>
+
+                            <h2>Logoprosess</h2>
+                            <p>Første steg i designprosessen min var å prøve å få bokstavene i «Energize» til å passe med både navnet og konseptet. Jeg 
+                                valgte å videreutvikle skrifttypen «Anona Extrabold Italic» ved å endre på bokstavene. Dette gjorde jeg ved å lage kantene litt skarpere 
+                                og gi teksten litt mer liv ved å skråstille den. Målet mitt var å gjøre at bokstavene assosieres enda mer med energi og lyn, 
+                                og dermed passer bedre til navnet.</p>
+                            <img src="../images/projects/energize/process/logo-text.png" alt="Tekstuviklingen til logoen til Energize">
+                        
+                            <p>I tillegg valgte jeg å utvikle et emblem formet som et lyn. Det første lynet med hvit strek brukes på alle designutkastene mine, men mot 
+                                slutten av prosessen valgte jeg å teste ut noen nye versjoner også. Jeg var innom en del ulike idéer før jeg til slutt endte opp med å 
+                                gjøre det veldig enkelt og bare gjøre hele lynet helt svart. </p>
+                            <img src="../images/projects/energize/process/logo-lightning.png" alt="Utviklingen av lynet som hører til logoen">
+
+                            <div class="flex mobile-flex">
+                                <div>
+                                    <img src="../images/projects/energize/result/logo-black.webp" alt="Ferdig logo med svart bakgrunn">
+                                </div>
+
+                                <div>
+                                    <img class="white-img" src="../images/projects/energize/result/logo-white.webp" alt="Ferdig logo med hvit bakgrunn">
+                                </div>
+                            </div>
+
+                            <h2>Designprosess</h2>
+                            <p>Designprosessen til dette prosjektet var lang, og jeg var innom mange ulike versjoner før jeg ble fornøyd.</p>
+                            
+                            <h3>Tekstoppsett</h3>
+                            <p>Jeg valgte å lage etikettene til boksene i formatet 206×160 mm, og startet prosessen med å teste ut hvordan jeg burde sette opp alt av tekstinnhold. </p>
+                            <div class="flex mobile-flex">
+                                <div>
+                                    <img class="white-img" src="../images/projects/energize/process/boxes/text1.jpg" alt="Første utkast av tekstoppsett på etikettene">
+                                    <img class="white-img" src="../images/projects/energize/process/boxes/text4.jpg" alt="Tredje utkast av tekstoppsett på etikettene">
+                                </div>
+
+                                <div>
+                                    <img class="white-img" src="../images/projects/energize/process/boxes/text2.jpg" alt="Andre utkast av tekstoppsett på etikettene">
+                                    <img class="white-img" src="../images/projects/energize/process/boxes/text3.jpg" alt="Ferdig tekstoppsett på etikettene riktig">
+                                </div>
+                            </div>
+
+                            <h3>Valg av bakgrunn</h3>
+                            <p>Neste steg var å teste ut hva slags type bakgrunn som passet best. Jeg testet ut
+                                ulike farger og mønster, men endte til slutt opp med en enkel gradient.</p>
+                            <img src="../images/projects/energize/process/boxes/peach-gradient-background.jpg" alt="Tekstoppsettet sammen med en gradient bakgrunn med oransje og rosa toner">
+
+                            <h3>Detaljer</h3>
+                            <p>Når både bakgrunnen var ferdig, begynte jeg å teste ut ulike måter å plassere en illustrasjon av en fersken som jeg tegnet selv. I tillegg 
+                                valgte jeg å legge til litt flere detaljer på bakgrunnen for å gjøre designet litt mer spennende. </p>
+                            
+                            <div class="flex mobile-flex">
+                                <div>
+                                    <img src="../images/projects/energize/process/boxes/peach-illustration1.jpg" alt="Første utkast av etikett med plassering av detaljer">
+                                    <img src="../images/projects/energize/process/boxes/peach-illustration2.jpg" alt="Fjerde utkast av etikett med plassering av detaljer">
+                                </div>
+
+                                <div>
+                                    <img src="../images/projects/energize/process/boxes/peach-illustration3.jpg" alt="Andre utkast av etikett med plassering av detaljer">
+                                    <img src="../images/projects/energize/process/boxes/peach-illustration4.jpg" alt="Femte utkast av etikett med plassering av detaljer">
+                                </div>
+
+                                <div>
+                                    <img src="../images/projects/energize/process/boxes/peach-illustration5.jpg" alt="Tredje utkast av etikett med plassering av detaljer">
+                                    <img src="../images/projects/energize/process/boxes/peach-illustration6.jpg" alt="Sjette utkast av etikett med plassering av detaljer">
+                                </div>
+                            </div>
+
+                            <h3>Ferdig «Peachy Paradise»</h3>
+                            <p>Jeg fant fort ut at illustrasjonen ikke fungerte, og valgte derfor å fjerne den, fordi den bidro til å gjøre designet mitt litt for barnslig.
+                                Mot slutten av prosessen valgte jeg også å finpusse logoen, og gjøre fargene mørkere. I tillegg la jeg til slagordet til «Energize» for å få 
+                                med litt mer innhold på boksen.</p>
+                            <img src="../images/projects/energize/result/peachy-paradise-flat.webp" alt="Ferdig etikett for Peachy Paradise boksen">
+
+                            <h3>«Berry Blast» prosess</h3>
+                            <p>Designprosessen med «Berry Blast» og «Apple Fresh» gikk raskere enn «Peachy Paradise» fordi designet allerede var klart. Det eneste jeg måtte 
+                                endre på var fargene, og de små formene i bak&shy;grunnen.</p>
+                            <div class="flex">
+                                <div>
+                                    <img src="../images/projects/energize/process/boxes/gradient-berry.png" alt="Etiketten til Berry Blast boksen med bare en lilla gradient">
+                                </div>
+                                <p class="arrow-down">l</p>
+                                <div>
+                                    <img src="../images/projects/energize/process/boxes/berry-background.webp" alt="Etiketten til Berry Blast boksen med litt mer detaljer i bakgrunn">
+                                </div>
+                                <p class="arrow-down">l</p>
+                                <div>
+                                    <img src="../images/projects/energize/process/boxes/berry-text.webp" alt="Etiketten til Berry Blast boksen med alt av tekst">
+                                </div>
+                                <p class="arrow-down">&darr;</p>
+                                <div>
+                                    <img src="../images/projects/energize/result/berry-blast-flat.webp" alt="Ferdig etikett for Berry Blast boksen">
+                                </div>
+                            </div>
+
+                            <h3>«Apple fresh» prosess</h3>
+                            <p>Designprosessen med «Apple Fresh» var lik som prosessen med «Berry Blast»</p>
+                            <div class="flex">
+                                <div>
+                                    <img src="../images/projects/energize/process/boxes/gradient-apple.png" alt="Etiketten til Apple Fresh boksen med bare en lilla gradient">
+                                </div>
+                                <p class="arrow-down">l</p>
+                                <div>
+                                    <img src="../images/projects/energize/process/boxes/apple-background.webp" alt="Etiketten til Apple Fresh boksen med litt mer detaljer i bakgrunn">
+                                </div>
+                                <p class="arrow-down">l</p>
+                                <div>
+                                    <img src="../images/projects/energize/process/boxes/apple-text.webp" alt="Etiketten til Apple Fresh boksen med alt av tekst">
+                                </div>
+                                <p class="arrow-down">&darr;</p>
+                                <div>
+                                    <img src="../images/projects/energize/result/apple-fresh-flat.webp" alt="Ferdig etikett for Apple Fresh boksen">
+                                </div>
+                            </div>
+
+                            <h3>Utvikling av reklameplakat</h3>
+                            <p>Tilslutt utviklet jeg en reklameplakat. Jeg lagde den i A0 (841×1189) format og valgte å presentere alle tre smakene på én plakat. Her var jeg også innom 
+                                et par idéer og testet ut både tekstoppsett og elementer, før jeg til slutt endte opp med en versjon som passer bra sammen med designet på boksene.</p>
+                            <div class="flex">
+                                <div class="mobile-flex">
+                                    <div>
+                                        <img src="../images/projects/energize/process/poster/poster-text1.webp" alt="Første utkast av reklameplakaten til Energize">
+                                        <img src="../images/projects/energize/process/poster/poster-elements1.webp" alt="Tredje av reklameplakaten til Energize">
+                                        <img src="../images/projects/energize/process/poster/poster-colors2.webp" alt="Femte utkast av reklameplakaten til Energize">
+                                    </div>
+
+                                    <div>
+                                        <img src="../images/projects/energize/process/poster/poster-text2.webp" alt="Andre utkast av reklameplakaten til Energize">
+                                        <img src="../images/projects/energize/process/poster/poster-elements2.webp" alt="Fjerde utkast av reklameplakaten til Energize">
+                                        <img src="../images/projects/energize/process/poster/poster-colors1.webp" alt="Sjette utkast av reklameplakaten til Energize">
+                                    </div>
+                                </div>  
+                            </div>
+
+                            <img src="../images/projects/energize/result/finished-poster.webp" alt="Ferdig reklameplakat for Energize">
+                            
+                            <div class="project__next project__next--bottom mobile-flex">
+                                <div>
+                                    <a href="avis.html">&#x2190; OA - Avisdesign</a>
+                                </div>
+                                <div>
+                                    <a href="vardal.html">Vardal Turnforening &#x2192;</a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </article>
+        </main>
+
+        <footer class="footer">
+            <figure class="footer__some mobile-flex">
+                <div>
+                    <a href="https://www.instagram.com/designsbytuva/" target="_blank" aria-label="Åpner i ny fane"><img src="../images/icons/ig-white.png" alt="Besøk Instagrammen til Designs by tuva"></a>
+                    <p class="username">@designsbytuva</p>
+                </div>
+                <div>
+                    <a href="mailto:contact@designsbytuva.no" target="_blank" aria-label="Åpner i ny fane"><img src="../images/icons/mail-white.png" alt="Send meg en epost"></a>
+                    <p class="username">contact@designsbytuva.no</p>
+                </div>
+                <div>
+                    <a href="https://www.linkedin.com/in/tuvahansen/" target="_blank" aria-label="Åpner i ny fane"><img src="../images/icons/in-white.png" alt="Besøk LinkedIn profilen min"></a>
+                    <p class="username">@tuvahansen</p>
+                </div>
+            </figure>
+            <p>&copy;2024 - Alt laget av Tuva Konstanse Hansen</p>
+        </footer>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', (event) => {
+            const buttons = document.querySelectorAll('.btn');
+            const resultDiv = document.getElementById('result');
+            const processDiv = document.getElementById('process');
+
+                // Initialize to show 'Resultat' by default
+                resultDiv.style.display = 'block';
+                processDiv.style.display = 'none';
+
+                buttons.forEach(button => {
+                    button.addEventListener('click', () => {
+                        // Remove 'active' class from all buttons
+                        buttons.forEach(btn => btn.classList.remove('active'));
+                        // Add 'active' class to the clicked button
+                        button.classList.add('active');
+
+                        // Toggle content based on which button is clicked
+                        if (button.id === 'resultPage') {
+                            resultDiv.style.display = 'block';
+                            processDiv.style.display = 'none';
+                        } else if (button.id === 'processPage') {
+                            resultDiv.style.display = 'none';
+                            processDiv.style.display = 'block';
+                        }
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>

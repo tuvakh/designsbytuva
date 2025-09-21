@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="no">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="author" content="Tuva Konstanse Hansen">
+        <meta name="description" content="Designs by Tuva - A portfolio for Graphic design">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="../styles/style.css" rel="stylesheet">
+        <link rel="icon" href="../images/heart.png">
+
+        <title>Prosjekter - Halloween Madness</title>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const menuToggle = document.querySelector('.navbar__menu');
+                const menu = document.querySelector('.navbar__list');
+
+                // Toggle menu on click
+                menuToggle.addEventListener('click', () => {
+                    const isOpen = menu.classList.toggle('open');
+                    menuToggle.setAttribute('aria-expanded', isOpen);
+                });
+
+                // Close menu when clicking a link
+                menu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        menu.classList.remove('open');
+                    });
+                });
+
+                // Toggle menu on keyboard (Enter or Space)
+                menuToggle.addEventListener('keypress', (e) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                        e.preventDefault();
+                        const isOpen = menu.classList.toggle('open');
+                        menuToggle.setAttribute('aria-expanded', isOpen);
+                    }
+                });
+            });
+        </script>
+    </head>
+
+    <body>
+        <header>
+            <a href="#main" class="skip">Skip to main content</a>
+
+            <nav class="navbar mobile-flex">
+                <!-- Logo on all screens -->
+                <div class="navbar__logo">
+                    <a href="../index.html"><img src="../images/logo.png" alt="Logo for designs by Tuva"></a>
+                </div>
+
+                <div>
+                    <button class="navbar__menu" aria-controls="navbarMenu" aria-expanded="false">☰</button>
+                    <ul id="navbarMenu" class="navbar__list">
+                        <li class="navbar__items"><a href="../index.html#work-process">Prosess</a></li>
+                        <li class="navbar__items"><a href="../index.html#projects">Alle prosjekter</a></li>
+                        <li class="navbar__items"><a href="about.html">Om meg</a></li>
+                        <li class="navbar__items"><a class="button button--navbar background" href="mailto:contact@designsbytuva.no">Kontakt meg</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <main id="main">
+            <article class="grid" aria-label="Informasjon om prosjektet">
+               <div class="grid__left background">
+                    <img class="project-img" src="../images/projects/madness.webp" alt="Prosjektbilde - Lilla bakgrunn med røyk, rosa strobelyd og logoen til Halloween Madness 2024">
+
+                    <div class="content-box project mobile-flex">
+                        <div>
+                            <p class="project__type">Arrangement</p>
+                            <h2 class="project__name">Halloween Madness</h2>
+                            <p>Betalt arbeid</p>
+                        </div>
+                    
+                        <div class="project__intro">
+                            <p>Hardstyle DNA ga meg muligheten til å gjennomføre mitt første betalte oppdrag som ferdigutdanna grafisk designer høsten 2024! De 
+                                ønsket promomateriell til arrangementet «Halloween Madness 2024». Dette inkluderte design av plakater, instagram innlegg og facebook banner.</p>
+                            <p>De ville ha et design som tydelig får fram at det er en musikkfestival med halloween tema, men uten å gjøre det veldig skummelt. 
+                                Resultatet ble et mørkt, lilla design med svarte detaljer, og en strobelys inspirert bakgrunn.</p>
+                            <p>Verktøy: Photoshop</p>
+                        </div>
+
+                        <div class="project__next mobile-flex">
+                            <div>
+                                <a class="background" href="fadderuka.html">&#x2190; Fadderuka 23</a>
+                            </div>
+                            <div>
+                                <a class="background" href="bokdesign.html">Slottskrønikene &#x2192;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid__right">
+                    <div class="switch-btn mobile-flex">
+                        <button id="resultPage" class="btn active">Resultat</button>
+                        <button id="processPage" class="btn">Prosess</button>
+                    </div>
+
+                    <section role="region" aria-label="Informasjon om prosessen og resultatet til Hardstyle DNA">
+                        <div id="result">
+                            <div> 
+                                <img src="../images/projects/madness/result/fb-event.webp" alt="Ferdig Facebook-event banner for Halloween Madness 2024">
+                            </div>
+
+                            <div class="mobile-flex">
+                                <div> 
+                                    <img src="../images/projects/madness/result/artists/markz-ig.webp" alt="Ferdig artist innlegg for artisten Markz">
+                                    <img src="../images/projects/madness/result/artists/kapteinene-ig.webp" alt="Ferdig artist innlegg for artisten 99PRBMLZ">
+                                </div>
+                              
+                                <div> 
+                                    <img src="../images/projects/madness/result/artists/99prblmz-ig.webp" alt="Ferdig artist innlegg for artisten Kapteinene">
+                                    <img src="../images/projects/madness/result/artists/cyber-ig.webp" alt="Ferdig artist innlegg for artisten Cyber">
+                                </div>
+                            </div>
+
+                            <img src="../images/projects/madness/result/poster-mockup.webp" alt="Utendørs mockup av reklameplakaten for Halloween Madness 2024">
+                        </div>
+
+                        <div id="process" class="content-box content-box--process">
+                            <h2>Innsiktsarbeid</h2>
+                            <p>Som innsiktsarbeid for dette prosjektet gikk jeg igjennom instagrammen til Hardstyle DNA for å se hva slags designstil de vanligvis brukte. Dette varierte litt fra 
+                                arrangement til arrangement, og jeg fikk også beskjed om at jeg hadde relativt frie tøyler.</p>
+
+                            <h3>Inspirasjon</h3>
+                            <p>Den første idéen min var å skape et litt creepy design med mørke greiener, klovner og lyn, med litt samme type uttrykk som bildene dere ser her. Etterhvert som
+                                jeg jobbet med prosjektet endret denne idéen seg veldig mye, men dette var ihvertfall utgangspunktet mitt.</p>
+
+                            <img src="../images/projects/madness/process/inspiration.webp" alt="Fire bilder med halloween motiv - Inspirasjonsbilde">
+                                
+                            <h2>Logoprosess</h2>
+                            <p>Logoen til «Halloween Madness» endret seg MYE underveis, og gikk fra å se ganske håndtegnet og nesten barnslig ut, til å bli med proff med glossy detaljer og et kult uttrykk.</p>
+                            
+                            <img src="../images/projects/madness/process/logo-draft1.png" alt="Første utkast av logo">
+                            <p class="arrow-down">&darr;</p>
+                            <img src="../images/projects/madness/process/logo-draft2.png" alt="Andre utkast av logo">
+                            <p class="arrow-down">&darr;</p>
+                            <img src="../images/projects/madness/process/logo.webp" alt="Ferdig logo med glossy effekt">
+                            
+                            <h2>Designprosess</h2>
+                            <p>Når jeg starter på selve designprosessen, hadde jeg fremdeles de første inspirasjonsbildene i bakhodet, men når jeg starter ordentlig fant jeg løsninger som fungerte
+                                bedre og første til et kulere resultat. Denne prosessen var lang, men veldig verdt det til slutt.
+                            </p>
+
+                            <h3>Testing av design</h3>
+                            <p>Jeg startet med å teste design idéer til reklameplakaten. Jeg prøvde først å lage skyer og lyn i Illustrator, men innså raskt at dette var enklere å få til bra med Photoshop.</p>
+                            <p>Tanken var først at logoen til Hardstyle DNA kunne representere en full måne, men etterhvert som den mørke skikkelsen i bakgrunn ble en del av designet, gikk den over til å 
+                                representere en slags «kraftsirkel». Bølgene rundt logoen kan også assosieres med lydbølger, som var en annen tanke jeg hadde underveis.</p> 
+                            <p>I tillegg la jeg til strobelys i bakgrunn, for å få fram litt tydeligere at det er snakk om et arrangement med fest-vibe, og halloween detaljer.</p>
+                     
+                            <div class="flex">
+                                <div class="mobile-flex">
+                                    <div>
+                                        <img src="../images/projects/madness/process/poster-test1.webp" alt="Første test av design">
+                                        <img src="../images/projects/madness/process/poster-test4.webp" alt="Andre utkast event poster">
+                                    </div>
+                                    <div>
+                                        <img src="../images/projects/madness/process/poster-test2.webp" alt="Andre test av design">
+                                        <img src="../images/projects/madness/process/poster-test5.webp" alt="Tredje utkast event poster">
+                                    </div>
+                                    <div>
+                                        <img src="../images/projects/madness/process/poster-test3.webp" alt="Første utkast event poster">
+                                        <img src="../images/projects/madness/result/event-poster.webp" alt="Ferdig event poster for Halloween Madness 2024">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3>Plakat som story format</h3>
+                            <p>Hardstyle DNA ønsket også at palakten skulle lages i story format, så her har jeg også testet to ulike måte å gjøre dette på, men endte opp med den løsningen som ligner mest på den fysiske plakaten.</p>
+                            <div class="flex mobile-flex">
+                                <div>
+                                    <img src="../images/projects/madness/process/poster-story-test.webp" alt="Første utkast av event plakat som kan brukes på story">
+                                </div>
+                                <div>
+                                    <img src="../images/projects/madness/result/poster-story.webp" alt="Ferdig event plakat som kan brukes på story">
+                                </div>
+                            </div>
+
+                            <h3>Facebook event banner</h3>
+                            <p>De ville også ha et facebook banner i samme stil. Her prøvde jeg først å lage det så enkelt som mulig (dette var før logoen ble ferdigstilt), men endte opp med å spice det opp ved 
+                                å legge til den mørke skikkelsen og litt ekstra halloween detaljer her også.
+                            </p>
+
+                            <div class="flex">
+                                <div>
+                                    <img src="../images/projects/madness/process/fb-event-test.webp" alt="Første utkast av facebook event banner">
+                                </div>
+                                <div>
+                                    <img src="../images/projects/madness/result/fb-event.webp" alt="Ferdig facebook event banner">
+                                </div>
+                            </div>
+
+                            <h3>Alle ferdig artist-innlegg samlet</h3>
+                            <p>Artist-innleggene fikk også samme type design som plakaten med strobelys, «kraftsirkel» og halloween detaljer, men uten den svarte skikkelsen i bakgrunn, siden dette ble litt for mye når man la til artisten itillegg.</p>
+                            <p>Jeg lagde artist-innlegg både i firkanta og story/reel format, men Hardstyle DNA endte opp med å poste alle artist-innleggene som reels, så de firkanta versjonene ble ikke brukt. Her ser dere alle de 21 artist-innleggene samlet.</p>
+
+                            <div class="flex mobile-flex">
+                                <div>
+                                    <img src="../images/projects/madness/result/artists/99prblmz-story.webp" alt="Artist innlegg i story format for artisten 99PRBLMZ">
+                                    <img src="../images/projects/madness/result/artists/cyber-story.webp" alt="Artist innlegg i story format for artisten Cyber">
+                                    <img src="../images/projects/madness/result/artists/devinWild-story.webp" alt="Artist innlegg i story format for artisten Devin Wild">
+                                    <img src="../images/projects/madness/result/artists/markz-story.webp" alt="Artist innlegg i story format for artisten Markz">
+                                    <img src="../images/projects/madness/result/artists/neutrophic-story-svart.webp" alt="Artist innlegg i story format for artisten Neutrophic">
+                                    <img src="../images/projects/madness/result/artists/reflect-story.webp" alt="Artist innlegg i story format for artisten Reflect">
+                                    <img src="../images/projects/madness/result/artists/steveAioli-story.webp" alt="Artist innlegg i story format for artisten Steve Aioli">
+                                </div>
+                                <div>
+                                    <img src="../images/projects/madness/result/artists/aor-story.webp" alt="Artist innlegg i story format for artisten Act of Rage">
+                                    <img src="../images/projects/madness/result/artists/dcharged-story.webp" alt="Artist innlegg i story format for artisten D-Charged">
+                                    <img src="../images/projects/madness/result/artists/fade-story.webp" alt="Artist innlegg i story format for artisten Fade">
+                                    <img src="../images/projects/madness/result/artists/matzic-story.webp" alt="Artist innlegg i story format for artisten Matzic">
+                                    <img src="../images/projects/madness/result/artists/obscure-story.webp" alt="Artist innlegg i story format for artisten Obscure">
+                                    <img src="../images/projects/madness/result/artists/refuzion-story.webp" alt="Artist innlegg i story format for artisten Refuzion">
+                                    <img src="../images/projects/madness/result/artists/svane-story.webp" alt="Artist innlegg i story format for artisten Svane">
+                                </div>
+                                <div>
+                                    <img src="../images/projects/madness/result/artists/cryex-story.webp" alt="Artist innlegg i story format for artisten Cryex">
+                                    <img src="../images/projects/madness/result/artists/deluzion-story.webp" alt="Artist innlegg i story format for artisten Deluzion">
+                                    <img src="../images/projects/madness/result/artists/kapteinene-story.webp" alt="Artist innlegg i story format for artisten Kapteinene">
+                                    <img src="../images/projects/madness/result/artists/mcruud-story.webp" alt="Artist innlegg i story format for artisten McRuud">
+                                    <img src="../images/projects/madness/result/artists/recharged-story.webp" alt="Artist innlegg i story format for artisten Recharged">
+                                    <img src="../images/projects/madness/result/artists/serzo-story.webp" alt="Artist innlegg i story format for artisten Serzo">
+                                    <img src="../images/projects/madness/result/artists/unex-story.webp" alt="Artist innlegg i story format for artisten Unex">
+                                </div>
+                            </div>
+
+                            <h2>Andre innlegg fra prosjektet som ikke ble laget av meg</h2>
+                            <p><i>(men med utgangspunkt i mitt design)</i></p>
+                            <p>Hardstyle DNA hadde en mal som de bruker til hvert arrangement når det kommer til timetable og info-innlegg, så derfor designet de disse selv. Jeg hjalp til med headliners innlegget,
+                                men versjonen som dere ser her har blitt endret på av noen andre.
+                            </p>
+                            
+                            <div class="flex">
+                                <div>
+                                    <img src="../images/projects/madness/result/headliners.jpg" alt="Headliners innlegg laget av Hardstyle DNA">
+                                </div>
+                                <div>
+                                    <img src="../images/projects/madness/result/timetable.jpg" alt="Timetable innlegg laget av Hardstyle DNA">
+                                </div>
+                                <div>
+                                    <img src="../images/projects/madness/result/info-post.jpg" alt="Info innlegg laget av Hardstyle DNA">
+                                </div> 
+                            </div>
+
+                            <div class="project__next project__next--bottom mobile-flex">
+                                <div>
+                                    <a href="fadderuka.html">&#x2190; Fadderuka 23</a>
+                                </div>
+                                <div>
+                                    <a href="bokdesign.html">Slottskrønikene &#x2192;</a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </article>
+        </main>
+
+        <footer class="footer">
+            <figure class="footer__some mobile-flex">
+                <div>
+                    <a href="https://www.instagram.com/designsbytuva/" target="_blank" aria-label="Åpner i ny fane"><img src="../images/icons/ig-white.png" alt="Besøk Instagrammen til Designs by tuva"></a>
+                    <p class="username">@designsbytuva</p>
+                </div>
+                <div>
+                    <a href="mailto:contact@designsbytuva.no" target="_blank" aria-label="Åpner i ny fane"><img src="../images/icons/mail-white.png" alt="Send meg en epost"></a>
+                    <p class="username">contact@designsbytuva.no</p>
+                </div>
+                <div>
+                    <a href="https://www.linkedin.com/in/tuvahansen/" target="_blank" aria-label="Åpner i ny fane"><img src="../images/icons/in-white.png" alt="Besøk LinkedIn profilen min"></a>
+                    <p class="username">@tuvahansen</p>
+                </div>
+            </figure>
+            <p>&copy;2024 - Alt laget av Tuva Konstanse Hansen</p>
+        </footer>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', (event) => {
+            const buttons = document.querySelectorAll('.btn');
+            const resultDiv = document.getElementById('result');
+            const processDiv = document.getElementById('process');
+
+                // Initialize to show 'Resultat' by default
+                resultDiv.style.display = 'block';
+                processDiv.style.display = 'none';
+
+                buttons.forEach(button => {
+                    button.addEventListener('click', () => {
+                        // Remove 'active' class from all buttons
+                        buttons.forEach(btn => btn.classList.remove('active'));
+                        // Add 'active' class to the clicked button
+                        button.classList.add('active');
+
+                        // Toggle content based on which button is clicked
+                        if (button.id === 'resultPage') {
+                            resultDiv.style.display = 'block';
+                            processDiv.style.display = 'none';
+                        } else if (button.id === 'processPage') {
+                            resultDiv.style.display = 'none';
+                            processDiv.style.display = 'block';
+                        }
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>

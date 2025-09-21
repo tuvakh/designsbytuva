@@ -1,0 +1,137 @@
+// HIDDEN "SKIP TO MAIN CONTENT" LINK FOR SCREEN READERS
+.skip {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.skip:focus {
+    position: static;
+    width: auto;
+    height: auto;
+}
+
+// COMMON RULES 
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family);
+    height: 100%;
+    text-align: center;
+}
+
+h1 {
+    font-size: var(--step-3);
+}
+
+h2 {
+    font-size: var(--step-2);
+    line-height: var(--line-height-small);
+}
+
+h2:not(:first-child) {
+    padding-block-start: var(--small-space);
+}
+
+h4 {
+    margin-block-start: var(--mini-space);
+}
+
+h1, h2, h3, h4 {
+    margin-block-end: var(--micro-space);
+}
+
+h1, h2 {
+    font-weight: var(--font-weight-bold);
+}
+
+h3, h4, .info, .button, .arrow-down, .pink {
+    font-weight: var(--font-weight-medium);
+}
+
+p {
+    font-size: var(--step-0);
+    line-height: var(--line-height-base);
+}
+
+a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+figcaption {
+    font-size: var(--step--1);
+}
+
+figcaption a {
+    text-decoration: underline;
+}
+
+.username {
+    background-color: var(--no-color);
+    font-size: var(--step--1);
+    padding-block-start: var(--mini-space);
+    color: var(--text-color-light);
+}
+
+img {
+    vertical-align: bottom;
+    max-width: 100%;
+    width: 100%
+}
+
+nav a:hover, .active, .project-types__description h3 {
+    font-weight: var(--font-weight-bold);
+}
+
+.about__cv, #process {
+    text-align: left;
+    padding-block-end: 0;
+}
+
+nav, .button, h1, h2, .project-types__description h3, .btn {
+    text-transform: uppercase;
+}
+
+.white-img {
+    border: 0.5px solid var(--footer-text);
+}
+
+p:not(.project-types__info, .work-process__preferance, .project__type), .stand {
+    margin-block-end: var(--small-space);
+}
+
+.content-box, .project-types__info, .about__intro {
+    width: 90%;
+    margin: auto;
+    padding-block: var(--normal-space);
+}
+
+/* COLORS */
+.pink {
+    color: var(--primary-color);
+}
+
+.background {
+    color: var(--text-color-light);
+    background-color: var(--primary-color);
+}
+
+@media (min-width: 600px) {
+    .content-box, .about__intro {
+        padding-block: var(--mega-space);
+        
+        &--home {
+            width: 36%;
+        }
+
+        &--process {
+            padding-block: var(--normal-space);
+        }
+    }
+}

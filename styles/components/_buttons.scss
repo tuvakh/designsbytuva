@@ -1,0 +1,53 @@
+/* BUTTONS */
+button {
+    border: none;
+    background-color: var(--no-color);
+}
+
+.button {
+    border-radius: 30px;
+    width: 35%;
+    padding: var(--small-space);
+    margin: 0 auto;
+    text-align: center;
+    font-size: var(--step-0);
+
+    &--light {
+        background-color: var(--secondary-color);
+    }
+
+    &--navbar {
+        width: 80%;
+    }
+
+    &--proto {
+        width: 40%;
+        margin: var(--small-space);
+    }
+
+    &--cv {
+        width: 20%;
+        margin-block-end: var(--medium-space);
+        margin-inline: 0;
+    }
+}
+
+/* Result & process btn */
+.switch-btn {
+    padding: var(--normal-space);
+    border: solid 1px #e8e8e8;
+}
+
+@media (min-width: 600px) {
+    .button {
+        &--light {
+            width: 25%;
+        }
+
+        &--proto {
+            width: 20%;
+        }
+    }
+}
+
+

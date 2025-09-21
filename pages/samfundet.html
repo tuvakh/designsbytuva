@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="no">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="author" content="Tuva Konstanse Hansen">
+        <meta name="description" content="Designs by Tuva - A portfolio for Graphic design">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="../styles/style.css" rel="stylesheet">
+        <link rel="icon" href="../images/heart.png">
+
+        <title>Prosjekter - Samfundet Gjøvik</title>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const menuToggle = document.querySelector('.navbar__menu');
+                const menu = document.querySelector('.navbar__list');
+
+                // Toggle menu on click
+                menuToggle.addEventListener('click', () => {
+                    const isOpen = menu.classList.toggle('open');
+                    menuToggle.setAttribute('aria-expanded', isOpen);
+                });
+
+                // Close menu when clicking a link
+                menu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        menu.classList.remove('open');
+                    });
+                });
+
+                // Toggle menu on keyboard (Enter or Space)
+                menuToggle.addEventListener('keypress', (e) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                        e.preventDefault();
+                        const isOpen = menu.classList.toggle('open');
+                        menuToggle.setAttribute('aria-expanded', isOpen);
+                    }
+                });
+            });
+        </script>
+    </head>
+
+    <body>
+        <header>
+            <a href="#main" class="skip">Skip to main content</a>
+
+            <nav class="navbar mobile-flex">
+                <!-- Logo on all screens -->
+                <div class="navbar__logo">
+                    <a href="../index.html"><img src="../images/logo.png" alt="Logo for designs by Tuva"></a>
+                </div>
+
+                <div>
+                    <button class="navbar__menu" aria-controls="navbarMenu" aria-expanded="false">☰</button>
+                    <ul id="navbarMenu" class="navbar__list">
+                        <li class="navbar__items"><a href="../index.html#work-process">Prosess</a></li>
+                        <li class="navbar__items"><a href="../index.html#projects">Alle prosjekter</a></li>
+                        <li class="navbar__items"><a href="about.html">Om meg</a></li>
+                        <li class="navbar__items"><a class="button button--navbar background" href="mailto:contact@designsbytuva.no">Kontakt meg</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <main id="main">
+            <article class="grid" aria-label="Informasjon om prosjektet">
+                <div class="grid__left background">
+                    <img class="project-img" src="../images/projects/samfundet/samfundet-section.webp" alt="Prosjektbilde - Grønn bakgrunn med mockup av Samfundet Gjøvik sin nettside på desktop og mobil">
+                
+                    <div class="content-box project mobile-flex">  
+                        <div>
+                            <p class="project__type">Webdesign</p>
+                            <h1>Samfundet Gjøvik</h1>
+                            <p>Skoleprosjekt</p>
+                        </div>
+                    
+                        <div class="project__intro">
+                            <p>Nettsiden til Samfundet Gjøvik har et veldig stort forbedringspotensiale, både når det kommer til universell utforming og det visuelle uttrykket til siden. 
+                                Oppgaven vår ble derfor å utforme en ny nettside med bedre navigasjon og mer fokus på brukervennlighet.</p>
+                            <p>I dette prosjektet har vi fokusert mye på retningslinjene for tilgjengelighet på nettsider (WCAG), og har kommet fram til en løsning som tar hensyn til brukeren og gjør det enkelt å finne fram på nettsiden.
+                                Løsningen vår består av et grønt fargepalett med bra kontraster som matcher fargene man finner i lokalene til Samfundet Gjøvik, og et oppsett som gjør nettsiden mer oversiktlig.</p>
+                            <p>Dette prosjektet ble løst gruppevis, og jeg jobbet sammen med <a href="http://beislanddesign.no/">Jenny E. Beisland</a>, <a href="https://www.linkedin.com/in/maren-diesen-3662392ba/">Maren Diesen</a> og <a href="https://www.linkedin.com/in/tiril-s%C3%A6ther-hansen-ab82682a6/">Tiril S. Hansen</a></p>
+                            <p>Verktøy: Figma & Figjam</p>
+                        </div>
+                    
+                        <div class="project__next mobile-flex">
+                            <div>
+                                <a class="background" href="bokdesign.html">&#x2190; Slottskrønikene</a>
+                            </div>
+                            <div>
+                                <a class="background" href="avis.html">OA - Avisdesign &#x2192;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+ 
+                <div class="grid__right">
+                    <div class="switch-btn mobile-flex">
+                        <button id="resultPage" class="btn active">Resultat</button>
+                        <button id="processPage" class="btn">Prosess</button>
+                    </div>
+
+                    <section role="region" aria-label="Informasjon om prosessen og resultatet til nettsiden">
+                        <div id="result">
+                            <div class="proto">
+                                <a class="button button--proto background mobile" target="_blank" aria-label="Åpner i ny fane" href="https://www.figma.com/proto/UPkjrExaXaJoKJLQ5Smomf/Resultat?node-id=459-1235&starting-point-node-id=459%3A1235&t=3dULxQSaxLpMBoJu-1">Prøv prototype</a>
+                                <a class="button button--proto background desktop" target="_blank" aria-label="Åpner i ny fane" href="https://www.figma.com/proto/UPkjrExaXaJoKJLQ5Smomf/Resultat?node-id=3001-3323&t=fwQhfP31m99vJI11-1&scaling=scale-down-width&content-scaling=fixed&page-id=3003%3A2363&starting-point-node-id=3001%3A3323">Prøv prototype</a>
+                            </div>
+                            
+                            <img src="../images/projects/samfundet/result/multiple-mockup.webp" alt="Grønn bakgrunn med en mockup av nettsiden til Samfundet Gjøvik på flere skjermer">                       
+                            <img src="../images/projects/samfundet/result/phones-mockup.webp" alt="Grønn bakgrunn med en mockup av nettsiden til Samfundet Gjøvik på flere mobiler">
+                            <img src="../images/projects/samfundet/result/screen-mockup.webp" alt="Grønn bakgrunn med en mockup av nettsiden til Samfundet Gjøvik på desktop og mobil">                
+                        </div>
+
+                        <div id="process" class="content-box">
+                            <h2>Innsiktsarbeid</h2>
+                            <p>Innsiktsarbeidet til dette prosjektet var omfattende og bestod av å analysere den originale nettsiden, utføre brukertesting, og lage «affinity diagram» og «user journey map»</p>
+
+                            <h3>Analyse av nåværende nettside</h3>
+                                <p>Den nåværende nettsiden bruker mye pastell&shy;farger som blant annet kan påvirke lesligheten noen steder pga dårlig fargekontrast. I tillegg er navigasjons&shy;systemet dårlig fordi det blant annet er vanskelig å  
+                                    finne mer informasjon om hvert arrangement, og catering menyen er gjemt under «bespisning» som kan være forvirrende når man ikke vet hva dette betyr.</p>
+                                
+                            <div class="flex">
+                                <div class="mobile-flex">
+                                    <div>
+                                        <img src="../images/projects/samfundet/process/research/original-website/homepage-original-mobile.webp" alt="Samfundet Gjøvik sin originale nettside på mobil: Forside">
+                                    </div>
+                                    <div>
+                                        <img src="../images/projects/samfundet/process/research/original-website/events-original-mobile.webp" alt="Samfundet Gjøvik sin originale nettside på mobil: Oversikt over arrangementer">
+                                    </div>
+                                </div>
+                                <div class="mobile-flex">
+                                    <div>
+                                        <img src="../images/projects/samfundet/process/research/original-website/rooms-original-mobile.webp" alt="Samfundet Gjøvik sin originale nettside på mobil: Oversikt over lokaler">
+                                    </div>
+                                    <div>
+                                        <img src="../images/projects/samfundet/process/research/original-website/room-info-original-mobile.webp" alt="Samfundet Gjøvik sin originale nettside på mobil: Informasjon om storsalen">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="flex">
+                                <div>
+                                    <img class="white-img" src="../images/projects/samfundet/process/research/original-website/homepage-original-pc.webp" alt="Samfundet Gjøvik sin originale nettside på pc: Forsiden">
+                                    <img class="white-img" src="../images/projects/samfundet/process/research/original-website/rooms-original-pc.webp" alt="Samfundet Gjøvik sin originale nettside på pc: Oversikt over lokaler">
+                                </div>
+                                <div>
+                                    <img class="white-img" src="../images/projects/samfundet/process/research/original-website/room-info-original-pc.webp" alt="Samfundet Gjøvik sin originale nettside på pc: Informasjon om Storsalen">
+                                    <img class="white-img" src="../images/projects/samfundet/process/research/original-website/events-original-pc.webp" alt="Samfundet Gjøvik sin originale nettside på pc: Oversikt over arrangementer">
+                                </div>
+                            </div>
+
+                            <h3>Brukertesting</h3>
+                            <p>Etter å ha analysert nettsiden på egenhånd, valgte vi å utføre bruker&shy;testing med personer fra ulike aldersgrupper. Dette gjorde vi ved å be personene om å utføre ulike oppgaver, mens vi observerte hvordan de løste dem. Ut ifra dette fant vi ut hvilke problemer og utfordringer nettsiden har, som vi skulle jobbe med å løse.
+                                Deretter samlet vi hovedfunnene fra brukertestingen i et «affinity diagram», for å få en bedre oversikt over hva vi måtte tenke på når vi skulle designe løsningen vår.
+                                </p>
+                            <img class="mobile" src="../images/projects/samfundet/process/research/affinity-diagram.jpg" alt="Affinity diagram">
+                            <img class="desktop" src="../images/projects/samfundet/process/research/affinity-diagram2.jpg" alt="Affinity diagram">
+                        
+                            <h3>User journey map</h3>
+                            <p>Vi lagde også et «user journey map» for å vise hva brukeren syntes fungerte og ikke med nettsiden.</p>
+                            <img src="../images/projects/samfundet/process/research/user-journey.jpeg" alt="User journey map">
+
+                            <h3>Personas</h3>
+                            <p>Til slutt brukte vi all dataen vi hadde samlet til å utvikle 2 personas med hvert sitt scenario, som vi brukte som utgangspunkt når vi skulle løse hovedproblemene på nettsiden.</p>
+                            <div class="flex">
+                                <div>
+                                    <img src="../images/projects/samfundet/process/research/personas/klara-næmmen.webp" alt="Persona Klara Næmmen">
+                                </div>
+
+                                <div>
+                                    <img src="../images/projects/samfundet/process/research/personas/paul-petersen.webp" alt="Persona Paul Petersen">
+                                </div>
+                            </div>
+                        
+                            <h2>Designprosess</h2>
+                            <p>Etter all brukertestingen, startet vi på selve designprosessen. Denne gikk hovedsaklig ut på skissing, idémyldring og prototyping.</p>
+
+                            <h3>Skisser</h3>
+                            <p>Vi startet med å skisse opp noen idéer til hvordan nettsiden vår kan se ut, og diskuterte hva slags oppsett som fungerte og ikke. </p>
+                            <div class="flex">
+                                <div>
+                                    <img src="../images/projects/samfundet/process/sketch/sketch1.webp" alt="Tidlige skisser for layout på mobil (bilde 1)">
+                                </div>
+
+                                <div>
+                                    <img src="../images/projects/samfundet/process/sketch/sketch2.webp" alt="Tidlige skisser for layout på mobil (bilde 2)">
+                                </div>
+                            </div>
+                            
+                            <h3>Enkel lo-fi mobil</h3>
+                            <p>Deretter gikk vi over til å utvikle en digital lo-fi versjon av nettsiden. Vi startet med mobilversjonen, og var bare innom én annet idé før vi 
+                                kom fram til resultatet som vises her.</p>
+                            <img src="../images/projects/samfundet/process/layout-mobile.png" alt="Enkel lo-fi mobil">
+                        
+                            <h3>Enkel lo-fi desktop</h3>
+                            <p>Vi brukte oppsettet fra mobilversjonen til å sette opp en lo-fi versjon for desktop også. Det ble et par små endringer for å få ting til 
+                                å fungere på en større skjerm, men alt fungerer på så og si samme måte.</p>
+                            <img src="../images/projects/samfundet/process/layout-desktop.png" alt="Enkel lo-fi desktop">
+                        
+                            <h3>Detaljer lo-fi mobil</h3>
+                            <p>Når vi hadde blitt enige om hvordan layoutet skulle se ut, gikk vi videre til mer detaljer lo-fi prototyping. Her begynte vi å implementere farger, 
+                                bilder og effekter til løsningen vår. Vi endte opp med et design med varme, myke fargetoner og avrundede kanter som gjør at nettsiden representerer 
+                                den samme varme følelsen som man får av å være på Samfundet Gjøvik.</p>
+                            <img src="../images/projects/samfundet/result/mobile-result.webp" alt="Detaljert lo-fi mobil">
+
+                            
+                            <h3>Detaljert lo-fi desktop</h3>
+                            <p>Både desktopversjonen og mobilversjonen har de samme fargene og bildene, så prosessen med å implementere dette på desktopversjonen gikk relativt raskt 
+                                så fort mobilversjonen var ferdig.</p>
+                            <img src="../images/projects/samfundet/result/pc-result.webp" alt="Detaljert lo-fi desktop">
+                            
+                            <div class="proto">
+                                <a class="button mobile-flex background mobile" target="_blank" aria-label="Åpner i ny fane" href="https://www.figma.com/proto/UPkjrExaXaJoKJLQ5Smomf/Resultat?node-id=459-1235&starting-point-node-id=459%3A1235&t=3dULxQSaxLpMBoJu-1">Prøv prototype</a>
+                                <a class="button mobile-flex background desktop" target="_blank" aria-label="Åpner i ny fane" href="https://www.figma.com/proto/UPkjrExaXaJoKJLQ5Smomf/Resultat?node-id=3001-3323&t=fwQhfP31m99vJI11-1&scaling=scale-down-width&content-scaling=fixed&page-id=3003%3A2363&starting-point-node-id=3001%3A3323">Prøv prototype</a>
+                            </div>
+
+                            <div class="project__next project__next--bottom mobile-flex">
+                                <div>
+                                    <a href="bokdesign.html">&#x2190; Slottskrønikene</a>
+                                </div>
+                                <div>
+                                    <a href="avis.html">OA - Avisdesign &#x2192;</a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </article>
+        </main>
+
+        <footer class="footer">
+            <figure class="footer__some mobile-flex">
+                <div>
+                    <a href="https://www.instagram.com/designsbytuva/" target="_blank" aria-label="Åpner i ny fane"><img src="../images/icons/ig-white.png" alt="Besøk Instagrammen til Designs by tuva"></a>
+                    <p class="username">@designsbytuva</p>
+                </div>
+                <div>
+                    <a href="mailto:contact@designsbytuva.no" target="_blank" aria-label="Åpner i ny fane"><img src="../images/icons/mail-white.png" alt="Send meg en epost"></a>
+                    <p class="username">contact@designsbytuva.no</p>
+                </div>
+                <div>
+                    <a href="https://www.linkedin.com/in/tuvahansen/" target="_blank" aria-label="Åpner i ny fane"><img src="../images/icons/in-white.png" alt="Besøk LinkedIn profilen min"></a>
+                    <p class="username">@tuvahansen</p>
+                </div>
+            </figure>
+            <p>&copy;2024 - Alt laget av Tuva Konstanse Hansen</p>
+        </footer>
+        
+        <script>
+            document.addEventListener('DOMContentLoaded', (event) => {
+            const buttons = document.querySelectorAll('.btn');
+            const resultDiv = document.getElementById('result');
+            const processDiv = document.getElementById('process');
+
+                // Initialize to show 'Resultat' by default
+                resultDiv.style.display = 'block';
+                processDiv.style.display = 'none';
+
+                buttons.forEach(button => {
+                    button.addEventListener('click', () => {
+                        // Remove 'active' class from all buttons
+                        buttons.forEach(btn => btn.classList.remove('active'));
+                        // Add 'active' class to the clicked button
+                        button.classList.add('active');
+
+                        // Toggle content based on which button is clicked
+                        if (button.id === 'resultPage') {
+                            resultDiv.style.display = 'block';
+                            processDiv.style.display = 'none';
+                        } else if (button.id === 'processPage') {
+                            resultDiv.style.display = 'none';
+                            processDiv.style.display = 'block';
+                        }
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>

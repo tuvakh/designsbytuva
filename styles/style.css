@@ -535,7 +535,8 @@ figcaption {
 .project__next {
   border-top: 1px solid #fff;
   padding-block-start: var(--normal-space);
-  justify-content: space-around;
+  padding-inline: var(--small-space);
+  justify-content: space-between;
 }
 .project__next--bottom {
   padding-bottom: var(--normal-space);

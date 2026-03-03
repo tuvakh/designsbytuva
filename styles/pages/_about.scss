@@ -1,0 +1,38 @@
+/* ABOUT ME */
+figcaption {
+    padding-block-start: var(--mini-space);
+}
+
+.about {
+    &__some {
+        margin: var(--normal-space) auto 0;
+
+        img {
+            width: 30%;
+        }
+    }
+}
+
+@media (min-width: 600px) {
+.about {
+    p {
+       width: 80%; 
+    }
+    &__intro {
+        p {
+            margin-inline: auto;
+        }
+    }
+
+    &__cv {
+        padding: var(--mega-space);
+    }
+
+    &__some {
+        width: 90%;
+        img{
+            width: 15%;
+        }
+    }
+}
+}

@@ -1,16 +1,21 @@
 .landingPage {
     background-color: #33052a; 
     height: 100vh;
-
-    justify-content: center;
-    align-items: center;
-    
-    &__content {
-
-    
     display: flex;
     flex-direction: column;
+    justify-content: center;
+
+    &__content {
+        display: grid;
+        grid-template-columns: 1fr 0.8fr;
+        background-color: #ffffff;
     }
+
+    &__buttons {
+        display: flex;
+        flex-direction: row;
+    }
+    
     &__copyright {
         color: #67415f; 
     }

@@ -225,6 +225,14 @@ button {
   text-align: center;
   font-size: var(--step-0);
 }
+.button__landingPage {
+  width: 25%;
+  border-radius: 10px;
+  padding: var(--small-space);
+  color: #ffffff;
+  background-color: #aa1f6f;
+  border: 0.2rem solid #d367af;
+}
 .button--light {
   background-color: var(--secondary-color);
 }
@@ -575,4 +583,16 @@ figcaption {
   .project-img {
     height: 35vh;
   }
+}
+.landingPage {
+  background-color: #33052a;
+  height: 100vh;
+}
+.landingPage__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.landingPage__copyright {
+  color: #67415f;
 }/*# sourceMappingURL=style.css.map */

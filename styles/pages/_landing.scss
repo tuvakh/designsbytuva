@@ -1,0 +1,15 @@
+.landingPage {
+    background-color: #33052a; 
+    height: 100vh;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    &__copyright {
+        color: #67415f; 
+    }
+}
+

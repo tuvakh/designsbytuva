@@ -40,47 +40,29 @@
                     }
                 });
             });
-        </script>
+    </script>
+    <style>
+/* @keyframes twinkle {
+    from { opacity: 0.5; transform: scale(1); }
+    to { opacity: 1; transform: scale(3); }
+} */
+        .star {
+    width: 50px;   /* juster etter behov */
+    height: 50px;
+    animation: twinkle 2s infinite alternate;
+}
+    </style>
     </head>
 
     <body>
-        <header>
-            <a href="#main" class="skip">Skip to main content</a>
-
-            <nav class="navbar mobile-flex">
-                <!-- Logo on all screens -->
-                <div class="navbar__logo">
-                    <a href="index.html"><img src="images/logo.png" alt="Logo for designs by Tuva"></a>
-                </div>
-
-                <div>
-                    <button class="navbar__menu" aria-controls="navbarMenu" aria-expanded="false">☰</button>
-                    <ul id="navbarMenu" class="navbar__list">
-                        <li class="navbar__items"><a href="#work-process">Prosess</a></li>
-                        <li class="navbar__items"><a href="#projects">Alle prosjekter</a></li>
-                        <li class="navbar__items"><a href="pages/about.html">Om meg</a></li>
-                        <li class="navbar__items"><a class="button button--navbar background" href="mailto:contact@designsbytuva.no">Kontakt meg</a></li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
-
-        <main id="main">
-            <section class="background" role="region" aria-label="Velkommen til denne siden">
-                <div class="content-box content-box--home">
-                    <h1>Velkommen!</h1>
-                    <p>Trenger du en designer med lidenskap for farge, typografi og lekent design? Da har du kommet til riktig sted!</p>
-                    <p>Jeg er en nyutdanna grafisk designer som alltid er åpen for nye spennende utfordringer!</p>
-                 
-                    <a class="button button--light mobile-flex" href="mailto:contact@designsbytuva.no">Kontakt meg</a>
-                </div>
-            </section>
-
-            <a href="graphic-design/index.html">Grafisk design</a>
-            <a href="web-development/index.html">Web utvikling</a>
-        </main>
-
-        <footer class="footer">
+        <main id="main" class="landingPage">
+            <section class="landingPage__buttons" role="region" aria-label="Velkommen til denne siden">    
+                
+                    <a href="graphic-design/index.html">Grafisk design</a>
+                    <a href="web-development/index.html">Web utvikling</a>
+                    <a href="web-development/index.html">Video produksjon</a>
+           </section>
+        
             <figure class="footer__some mobile-flex">
                 <div>
                     <a href="https://www.instagram.com/designsbytuva/" target="_blank" aria-label="Åpner i ny fane"><img src="images/icons/ig-white.png" alt="Besøk Instagrammen til Designs by tuva"></a>
@@ -95,7 +77,47 @@
                     <p class="username">@tuvahansen</p>
                 </div>
             </figure>
-            <p>&copy;2024 - Alt laget av Tuva Konstanse Hansen</p>
-        </footer>
+            <p class="landingPage__copyright">&copy;2024 - Alt laget av Tuva Konstanse Hansen</p>
+         </main>
+
+         <script>
+            const container = document.getElementById('main');
+
+const starPositions = [
+  {x: 150, y: 100},
+  {x: 200, y: 150},
+  {x: 300, y: 200},
+  {x: 400, y: 250},,
+  {x: 500, y: 300},
+  {x: 620, y: 350},
+  // flere
+];
+
+starPositions.forEach(pos => {
+  const star = document.createElement('img');
+  star.src = 'images/stars.svg';
+  star.classList.add('star');
+
+  // tilfeldig størrelse
+  const size = 5 + Math.random() * 15;
+  star.style.width = `${size}px`;
+  star.style.height = `${size}px`;
+
+  star.style.position = 'absolute';
+  star.style.left = `${pos.x}px`;
+  star.style.top = `${pos.y}px`;
+
+  // tilfeldig: 50% blinker
+  if (Math.random() < 0.5) star.classList.add('twinkle');
+
+  // tilfeldig blinketid og delay
+  if (star.classList.contains('twinkle')) {
+    star.style.animationDuration = `${1 + Math.random() * 2}s`;
+    star.style.animationDelay = `${Math.random() * 2}s`;
+  }
+
+  container.appendChild(star);
+});
+        </script>
     </body>
 </html>

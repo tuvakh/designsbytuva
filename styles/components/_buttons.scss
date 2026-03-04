@@ -12,6 +12,15 @@ button {
     text-align: center;
     font-size: var(--step-0);
 
+    &__landingPage {
+        width: 25%;
+        border-radius: 10px;
+        padding: var(--small-space);
+        color: #ffffff;
+        background-color: #aa1f6f;
+        border: 0.2rem solid #d367af;
+    }
+
     &--light {
         background-color: var(--secondary-color);
     }

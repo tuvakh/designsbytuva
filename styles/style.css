@@ -587,11 +587,12 @@ figcaption {
 .landingPage {
   background-color: #33052a;
   height: 100vh;
+  justify-content: center;
+  align-items: center;
 }
 .landingPage__content {
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 .landingPage__copyright {
   color: #67415f;

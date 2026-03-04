@@ -54,15 +54,16 @@
     </style>
     </head>
 
-    <body>
-        <main id="main" class="landingPage">
-            <section class="landingPage__buttons" role="region" aria-label="Velkommen til denne siden">    
+    <body class="landingPage">
+        <main id="main" class="landingPage__content">
+            <section class="landingPage__content" role="region" aria-label="Velkommen til denne siden">    
+                <a class="button button__landingPage" href="graphic-design/index.html">Grafisk design</a>
+                <a class="button button__landingPage" href="web-development/index.html">Web utvikling</a>
+                <a class="button button__landingPage" href="web-development/index.html">Video produksjon</a>
                 
-                    <a href="graphic-design/index.html">Grafisk design</a>
-                    <a href="web-development/index.html">Web utvikling</a>
-                    <a href="web-development/index.html">Video produksjon</a>
-           </section>
-        
+            </section>
+        </main>
+            <footer>
             <figure class="footer__some mobile-flex">
                 <div>
                     <a href="https://www.instagram.com/designsbytuva/" target="_blank" aria-label="Åpner i ny fane"><img src="images/icons/ig-white.png" alt="Besøk Instagrammen til Designs by tuva"></a>
@@ -78,7 +79,7 @@
                 </div>
             </figure>
             <p class="landingPage__copyright">&copy;2024 - Alt laget av Tuva Konstanse Hansen</p>
-         </main>
+            </footer>
 
          <script>
             const container = document.getElementById('main');
@@ -87,7 +88,7 @@ const starPositions = [
   {x: 150, y: 100},
   {x: 200, y: 150},
   {x: 300, y: 200},
-  {x: 400, y: 250},,
+  {x: 400, y: 250},
   {x: 500, y: 300},
   {x: 620, y: 350},
   // flere

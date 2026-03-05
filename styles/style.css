@@ -39,11 +39,13 @@ table {
 :root {
   --font-family: "montserrat", sans-serif;
   /* @link https://utopia.fyi/type/calculator?c=320,16,1.2,1240,20,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
-  --step--1: clamp(0.85rem, 0.5677rem + 0.1836vw, 0.9rem);
+  --step--2: clamp(0.85rem, 0.5677rem + 0.1836vw, 0.9rem);
+  --step--1: clamp(0.85rem, 0.6877rem + 0.2536vw, 0.9rem);
   --step-0: clamp(0.9rem, 0.7754rem + 0.2899vw, 1rem);
   --step-1: clamp(1.2rem, 1.0739rem + 0.6304vw, 1.5rem);
   --step-2: clamp(1.44rem, 1.2615rem + 0.8924vw, 1.7rem);
   --step-3: clamp(1.6rem, 1.6615rem + 1.124vw, 2rem);
+  --step-4: clamp(2rem, 1.7615rem + 1.224vw, 2.3rem);
   --font-weight-medium: 500;
   --font-weight-bold: bold;
   --line-height-small: 1.2;
@@ -56,7 +58,8 @@ table {
   --no-color: transparent;
   --micro-space: 0.3rem;
   --mini-space: 0.5rem;
-  --small-space: 1rem;
+  --smaller-space: 1rem;
+  --small-space: 1.2rem;
   --normal-space: 1.5rem;
   --medium-space: 2rem;
   --big-space: 2.5rem;
@@ -98,7 +101,7 @@ h2 {
 }
 
 h2:not(:first-child) {
-  padding-block-start: var(--small-space);
+  padding-block-start: var(--smaller-space);
 }
 
 h4 {
@@ -128,7 +131,7 @@ a {
 }
 
 figcaption {
-  font-size: var(--step--1);
+  font-size: var(--step--2);
 }
 
 figcaption a {
@@ -137,7 +140,7 @@ figcaption a {
 
 .username {
   background-color: var(--no-color);
-  font-size: var(--step--1);
+  font-size: var(--step--2);
   padding-block-start: var(--mini-space);
   color: var(--text-color-light);
 }
@@ -166,7 +169,7 @@ nav, .button, h1, h2, .project-types__description h3, .btn {
 }
 
 p:not(.project-types__info, .work-process__preferance, .project__type), .stand {
-  margin-block-end: var(--small-space);
+  margin-block-end: var(--smaller-space);
 }
 
 .content-box, .project-types__info, .about__intro {
@@ -220,13 +223,13 @@ button {
 .button {
   border-radius: 30px;
   width: 35%;
-  padding: var(--small-space);
+  padding: var(--smaller-space);
   margin: 0 auto;
   text-align: center;
   font-size: var(--step-0);
 }
 .button__landingPage {
-  width: 25%;
+  width: 65%;
   border-radius: 10px;
   color: #ffffff;
   background-color: #aa1f6f;
@@ -237,7 +240,7 @@ button {
 }
 .button--proto {
   width: 40%;
-  margin: var(--small-space);
+  margin: var(--smaller-space);
 }
 .button--cv {
   width: 20%;
@@ -252,6 +255,11 @@ button {
 }
 
 @media (min-width: 600px) {
+  .button__landingPage {
+    width: 22%;
+    font-size: var(--step--1);
+    padding-block: var(--small-space);
+  }
   .button--light {
     width: 25%;
   }
@@ -319,7 +327,7 @@ button {
   }
   .navbar__items {
     border: none;
-    padding: var(--small-space);
+    padding: var(--smaller-space);
     align-content: center;
   }
   .navbar__logo {
@@ -333,13 +341,19 @@ button {
 }
 .footer p:not(.username) {
   color: var(--footer-text);
-  font-size: var(--step--1);
+  font-size: var(--step--2);
 }
 .footer__some {
-  margin: var(--small-space) auto;
+  margin: var(--smaller-space) auto;
 }
 .footer__some img {
   width: 25%;
+}
+.footer__some--landing {
+  width: 70%;
+}
+.footer__some--landing img {
+  width: 40%;
 }
 
 @media (min-width: 600px) {
@@ -348,6 +362,9 @@ button {
   }
   .footer__some img {
     width: 15%;
+  }
+  .footer__some--landing {
+    width: 40%;
   }
 }
 .grid {
@@ -506,10 +523,10 @@ figcaption {
   }
   .project-types__description {
     padding-block-start: var(--normal-space);
-    padding-inline: var(--small-space);
+    padding-inline: var(--smaller-space);
   }
   .project-types__description p {
-    font-size: var(--step--1);
+    font-size: var(--step--2);
   }
   .project-types__info {
     padding-block-start: 0;
@@ -527,7 +544,7 @@ figcaption {
   padding-block-start: var(--big-space);
 }
 .project__intro:nth-child(2) {
-  padding-block-end: var(--small-space);
+  padding-block-end: var(--smaller-space);
 }
 .project__intro a {
   font-weight: var(--font-weight-bold);
@@ -548,16 +565,16 @@ figcaption {
 }
 .project__next--bottom {
   padding-bottom: var(--normal-space);
-  padding-inline: var(--small-space);
+  padding-inline: var(--smaller-space);
 }
 
 #resultPage, #processPage {
   font-size: var(--step-0);
-  padding-inline-end: var(--small-space);
+  padding-inline-end: var(--smaller-space);
 }
 
 #process h3 {
-  padding-block-start: var(--small-space);
+  padding-block-start: var(--smaller-space);
 }
 
 #result > div:not(:last-child.mobile-flex) img, #process img {
@@ -585,20 +602,69 @@ figcaption {
 }
 .landingPage {
   background-color: #33052a;
+  position: relative; /* For stjernene! */
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
+}
+.landingPage__logo {
+  font-family: abril-display, serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: var(--step-2);
 }
 .landingPage__content {
-  display: grid;
-  grid-template-columns: 1fr 0.8fr;
-  background-color: #ffffff;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
 }
 .landingPage__buttons {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  margin-block-start: 2rem;
+  gap: 1.5rem;
 }
 .landingPage__copyright {
   color: #67415f;
+}
+.landingPage__image {
+  display: none;
+}
+
+@media (min-width: 600px) {
+  .landingPage__content {
+    display: grid;
+    grid-template-columns: 1fr 0.5fr;
+    grid-template-areas: "content image" "footer image";
+    width: 75%;
+  }
+  .landingPage__content--text {
+    width: 55ch;
+    margin: 1rem auto;
+  }
+  .landingPage__content--info {
+    grid-area: content;
+  }
+  .landingPage__footer {
+    grid-area: footer;
+  }
+  .landingPage__logo {
+    font-size: var(--step-4);
+  }
+  .landingPage__buttons {
+    flex-direction: row;
+    gap: 0;
+  }
+  .landingPage__image {
+    display: block;
+    width: 32%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    grid-area: image;
+  }
 }/*# sourceMappingURL=style.css.map */

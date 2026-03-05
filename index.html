@@ -10,7 +10,8 @@
 
         <link href="styles/style.css" rel="stylesheet">
         <link rel="icon" href="images/heart.png">
-        
+        <link rel="stylesheet" href="https://use.typekit.net/ouy2ncs.css">
+
         <title>Designs by Tuva - Grafisk design portfolio</title>
 
         <script>
@@ -42,65 +43,79 @@
             });
     </script>
     <style>
-/* @keyframes twinkle {
+@keyframes twinkle {
     from { opacity: 0.5; transform: scale(1); }
     to { opacity: 1; transform: scale(3); }
-} */
+}
         .star {
-    width: 50px;   /* juster etter behov */
-    height: 50px;
     animation: twinkle 2s infinite alternate;
 }
     </style>
     </head>
 
-    <body class="landingPage">
-        <main id="main">
+    <body>
+        <main id="main" class="landingPage">
             <section class="landingPage__content" role="region" aria-label="Velkommen til denne siden">
-                <div>
-                    <h1>DESIGNS BY TUVA</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse</p>
+                <div class="landingPage__content--info">
+                    <h1 class="landingPage__logo">DESIGNS BY TUVA</h1>
+                    <div class="landingPage__content--text">
+                        <p>Trenger du hjelp til markedsføring? Da er det bra du fant meg!</p>
+                        <p>Jeg utvikler grafiske konsepter, funksjonelle nettsider og enkle reels/tiktok videoer som kan brukes til markedsføring!</p> 
+                        <p>Sjekk ut arbeidet mitt her, og ta gjerne kontakt for en uforpliktende prat </p>
+                    </div>
                     <div class="landingPage__buttons">    
                         <a class="button button__landingPage" href="graphic-design/index.html">Grafisk design</a>
                         <a class="button button__landingPage" href="web-development/index.html">Web utvikling</a>
                         <a class="button button__landingPage" href="web-development/index.html">Video produksjon</a>
                     </div>
                 </div>
-                <div>
-                    <h2>heihei</h2>
+                <div class="landingPage__image">
+                    <img src="images/me.png">
                 </div>
-        </section>
+                <div class="landingPage__footer">
+                    <figure class="footer__some footer__some--landing mobile-flex">
+                        <div>
+                            <a href="https://www.instagram.com/designsbytuva/" target="_blank" aria-label="Åpner i ny fane"><img src="images/icons/ig-white.png" alt="Besøk Instagrammen til Designs by tuva"></a>
+                            <p class="username">@designsbytuva</p>
+                        </div>
+                        <div>
+                            <a href="mailto:contact@designsbytuva.no" target="_blank" aria-label="Åpner i ny fane"><img src="images/icons/mail-white.png" alt="Send meg en epost"></a>
+                            <p class="username">contact@designsbytuva.no</p>
+                        </div>
+                        <div>
+                            <a href="https://www.linkedin.com/in/tuvahansen/" target="_blank" aria-label="Åpner i ny fane"><img src="images/icons/in-white.png" alt="Besøk LinkedIn profilen min"></a>
+                            <p class="username">@tuvahansen</p>
+                        </div>
+                    </figure>
+                    <p class="landingPage__copyright">&copy;2024 - Alt laget av Tuva Konstanse Hansen</p>
+                </div>
+            </section>
         </main>
-            <footer>
-            <figure class="footer__some mobile-flex">
-                <div>
-                    <a href="https://www.instagram.com/designsbytuva/" target="_blank" aria-label="Åpner i ny fane"><img src="images/icons/ig-white.png" alt="Besøk Instagrammen til Designs by tuva"></a>
-                    <p class="username">@designsbytuva</p>
-                </div>
-                <div>
-                    <a href="mailto:contact@designsbytuva.no" target="_blank" aria-label="Åpner i ny fane"><img src="images/icons/mail-white.png" alt="Send meg en epost"></a>
-                    <p class="username">contact@designsbytuva.no</p>
-                </div>
-                <div>
-                    <a href="https://www.linkedin.com/in/tuvahansen/" target="_blank" aria-label="Åpner i ny fane"><img src="images/icons/in-white.png" alt="Besøk LinkedIn profilen min"></a>
-                    <p class="username">@tuvahansen</p>
-                </div>
-            </figure>
-            <p class="landingPage__copyright">&copy;2024 - Alt laget av Tuva Konstanse Hansen</p>
-            </footer>
 
          <script>
             const container = document.getElementById('main');
 
-const starPositions = [
-  {x: 150, y: 100},
-  {x: 200, y: 150},
-  {x: 300, y: 200},
-  {x: 400, y: 250},
-  {x: 500, y: 300},
-  {x: 620, y: 350},
-  // flere
+const starPositionsDesktop = [
+  {x: '10%', y: '20%'},
+  {x: '20%', y: '30%'},
+  {x: '35%', y: '40%'},
+  {x: '50%', y: '50%'},
+  {x: '70%', y: '60%'},
+  {x: '85%', y: '70%'},
 ];
+
+const starPositionsMobile = [
+  {x: '80%', y: '10%'},
+  {x: '16%', y: '5%'},
+  {x: '45%', y: '17%'},
+  {x: '85%', y: '40%'},
+  {x: '12%', y: '55%'},
+  {x: '70%', y: '70%'},
+  {x: '28%', y: '80%'},
+];
+
+const isMobile = window.innerWidth < 768;
+const starPositions = isMobile ? starPositionsMobile : starPositionsDesktop;
 
 starPositions.forEach(pos => {
   const star = document.createElement('img');
@@ -113,8 +128,8 @@ starPositions.forEach(pos => {
   star.style.height = `${size}px`;
 
   star.style.position = 'absolute';
-  star.style.left = `${pos.x}px`;
-  star.style.top = `${pos.y}px`;
+  star.style.left = pos.x;
+  star.style.top = pos.y;
 
   // tilfeldig: 50% blinker
   if (Math.random() < 0.5) star.classList.add('twinkle');

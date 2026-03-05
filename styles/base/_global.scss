@@ -35,7 +35,7 @@ h2 {
 }
 
 h2:not(:first-child) {
-    padding-block-start: var(--small-space);
+    padding-block-start: var(--smaller-space);
 }
 
 h4 {
@@ -65,7 +65,7 @@ a {
 }
 
 figcaption {
-    font-size: var(--step--1);
+    font-size: var(--step--2);
 }
 
 figcaption a {
@@ -74,7 +74,7 @@ figcaption a {
 
 .username {
     background-color: var(--no-color);
-    font-size: var(--step--1);
+    font-size: var(--step--2);
     padding-block-start: var(--mini-space);
     color: var(--text-color-light);
 }
@@ -103,7 +103,7 @@ nav, .button, h1, h2, .project-types__description h3, .btn {
 }
 
 p:not(.project-types__info, .work-process__preferance, .project__type), .stand {
-    margin-block-end: var(--small-space);
+    margin-block-end: var(--smaller-space);
 }
 
 .content-box, .project-types__info, .about__intro {

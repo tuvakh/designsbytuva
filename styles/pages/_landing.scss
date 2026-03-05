@@ -1,23 +1,83 @@
 .landingPage {
-    background-color: #33052a; 
+    background-color: #33052a;
+    position: relative; /* For stjernene! */
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
 
+    &__logo {
+        font-family: abril-display, serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: var(--step-2);
+    }
     &__content {
-        display: grid;
-        grid-template-columns: 1fr 0.8fr;
-        background-color: #ffffff;
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #ffffff;
     }
 
     &__buttons {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
+        margin-block-start: 2rem;
+        gap: 1.5rem;
     }
     
     &__copyright {
         color: #67415f; 
+    }
+
+    &__image {
+        display: none;
+    }
+}
+
+@media (min-width: 600px) {
+    .landingPage {
+        &__content {
+            display: grid;
+            grid-template-columns: 1fr 0.5fr;
+            grid-template-areas: 
+            "content image"
+            "footer image";
+            width: 75%;
+
+            &--text {
+                width: 55ch;
+                margin: 1rem auto;
+            }
+
+            &--info {
+                grid-area: content;
+            }
+        }
+
+        &__footer {
+            grid-area: footer;
+        }
+
+        &__logo {
+            font-size: var(--step-4);
+        }
+
+        &__buttons {
+            flex-direction: row;
+            gap: 0;
+        }
+
+        &__image {
+            display: block;
+            width: 32%;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            grid-area: image;
+        }
     }
 }
 

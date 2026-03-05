@@ -5,14 +5,21 @@
 
     p:not(.username) {
         color: var(--footer-text);
-        font-size: var(--step--1);
+        font-size: var(--step--2);
     }
 
     &__some {
-        margin: var(--small-space) auto;
+        margin: var(--smaller-space) auto;
         
         img {
             width: 25%;
+        }
+
+        &--landing {
+            width: 70%;
+            img{
+                width: 40%;
+            }
         }
     }
 }
@@ -24,6 +31,11 @@
 
             img {
                 width: 15%;
+            }
+
+            &--landing {
+                width: 40%;
+                
             }
         }
     }

@@ -1,0 +1,71 @@
+// HIDDEN "SKIP TO MAIN CONTENT" LINK FOR SCREEN READERS
+.skip {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.skip:focus {
+    position: static;
+    width: auto;
+    height: auto;
+}
+
+// COMMON RULES 
+body {
+    font-family: var(--font-family);
+    color: var(--white-color);
+}
+
+h1 {
+    font-size: var(--step-3);
+    font-family: abril-display, serif;
+    padding-block-end: 1rem;
+}
+
+p {
+    font-size: var(--step-0);
+    line-height: var(--line-height-base);
+    margin-block-end: var(--smaller-space);
+}
+
+a {
+    color: var(--white-color);
+    text-decoration: none;
+}
+
+figcaption {
+    font-size: var(--step--2);
+}
+
+figcaption a {
+    text-decoration: underline;
+}
+
+.username {
+    background-color: var(--no-color);
+    font-size: var(--step--2);
+    padding-block-start: var(--mini-space);
+    color: var(--text-color-light);
+}
+
+img {
+    vertical-align: bottom;
+    max-width: 100%;
+    width: 100%;
+}
+
+.about__cv, #process {
+    text-align: left;
+    padding-block-end: 0;
+}
+
+nav, .button, h1, h2, .project-types__description h3, .btn {
+    text-transform: uppercase;
+}
+
+
+

@@ -1,0 +1,40 @@
+@keyframes twinkle {
+    from { opacity: 0.5; transform: scale(1); }
+    to { opacity: 1; transform: scale(3); }
+}
+.star {
+    animation: twinkle 2s infinite alternate;
+}
+
+.hero {
+    background-color: var(--primary-color);
+    position: relative; /* For stjernene!! */
+    height: 100vh;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        height: 100%;
+    }
+    &__info {
+        margin-inline: auto;
+        width: clamp(28ch, 50%, 60ch);
+    }
+    &__image {
+        align-self: end;
+        width: clamp(280px, 50%, 1200px);
+    }
+    &__scroll {
+        font-size: 3rem;
+        animation: bounce 2s infinite;
+        position: absolute;
+        left: 12%;
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(8px); }
+}

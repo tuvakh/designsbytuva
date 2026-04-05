@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="no">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="author" content="Tuva Konstanse Hansen">
+        <meta name="description" content="Designs by Tuva - My portfolio for Graphic design, Web development and Video editing">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <script defer src="scripts/copyright.js"></script>
+
+        <link href="styles/main.css" rel="stylesheet">
+        <link rel="icon" href="assets/images/heart.png">
+        <link rel="stylesheet" href="https://use.typekit.net/ouy2ncs.css">
+
+        <title>Designs by Tuva - Homepage</title>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const menuToggle = document.querySelector('.navbar__menu');
+                const menu = document.querySelector('.navbar__list');
+
+                // Toggle menu on click
+                menuToggle.addEventListener('click', () => {
+                    const isOpen = menu.classList.toggle('open');
+                    menuToggle.setAttribute('aria-expanded', isOpen);
+                });
+
+                // Close menu when clicking a link
+                menu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        menu.classList.remove('open');
+                    });
+                });
+
+                // Toggle menu on keyboard (Enter or Space)
+                menuToggle.addEventListener('keypress', (e) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                        e.preventDefault();
+                        const isOpen = menu.classList.toggle('open');
+                        menuToggle.setAttribute('aria-expanded', isOpen);
+                    }
+                });
+            });
+        </script>
+    </head>
+
+    <body>
+        <header>
+            <a href="#main" class="skip">Skip to main content</a>
+
+            <nav class="navbar mobile-flex">
+                <!-- Logo on all screens -->
+                <div class="navbar__logo">
+                    <a href="#"><img src="../assets/images/logo.png" alt="Logo for designs by Tuva"></a>
+                </div>
+
+                <div>
+                    <button class="navbar__menu" aria-controls="navbarMenu" aria-expanded="false">☰</button>
+                    <ul id="navbarMenu" class="navbar__list">
+                        <li class="navbar__items"><a href="#work-process">Prosess</a></li>
+                        <li class="navbar__items"><a href="#projects">Alle prosjekter</a></li>
+                        <li class="navbar__items"><a href="pages/about.html">Om meg</a></li>
+                        <li class="navbar__items"><a class="button button--navbar background" href="mailto:contact@designsbytuva.no">Kontakt meg</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <main id="main">
+            <section class="hero" role="region" aria-label="Velkommen til denne siden">
+                <div class="hero__content">
+                    <div class="hero__info">
+                        <h1 class="hero__title">DESIGNS BY TUVA</h1>
+                        <div class="hero__text">
+                            <p>Trenger du hjelp med markedsføring?</p>
+                            <p>Jeg utvikler grafiske konsepter, nettsider og innhold som får merkevaren din til å skille seg ut.</p> 
+                            <p>Sjekk ut arbeidet mitt!🤍</p>
+                            <span class="hero__scroll"><a href="#">↓</a></span>
+                        </div>
+                    </div>
+                    <div class="hero__image">
+                        <img src="assets/images/me.png">
+                    </div>
+                </div>
+            </section>
+            <section class="services">
+                <div>
+                    <img src="assets/images/heart.png">
+                    <h2>Grafisk design</h2>
+                    <p></p>
+                    <a>Grafisk design -></a>
+                </div>
+                <div>
+                    <img src="assets/images/heart.png">
+                    <h2>Webutvikling</h2>
+                    <p></p>
+                    <a>Webutvikling -></a>
+                </div>
+                <div>
+                    <img src="assets/images/heart.png">
+                    <h2>Video produksjon</h2>
+                    <p>Kommer snart!</p>
+                </div>
+            </section>
+        </main>
+
+        <script>
+            const container = document.getElementById('main');
+
+            const starPositionsDesktop = [
+            {x: '14%', y: '10%'},
+            {x: '90%', y: '10%'},
+            {x: '53%', y: '20%'},
+            {x: '4%', y: '50%'},
+            {x: '28%', y: '68%'},
+            {x: '60%', y: '78%'},
+            {x: '8%', y: '88%'},
+            ];
+
+            const starPositionsMobile = [
+            {x: '18%', y: '12%'},
+            {x: '78%', y: '5%'},
+            {x: '88%', y: '45%'},
+            {x: '8%', y: '58%'},
+            {x: '80%', y: '72%'},
+            {x: '20%', y: '82%'},
+            ];
+
+            const isMobile = window.innerWidth < 768;
+            const starPositions = isMobile ? starPositionsMobile : starPositionsDesktop;
+
+            starPositions.forEach(pos => {
+                const star = document.createElement('img');
+                star.src = 'assets/images/stars.svg';
+                star.classList.add('star');
+
+                // tilfeldig størrelse
+                const size = 5 + Math.random() * 15;
+                star.style.width = `${size}px`;
+                star.style.height = `${size}px`;
+
+                star.style.position = 'absolute';
+                star.style.left = pos.x;
+                star.style.top = pos.y;
+
+                // tilfeldig: 50% blinker
+                if (Math.random() < 0.5) star.classList.add('twinkle');
+
+                // tilfeldig blinketid og delay
+                if (star.classList.contains('twinkle')) {
+                    star.style.animationDuration = `${1 + Math.random() * 2}s`;
+                    star.style.animationDelay = `${Math.random() * 2}s`;
+                }
+
+                container.appendChild(star);
+            });
+        </script>
+    </body>
+</html>

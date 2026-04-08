@@ -2,12 +2,12 @@
 .navbar {
     display: flex;
     align-items: center;
-    padding: 1.2rem;
+    padding: var(--small-space);
     position: absolute;
     z-index: 1;
     justify-content: space-between;
     text-align: center;
-    
+
     &__menu {
         background: none;
         font-size: var(--step-3);
@@ -19,7 +19,7 @@
         flex-direction: column;
         background: var(--primary-color);
         position: absolute;
-        padding-block: 1rem;
+        padding-block: var(--smaller-space);
         top: 100%;
         right: 0;
         width: 100%;
@@ -31,10 +31,10 @@
 
     &__items {
         display: inline-block;
-        padding-block: 1.5rem;
+        padding-block: var(--normal-space);
 
         &:last-child {
-            padding-block-end: 1.2rem;
+            padding-block-end: var(-small-space);
         }
     }
 
@@ -57,7 +57,5 @@
       border: none;
       width: auto;
     }
-
-    
   }
 } 

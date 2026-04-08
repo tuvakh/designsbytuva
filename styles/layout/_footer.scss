@@ -1,0 +1,18 @@
+.footer {
+    padding: var(--smaller-space);
+    background-color: var(--black-color);
+    text-align: center;
+
+    &__some {
+        display: flex;
+        justify-content: space-around;
+        padding: var(--small-space);
+    }
+    &__link {
+        justify-items: center;
+        width: clamp(10px, 15%, 200px);
+    }
+    &__username {
+        display: none;
+    }
+}

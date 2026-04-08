@@ -1,0 +1,12 @@
+.button {
+    background-color: var(--tertiary-color);
+    border: 0.2rem solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: var(--smaller-space) var(--normal-space);
+    color: var(--white-color);
+    align-self: end;
+
+    &:hover {
+        background-color: var(--border-color);
+    }
+}

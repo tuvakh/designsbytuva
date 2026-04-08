@@ -3,7 +3,11 @@
 @use 'base/global';
 @use 'base/variables';
 
+@use 'components/cards';
+@use 'components/buttons';
+
 @use 'layout/hero';
 @use 'layout/navbar';
+@use 'layout/footer';
 
 @use 'pages/home';

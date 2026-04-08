@@ -1,3 +1,46 @@
-.services {
-    background-color: var(--secondary-color);
+.introduction {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    height: 60vh;
+
+    &__img-box {
+        width: clamp(200px, 60%, 300px);
+        transform: rotate(-5deg);
+    }
+    &__img {
+        box-shadow: -7px 12px 20px var(--black-color);
+        border-radius: var(--border-radius);
+    }
+    &__title {
+        padding-block-start: var(--mega-space);
+    }
 }
+
+.contact {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: var(--normal-space);
+        border: 0.2rem solid var(--border-color);
+        border-radius: var(--border-radius);
+        background-color: var(--tertiary-color);
+
+        label {
+            padding-block-end: var(--mini-space);
+        }
+        input:not(.button), select, textarea {
+            margin-block-end: var(--small-space);
+            padding: var(--mini-space);
+            border-radius: var(--border-radius);
+            background-color: var(--secondary-color);
+        }
+    }
+}
+
+

@@ -1,0 +1,32 @@
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--normal-space);
+
+    &__heading, &__info {
+        color: var(--tertiary-color)
+    }
+    &__box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--tertiary-color);
+        border: 0.2rem solid var(--border-color);
+        border-radius: var(--border-radius);
+        padding: var(--normal-space);
+
+        &--phases {
+            width: 100%;
+            flex-direction: row;
+        }
+    }
+    &__number {
+        font-size: var(--step-3);
+        color: var(--secondary-color);
+        padding-inline-end: var(--normal-space);
+    }
+    &__image {
+        padding-block-end: var(--smaller-space);
+        width: clamp(40px, 10%, 500px);
+    }
+}

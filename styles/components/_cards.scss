@@ -1,11 +1,8 @@
 .cards {
     display: flex;
     flex-wrap: wrap;
-    gap: var(--normal-space);
+    gap: var(--small-space);
 
-    &__heading, &__info {
-        color: var(--tertiary-color)
-    }
     &__box {
         display: flex;
         flex-direction: column;
@@ -14,19 +11,29 @@
         border: 0.2rem solid var(--border-color);
         border-radius: var(--border-radius);
         padding: var(--normal-space);
+        text-align: center;
 
         &--phases {
             width: 100%;
             flex-direction: row;
+            text-align: left;
+            padding-inline-end: var(--small-space);
+            padding-block: var(--small-space);
         }
     }
     &__number {
-        font-size: var(--step-3);
+        font-size: var(--step-4);
         color: var(--secondary-color);
+        font-family: abril-display, serif;
         padding-inline-end: var(--normal-space);
     }
     &__image {
         padding-block-end: var(--smaller-space);
-        width: clamp(40px, 10%, 500px);
+        width: clamp(20px, 10%, 500px);
+    }
+    &__title {
+        font-size: var(--step-1);
+        font-weight: 500;
+        margin: 0;
     }
 }

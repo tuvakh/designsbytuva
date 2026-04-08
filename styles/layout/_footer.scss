@@ -1,5 +1,5 @@
 .footer {
-    padding: var(--smaller-space);
+    padding: var(--small-space);
     background-color: var(--black-color);
     text-align: center;
 
@@ -10,7 +10,7 @@
     }
     &__link {
         justify-items: center;
-        width: clamp(10px, 15%, 200px);
+        width: clamp(10px, 12%, 200px);
     }
     &__username {
         display: none;

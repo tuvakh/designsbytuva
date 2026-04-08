@@ -88,17 +88,17 @@
                 <div class="cards__box">
                     <img class="cards__image" src="assets/images/heart.png">
                     <h2 class="cards__title">Grafisk design</h2>
-                    <p class="cards__text">bla bla bla</p>
+                    <a href="pages/about.html">Se prosjekter -></a>
                 </div>
                 <div class="cards__box">
                     <img class="cards__image" src="assets/images/heart.png">
                     <h2 class="cards__title">Webutvikling</h2>
-                    <p class="cards__text">bla bla bla</p>
+                    <a href="pages/about.html">Se prosjekter -></a>
                 </div>
                 <div class="cards__box">
                     <img class="cards__image" src="assets/images/heart.png">
                     <h2 class="cards__title">Video produksjon</h2>
-                    <p class="cards__text">bla bla bla</p>
+                    <a href="#">Kommer snart!</a>
                 </div>
             </section>
             <section class="introduction">
@@ -107,33 +107,40 @@
                 </figure>
                 <div class="introduction__info">
                     <h2 class="introduction__title">Hvem er jeg?</h2>
-                    <p>bla bla bla bla bla bla bla bla bla</p>
+                    <p>Jeg er en 23 år gammel grafisk designer med lidenskap for både design og koding. Jeg elsker å jobbe med prosjekter som lar meg være kreativ, men jeg setter også pris på enkelt og stilrent design</p>
                     <a class="button" href="pages/about.html">Les mer</a>
                 </div>
             </section>
-            <section class="cards">
-                <h2 class="cards__heading">Hvordan jobber jeg?</h2>
-                <p>Jeg deler inn designprosessen min i to faser:</p>
-                <div class="cards__box cards__box--phases">
-                    <div>
-                        <p class="cards__number">1</p>
+            <section class="phases">
+                <div class="phases__heading"> 
+                    <h2>Hvordan jobber jeg?</h2>
+                    <p>Jeg deler inn prosessen min i to faser:</p>
+                </div>
+                <div class="cards">
+                    <div class="cards__box cards__box--phases">
+                        <div>
+                            <p class="cards__number">1</p>
+                        </div>
+                        <div>
+                            <p class="cards__title">Fase 1: Idémyldring</p>
+                            <p class="cards__text">Vi blir enige om innhold, designretning og stil</p>
+                        </div>
                     </div>
-                    <div>
-                        <h2 class="cards__title">Fase 1</h2>
-                        <p class="cards__text">Idémyldring & skissing: Vi blir enige om designretning, stil og innhold</p>
+                    <div class="cards__box cards__box--phases">
+                        <div>
+                            <p class="cards__number">2</p>
+                        </div>
+                        <div>
+                            <p class="cards__title">Fase 2: Design</p>
+                            <p class="cards__text">Jeg tar idéene våre videre og gjør dem til et ferdig resultat</p>
+                        </div>
                     </div>
                 </div>
-                <div class="cards__box cards__box--phases">
-                    <div>
-                        <p class="cards__number">2</p>
-                    </div>
-                    <div>
-                        <h2 class="cards__title">Fase 2</h2>
-                        <p class="cards__text">Design & ferdigstilling: Jeg tar idéene våre videre og gjør dem til et ferdig resultat.</p>
-                    </div>
+                <div class="phases__info"> 
+                    <h3>Betaling:</h3>
+                    <p>50% ved oppstart, resten etter levering.</p>
+                    <p>(Prisen varierer basert på prosjektet)</p>
                 </div>
-                <p class="cards__info">Betaling: 50% ved oppstart, resten etter levering.</p>
-                <p>(Prisen varierer utfra størrelsen på prosjektet)</p>
             </section>
             <section class="contact">
                 <h2>Kontakt meg</h2>
@@ -155,7 +162,7 @@
 
                     <label for="message">Hva trenger du hjelp til?</label>
                     <textarea id="message" name="message" rows="8" placeholder="Beskriv prosjektet ditt kort"></textarea>
-                    <input class="button" type="submit" value="submit">
+                    <input class="button" type="submit" value="Send">
                 </form>
 
             </section>
@@ -192,12 +199,12 @@
             ];
 
             const starPositionsMobile = [
-            {x: '18%', y: '12%'},
-            {x: '78%', y: '5%'},
-            {x: '88%', y: '45%'},
-            {x: '8%', y: '58%'},
-            {x: '80%', y: '72%'},
-            {x: '20%', y: '82%'},
+            {x: '75%', y: '5%'},
+            {x: '28%', y: '18%'},
+            {x: '86%', y: '28%'},
+            {x: '10%', y: '65%'},
+            {x: '75%', y: '50%'},
+            {x: '30%', y: '92%'},
             ];
 
             const isMobile = window.innerWidth < 768;

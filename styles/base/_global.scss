@@ -26,25 +26,33 @@ section:nth-child(odd) {
 }
 section:not(.hero) {
     padding: var(--big-space);
-    min-height: 65vh;
+    min-height: 60vh;
     align-content: center;
 }
 
 h1 {
     font-size: var(--step-3);
     font-family: abril-display, serif;
-    padding-block: var(--smaller-space);
+    padding-block: var(--small-space);
 }
 
 h2 {
     font-size: var(--step-2);
     font-family: abril-display, serif;
+    padding-block-end: var(--mini-space);
+}
+
+h3 {
+    font-size: var(--step-1);
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-block-end: var(--mini-space);
 }
 
 p {
     font-size: var(--step-0);
     line-height: var(--line-height-base);
-    margin-block-end: var(--smaller-space);
+    margin-block-end: var(--small-space);
 }
 
 a {

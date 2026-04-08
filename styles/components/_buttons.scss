@@ -1,8 +1,9 @@
 .button {
+    display: inline-block;
     background-color: var(--tertiary-color);
     border: 0.2rem solid var(--border-color);
     border-radius: var(--border-radius);
-    padding: var(--smaller-space) var(--normal-space);
+    padding: var(--small-space) var(--normal-space);
     color: var(--white-color);
     align-self: end;
 

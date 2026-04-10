@@ -18,23 +18,26 @@
 
     &__content {
         display: flex;
-        flex-direction: column;
-        justify-content: end;
+        flex-wrap: wrap;
         height: 100%;
+
+        @media (max-width: 600px) {
+            align-content: end;
+        }
     }
     &__info {
+        align-self: center;
         margin-inline: auto;
-        width: clamp(28ch, 50%, 60ch);
+        width: clamp(28ch, 50%, 38ch);
     }
     &__image {
         align-self: end;
-        width: clamp(265px, 50%, 1200px);
+        margin-inline-start: auto;
+        width: clamp(265px, 50%, 350px);
     }
     &__scroll {
         font-size: var(--step-4);
         animation: bounce 2s infinite;
         position: absolute;
-        left: 12%;
-        transform: translateX(-50%);
     }
 }

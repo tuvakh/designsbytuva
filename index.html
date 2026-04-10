@@ -8,8 +8,8 @@
         <meta name="description" content="Designs by Tuva - My portfolio for Graphic design, Web development and Video editing">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <script defer src="scripts/copyright.js"></script>
-
+<!--         <script defer src="scripts/copyright.js"></script>
+ -->
         <link href="styles/main.css" rel="stylesheet">
         <link rel="icon" href="assets/images/heart.png">
         <link rel="stylesheet" href="https://use.typekit.net/ouy2ncs.css">
@@ -62,7 +62,7 @@
                         <li class="navbar__items"><a href="#work-process">Grafisk design</a></li>
                         <li class="navbar__items"><a href="#projects">Webutvikling</a></li>
                         <li class="navbar__items"><a href="pages/about.html">Om meg</a></li>
-                        <li class="navbar__items"><a class="button button--navbar background" href="mailto:contact@designsbytuva.no">Kontakt meg</a></li>
+                        <li class="navbar__items"><a class="button" href="mailto:contact@designsbytuva.no">Kontakt meg</a></li>
                     </ul>
                 </div>
             </nav>
@@ -85,17 +85,17 @@
                 </div>
             </section>
             <section id="scroll" class="cards">
-                <div class="cards__box">
+                <div class="cards__box cards__box--projects">
                     <img class="cards__image" src="assets/images/heart.png">
                     <h2 class="cards__title">Grafisk design</h2>
                     <a href="pages/about.html">Se prosjekter -></a>
                 </div>
-                <div class="cards__box">
+                <div class="cards__box cards__box--projects">
                     <img class="cards__image" src="assets/images/heart.png">
                     <h2 class="cards__title">Webutvikling</h2>
                     <a href="pages/about.html">Se prosjekter -></a>
                 </div>
-                <div class="cards__box">
+                <div class="cards__box cards__box--projects">
                     <img class="cards__image" src="assets/images/heart.png">
                     <h2 class="cards__title">Video produksjon</h2>
                     <a href="#">Kommer snart!</a>
@@ -143,9 +143,10 @@
                 </div>
             </section>
             <section class="contact">
-                <h2>Kontakt meg</h2>
-                <p>Ta gjerne kontakt med meg for en forpliktende prat!</p>
-
+                <div>
+                    <h2>Kontakt meg</h2>
+                    <p>Ta gjerne kontakt med meg for en forpliktende prat!</p>
+                </div>
                 <form class="contact__form">
                     <label for="name">Navn:</label>
                     <input type="text" id="name" placeholder="Hva heter du?" name="name">
@@ -182,7 +183,7 @@
                     <p class="footer__username">@tuvahansen</p>
                 </div>
             </figure>
-            <p>&copy;2024 - Alt laget av Tuva Konstanse Hansen</p>
+            <p class="footer__text">&copy;2024 - Alt laget av Tuva Konstanse Hansen</p>
         </footer>
 
         <script>

@@ -26,7 +26,7 @@ section:nth-child(odd) {
 }
 section:not(.hero) {
     padding: var(--big-space);
-    min-height: 60vh;
+    min-height: clamp(20vh, 20%, 60vh);
     align-content: center;
 }
 

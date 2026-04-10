@@ -1,6 +1,7 @@
 .cards {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: var(--small-space);
 
     &__box {
@@ -14,11 +15,14 @@
         text-align: center;
 
         &--phases {
-            width: 100%;
+            flex: 1;
             flex-direction: row;
             text-align: left;
             padding-inline-end: var(--small-space);
             padding-block: var(--small-space);
+        }
+        &--projects {
+            width: clamp(250px, 20%, 300px);
         }
     }
     &__number {

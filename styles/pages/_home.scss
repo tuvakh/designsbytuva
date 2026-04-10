@@ -2,7 +2,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-content: center;
+    align-items: center;
+    gap: 3rem 6rem;
     height: 75vh;
 
     &__img-box {
@@ -14,10 +15,7 @@
         border-radius: var(--border-radius);
     }
     &__info {
-        width: clamp(24ch, 50%, 60ch);
-    }
-    &__title {
-        padding-block-start: var(--mega-space);
+        width: clamp(24ch, 50%, 40ch);
     }
 }
 
@@ -43,12 +41,13 @@
 .contact {
     display: flex;
     flex-wrap: wrap;
+    gap: 0 6rem;
     height: 75vh;
 
     &__form {
+        flex: 1;
         display: flex;
         flex-direction: column;
-        width: 100%;
         padding: var(--normal-space) var(--small-space);
         border: 0.2rem solid var(--border-color);
         border-radius: var(--border-radius);

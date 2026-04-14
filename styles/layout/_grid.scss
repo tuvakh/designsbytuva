@@ -1,18 +1,16 @@
 .grid {
     display: grid;
 
-    &__right {
-        &--about {
-            grid-row: 2;
-        }
+    &__main {
+        grid-row: 2;
     }
-    &__left {
-        &--about {
-            display: contents;
-        
-         img {
+    &__aside {
+        display: contents;
+    
+        img {
+            width: 100%;
             object-fit: cover;
-        }}
+        }
 
         &--about figure:first-child img {
             height: 35vh;
@@ -27,21 +25,20 @@
         grid-template-columns: 0.7fr 1fr;
         grid-template-areas: 
             "left right";
-        align-items: start;
     
-        &__left {
+        &__aside {
             position: sticky;
             bottom: 0;
             align-self: last baseline;
-            height: auto;
             display: block;
+            grid-area: left;
             
             &--about figure:first-child img {
                 height: auto;
             }
         }
 
-        &__right {
+        &__main {
             grid-area: right;
         }
     }

@@ -34,14 +34,14 @@
             background-color: var(--primary-color);
             border: 0.1rem solid var(--tertiary-color);
             position: absolute;
-            flex-wrap: wrap;
             top: 100%;
             right: 0;
             width: 100%;
         }
 
         @media (min-width: 600px) {
-            display: block;
+            display: flex;
+            align-items: center;
         }
     }
 
@@ -49,10 +49,6 @@
         display: inline-block;
         padding-block: var(--normal-space);
         margin-inline: var(--mini-space); 
-
-        &:last-child {
-            padding-block-end: var(-small-space);
-        }
 
         &:hover {
             font-weight: bold;

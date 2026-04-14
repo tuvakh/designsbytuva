@@ -5,9 +5,7 @@
     border-radius: var(--border-radius);
     padding: var(--small-space) var(--normal-space);
     color: var(--white-color);
-    align-self: end;
     text-transform: uppercase;
-    flex: 1;
 
     &:hover {
         background-color: var(--border-color);
@@ -16,5 +14,8 @@
         @media (min-width: 600px) {
             display: none;
         }
+    }
+    &--cv {
+        padding-block: var(--mini-space);
     }
 }

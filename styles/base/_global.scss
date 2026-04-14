@@ -43,10 +43,13 @@ h2 {
 }
 
 h3 {
-    font-size: var(--step-1);
     text-transform: uppercase;
     font-weight: bold;
     padding-block-end: var(--mini-space);
+}
+
+h1, h2, h3 {
+    text-transform: uppercase;
 }
 
 p {
@@ -73,15 +76,5 @@ img {
     max-width: 100%;
     width: 100%;
 }
-
-.about__cv, #process {
-    text-align: left;
-    padding-block-end: 0;
-}
-
-nav, .button, h1, h2, .project-types__description h3, .btn {
-    text-transform: uppercase;
-}
-
 
 

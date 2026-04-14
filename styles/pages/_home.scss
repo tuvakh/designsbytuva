@@ -20,6 +20,8 @@
 }
 
 .phases {
+    margin: auto;
+
     &__heading, &__info {
         color: var(--primary-color);
     }
@@ -36,13 +38,18 @@
             color: var(--tertiary-color);
         }
     }
+
+    @media (min-width: 600px) {
+        width: 70%;
+    }
 }
 
 .contact {
     display: flex;
     flex-wrap: wrap;
-    gap: 0 6rem;
-    height: 75vh;
+    margin: 0 auto;
+
+    gap: 0 3rem;
 
     &__form {
         flex: 1;
@@ -65,6 +72,10 @@
         ::placeholder {
             color: var(--tertiary-color);
         }
+    }
+
+    @media (min-width: 600px) {
+        width: 75%;
     }
 }
 

@@ -50,7 +50,7 @@
         <header>
             <a href="#main" class="skip">Skip to main content</a>
 
-            <nav class="navbar mobile-flex">
+            <nav class="navbar">
                 <!-- Logo on all screens -->
                 <div class="navbar__logo">
                     <a href="#"><img src="../assets/images/logo.png" alt="Logo for designs by Tuva"></a>
@@ -122,7 +122,7 @@
                             <p class="cards__number">1</p>
                         </div>
                         <div>
-                            <p class="cards__title">Fase 1: Idémyldring</p>
+                            <p class="cards__title cards__title--phases">Fase 1: Idémyldring</p>
                             <p class="cards__text">Vi blir enige om innhold, designretning og stil</p>
                         </div>
                     </div>
@@ -131,7 +131,7 @@
                             <p class="cards__number">2</p>
                         </div>
                         <div>
-                            <p class="cards__title">Fase 2: Design</p>
+                            <p class="cards__title cards__title--phases">Fase 2: Design</p>
                             <p class="cards__text">Jeg tar idéene våre videre og gjør dem til et ferdig resultat</p>
                         </div>
                     </div>
@@ -142,45 +142,46 @@
                     <p>(Prisen varierer basert på prosjektet)</p>
                 </div>
             </section>
-            <section class="contact">
-                <div>
-                    <h2>Kontakt meg</h2>
-                    <p>Ta gjerne kontakt med meg for en forpliktende prat!</p>
+            <section>
+                <div class="contact">
+                    <div>
+                        <h2>Kontakt meg</h2>
+                        <p>Ta gjerne kontakt med meg for en forpliktende prat!</p>
+                    </div>
+                    <form class="contact__form">
+                        <label for="name">Navn:</label>
+                        <input type="text" id="name" placeholder="Hva heter du?" name="name">
+                        <label for="mail">Email:</label>
+                        <input type="text" id="mail" placeholder="Hva er mailen din?" name="mail">
+                        
+                        <!-- <label for="cars">Choose a car:</label>
+                        <select id="cars" name="cars" size="4" multiple>
+                            <option value="volvo">Volvo</option>
+                            <option value="saab">Saab</option>
+                            <option value="fiat">Fiat</option>
+                            <option value="audi">Audi</option>
+                        </select> -->
+
+                        <label for="message">Hva trenger du hjelp til?</label>
+                        <textarea id="message" name="message" rows="8" placeholder="Beskriv prosjektet ditt kort"></textarea>
+                        <input class="button" type="submit" value="Send">
+                    </form>
                 </div>
-                <form class="contact__form">
-                    <label for="name">Navn:</label>
-                    <input type="text" id="name" placeholder="Hva heter du?" name="name">
-                    <label for="mail">Email:</label>
-                    <input type="text" id="mail" placeholder="Hva er mailen din?" name="mail">
-                    
-                    <!-- <label for="cars">Choose a car:</label>
-                    <select id="cars" name="cars" size="4" multiple>
-                        <option value="volvo">Volvo</option>
-                        <option value="saab">Saab</option>
-                        <option value="fiat">Fiat</option>
-                        <option value="audi">Audi</option>
-                    </select> -->
-
-                    <label for="message">Hva trenger du hjelp til?</label>
-                    <textarea id="message" name="message" rows="8" placeholder="Beskriv prosjektet ditt kort"></textarea>
-                    <input class="button" type="submit" value="Send">
-                </form>
-
             </section>
         </main>
         <footer class="footer">
-            <figure class="footer__some">
-                <div class="footer__link">
-                    <a href="https://www.instagram.com/designsbytuva/" target="_blank" aria-label="Åpner i ny fane"><img class="footer_image" src="../assets/images/icons/ig-white.png" alt="Besøk Instagrammen til Designs by tuva"></a>
-                    <p class="footer__username">@designsbytuva</p>
+            <figure class="some">
+                <div class="some__link">
+                    <a href="https://www.instagram.com/designsbytuva/" target="_blank" aria-label="Åpner i ny fane"><img class="some__image" src="../assets/images/icons/ig-white.png" alt="Besøk Instagrammen til Designs by tuva"></a>
+                    <p class="some__username">@designsbytuva</p>
                 </div>
-                <div class="footer__link">
-                    <a href="mailto:contact@designsbytuva.no" target="_blank" aria-label="Åpner i ny fane"><img class="footer_image" src="../assets/images/icons/mail-white.png" alt="Send meg en epost"></a>
-                    <p class="footer__username">contact@designsbytuva.no</p>
+                <div class="some__link">
+                    <a href="mailto:contact@designsbytuva.no" target="_blank" aria-label="Åpner i ny fane"><img class="some__image" src="../assets/images/icons/mail-white.png" alt="Send meg en epost"></a>
+                    <p class="some__username">contact@designsbytuva.no</p>
                 </div>
-                <div class="footer__link">
-                    <a href="https://www.linkedin.com/in/tuvahansen/" target="_blank" aria-label="Åpner i ny fane"><img class="footer_image" src="../assets/images/icons/in-white.png" alt="Besøk LinkedIn profilen min"></a>
-                    <p class="footer__username">@tuvahansen</p>
+                <div class="some__link">
+                    <a href="https://www.linkedin.com/in/tuvahansen/" target="_blank" aria-label="Åpner i ny fane"><img class="some__image" src="../assets/images/icons/in-white.png" alt="Besøk LinkedIn profilen min"></a>
+                    <p class="some__username">@tuvahansen</p>
                 </div>
             </figure>
             <p class="footer__text">&copy;2024 - Alt laget av Tuva Konstanse Hansen</p>

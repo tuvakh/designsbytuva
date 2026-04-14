@@ -1,0 +1,26 @@
+.some {
+    display: flex;
+    width: 50%;
+    margin-inline: auto;
+    justify-content: space-around;
+    padding: var(--small-space);
+    text-align: center;
+
+    &--about {
+        gap: var(--medium-space);
+        padding-inline: 0;
+        margin: 0;
+    }
+    &__link {
+        justify-items: center;
+    }
+    &__image {
+        max-width: clamp(10px, 30%, 30px);
+    }
+    &__username {
+        display: none;
+        @media (min-width: 600px) {
+            display:block;
+        }
+    }
+}

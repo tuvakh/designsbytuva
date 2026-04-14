@@ -1,0 +1,48 @@
+.grid {
+    display: grid;
+
+    &__right {
+        &--about {
+            grid-row: 2;
+        }
+    }
+    &__left {
+        &--about {
+            display: contents;
+        
+         img {
+            object-fit: cover;
+        }}
+
+        &--about figure:first-child img {
+            height: 35vh;
+            grid-row: 1; 
+            object-position: 50% 15%;
+        }
+    }
+}
+
+@media (min-width: 600px) {
+    .grid {
+        grid-template-columns: 0.7fr 1fr;
+        grid-template-areas: 
+            "left right";
+        align-items: start;
+    
+        &__left {
+            position: sticky;
+            bottom: 0;
+            align-self: last baseline;
+            height: auto;
+            display: block;
+            
+            &--about figure:first-child img {
+                height: auto;
+            }
+        }
+
+        &__right {
+            grid-area: right;
+        }
+    }
+}

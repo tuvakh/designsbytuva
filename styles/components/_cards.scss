@@ -20,6 +20,13 @@
             text-align: left;
             padding-inline-end: var(--small-space);
             padding-block: var(--small-space);
+
+            p {
+                margin: 0;
+            }
+            @media (min-width: 600px) {
+                padding-block: var(--normal-space);
+            }
         }
         &--projects {
             width: clamp(250px, 20%, 300px);
@@ -32,12 +39,15 @@
         padding-inline-end: var(--normal-space);
     }
     &__image {
-        padding-block-end: var(--smaller-space);
-        width: clamp(20px, 10%, 500px);
+        padding-block-end: var(--small-space);
+        width: clamp(10px, 15%, 250px);
     }
     &__title {
         font-size: var(--step-1);
-        font-weight: 500;
+        font-weight: bold;
         margin: 0;
+        &--phases {
+            font-size: var(--step-0);
+        }
     }
 }

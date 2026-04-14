@@ -5,9 +5,12 @@
 
 @use 'components/cards';
 @use 'components/buttons';
+@use 'components/some';
 
 @use 'layout/hero';
 @use 'layout/navbar';
 @use 'layout/footer';
+@use 'layout/grid';
 
 @use 'pages/home';
+@use 'pages/about';

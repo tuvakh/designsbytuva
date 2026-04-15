@@ -24,9 +24,8 @@ body {
 section:nth-child(odd) {
     background-color: var(--primary-color);
 }
-section:not(.hero) {
+section:not(.hero, .graphic) {
     padding: var(--big-space);
-    min-height: clamp(20vh, 20%, 60vh);
     align-content: center;
 }
 

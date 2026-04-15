@@ -1,0 +1,48 @@
+
+/* ALL PROJECTS */
+.projects {
+    display: block;
+
+    @media (min-width: 600px) {
+        display: flex;
+    }
+
+    &__content {
+        position: relative;
+        border-top: 0.1rem var(--white-color) solid;
+
+        :hover img {
+             opacity: 0.15;
+        }
+    }
+    
+    a:hover > div {
+        opacity: 1;
+        color: var(--primary-color);
+    }
+
+    &__caption {
+        cursor: pointer;
+        position: absolute;
+        top: 50%; 
+        left: 50%; 
+        transform: translate(-50%, -50%); 
+        opacity: 0;
+        justify-items: center;
+        width: 100%;
+
+        h2, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        &--big {
+            font-size: 1.5rem;
+            line-height: 2.25rem;
+        }
+    }
+}
+
+.white-img {
+    border: 0.5px solid var(--footer-text);
+}

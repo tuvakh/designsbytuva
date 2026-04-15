@@ -1,24 +1,29 @@
-
 /* ALL PROJECTS */
 .projects {
-    display: block;
+    &__row {
+        display: block;
 
-    @media (min-width: 600px) {
-        display: flex;
+        @media (min-width: 600px) {
+            display: flex;
+        }
     }
 
-    &__content {
+    &__item {
         position: relative;
         border-top: 0.1rem var(--white-color) solid;
-
         :hover img {
-             opacity: 0.15;
+            opacity: 0.15;
         }
     }
     
     a:hover > div {
         opacity: 1;
         color: var(--primary-color);
+    }
+
+    h2, p {
+        margin: 0;
+        padding: 0;
     }
 
     &__caption {
@@ -30,16 +35,7 @@
         opacity: 0;
         justify-items: center;
         width: 100%;
-
-        h2, p {
-            margin: 0;
-            padding: 0;
-        }
-
-        &--big {
-            font-size: 1.5rem;
-            line-height: 2.25rem;
-        }
+        font-size: var(--step-1);
     }
 }
 

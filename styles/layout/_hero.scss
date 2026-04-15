@@ -23,12 +23,18 @@
 
         @media (max-width: 600px) {
             align-content: end;
+            :is(.hero--graphic, .hero--web) & {
+                align-content: center;
+            }
         }
     }
     &__info {
         align-self: center;
         margin-inline: auto;
         width: clamp(28ch, 50%, 38ch);
+        &--longer {
+            width: clamp(28ch, 80%, 45ch);
+        }
     }
     &__image {
         align-self: end;
@@ -39,5 +45,20 @@
         font-size: var(--step-4);
         animation: bounce 2s infinite;
         position: absolute;
+    }
+    &--graphic, &--web {
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        @media (min-width: 600px) {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+        }
+    }
+    &--graphic {
+        background-image: url(../assets/images/graphic-background.png);
+    }
+    &--web {
+        background-image: url(../assets/images/web-background.png);
     }
 }

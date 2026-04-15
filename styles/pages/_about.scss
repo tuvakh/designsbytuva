@@ -1,6 +1,14 @@
 /* ABOUT ME */
 .about {
-    background-color: var(--primary-color);
+    &__intro {
+        background-color: var(--secondary-color);
+        color: var(--primary-color);
+        min-height: 50vh;
+    }
+    &__cv p a {
+        color: var(--border-color);
+        font-weight: 500;
+    }
 
     h3, p:not(.some__username) {
        max-width: clamp(35ch, 80%, 52ch);
@@ -15,12 +23,6 @@
     figcaption {
         padding-block: var(--small-space) var(--normal-space);
         text-align: center;
-    }
-
-    section:nth-child(odd) {
-        min-height: 50vh;
-        background-color: var(--secondary-color);
-        color: var(--primary-color);
     }
 
     h3 {

@@ -17,14 +17,14 @@
 body {
     font-family: var(--font-family);
     color: var(--white-color);
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
     line-height: var(--line-height-base);
 }
 
-section:nth-child(odd) {
-    background-color: var(--primary-color);
+section:nth-child(even):not(.about__cv) {
+    background-color: var(--secondary-color);
 }
-section:not(.hero, .graphic) {
+section:not(.hero, .projects) {
     padding: var(--big-space);
     align-content: center;
 }

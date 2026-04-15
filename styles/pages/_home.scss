@@ -20,8 +20,12 @@
 }
 
 .phases {
-    margin: auto;
-
+    &__box {
+        @media (min-width: 600px) {
+            width: 75%;
+            margin: auto;
+        }
+    }
     &__heading, &__info {
         color: var(--primary-color);
     }
@@ -37,10 +41,6 @@
         p:last-of-type {
             color: var(--tertiary-color);
         }
-    }
-
-    @media (min-width: 600px) {
-        width: 70%;
     }
 }
 

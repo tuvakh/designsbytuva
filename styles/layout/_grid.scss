@@ -2,10 +2,13 @@
     display: grid;
 
     &__main {
-        grid-row: 2;
+        &--about {
+            grid-row: 2;
+        }
     }
     &__aside {
         display: contents;
+        border-right: 0.1rem solid var(--primary-color);
     
         img {
             width: 100%;

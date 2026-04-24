@@ -72,8 +72,8 @@
             <section class="hero" role="region" aria-label="Velkommen til denne siden">
                 <div class="hero__content">
                     <div class="hero__info">
-                        <h1 class="hero__title">DESIGNS BY TUVA</h1>
-                        <div class="hero__text">
+                        <h1>DESIGNS BY TUVA</h1>
+                        <div>
                             <p>Trenger du hjelp med markedsføring?</p>
                             <p>Jeg utvikler grafiske konsepter, nettsider og innhold som får merkevaren din til å skille seg ut.</p> 
                             <p>Sjekk ut hva jeg gjør! 🤍</p>
@@ -107,7 +107,7 @@
                     <img class="introduction__img" src="assets/images/me-pink.png">
                 </figure>
                 <div class="introduction__info">
-                    <h2 class="introduction__title">Hvem er jeg?</h2>
+                    <h2>Hvem er jeg?</h2>
                     <p>Jeg er en 23 år gammel grafisk designer med lidenskap for både design og koding. Jeg elsker å jobbe med prosjekter som lar meg være kreativ, men jeg setter også pris på enkelt og stilrent design</p>
                     <a class="button" href="pages/about.html">Les mer</a>
                 </div>
@@ -125,7 +125,7 @@
                             </div>
                             <div>
                                 <p class="cards__title cards__title--phases">Fase 1: Idémyldring</p>
-                                <p class="cards__text">Vi blir enige om innhold, designretning og stil</p>
+                                <p>Vi blir enige om innhold, designretning og stil</p>
                             </div>
                         </div>
                         <div class="cards__box cards__box--phases">
@@ -134,7 +134,7 @@
                             </div>
                             <div>
                                 <p class="cards__title cards__title--phases">Fase 2: Design</p>
-                                <p class="cards__text">Jeg tar idéene våre videre og gjør dem til et ferdig resultat</p>
+                                <p>Jeg tar idéene våre videre og gjør dem til et ferdig resultat</p>
                             </div>
                         </div>
                     </div>
@@ -174,15 +174,15 @@
         </main>
         <footer class="footer">
             <figure class="some">
-                <div class="some__link">
+                <div>
                     <a href="https://www.instagram.com/designsbytuva/" target="_blank" aria-label="Åpner i ny fane"><img class="some__image" src="assets/images/icons/ig-white.png" alt="Besøk Instagrammen til Designs by tuva"></a>
                     <p class="some__username">@designsbytuva</p>
                 </div>
-                <div class="some__link">
+                <div>
                     <a href="mailto:contact@designsbytuva.no" target="_blank" aria-label="Åpner i ny fane"><img class="some__image" src="assets/images/icons/mail-white.png" alt="Send meg en epost"></a>
                     <p class="some__username">contact@designsbytuva.no</p>
                 </div>
-                <div class="some__link">
+                <div>
                     <a href="https://www.linkedin.com/in/tuvahansen/" target="_blank" aria-label="Åpner i ny fane"><img class="some__image" src="assets/images/icons/in-white.png" alt="Besøk LinkedIn profilen min"></a>
                     <p class="some__username">@tuvahansen</p>
                 </div>
@@ -194,23 +194,23 @@
             const container = document.getElementById('main');
 
             const starPositionsDesktop = [
-            {x: '4%', y: '40%'},
-            {x: '12%', y: '88%'},
-            {x: '18%', y: '10%'},
-            {x: '35%', y: '65%'},
-            {x: '45%', y: '25%'},
-            {x: '58%', y: '80%'},
-            {x: '70%', y: '45%'},
-            {x: '95%', y: '22%'}
+            {x: '4%', y: '40%', size: 12},
+            {x: '12%', y: '88%', size: 8},
+            {x: '18%', y: '10%', size: 16},
+            {x: '35%', y: '65%', size: 10},
+            {x: '45%', y: '25%', size: 14},
+            {x: '58%', y: '80%', size: 7},
+            {x: '70%', y: '45%', size: 18},
+            {x: '95%', y: '22%', size: 11}
             ];
 
             const starPositionsMobile = [
-            {x: '10%', y: '65%'},
-            {x: '28%', y: '18%'},
-            {x: '30%', y: '92%'},
-            {x: '75%', y: '5%'},
-            {x: '75%', y: '50%'},
-            {x: '86%', y: '28%'}
+            {x: '10%', y: '65%', size: 10},
+            {x: '28%', y: '18%', size: 14},
+            {x: '30%', y: '92%', size: 8},
+            {x: '65%', y: '5%', size: 16},
+            {x: '75%', y: '50%', size: 12},
+            {x: '85%', y: '28%', size: 9}
             ];
 
             const isMobile = window.innerWidth < 768;
@@ -221,10 +221,8 @@
                 star.src = 'assets/images/stars.svg';
                 star.classList.add('star');
 
-                // tilfeldig størrelse
-                const size = 5 + Math.random() * 15;
-                star.style.width = `${size}px`;
-                star.style.height = `${size}px`;
+                star.style.width = `${pos.size}px`;
+                star.style.height = `${pos.size}px`;
 
                 star.style.position = 'absolute';
                 star.style.left = pos.x;

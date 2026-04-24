@@ -1,11 +1,13 @@
 .button {
     display: inline-block;
     background-color: var(--tertiary-color);
-    border: 0.2rem solid var(--border-color);
+    border: 0.15rem solid var(--border-color);
     border-radius: var(--border-radius);
-    padding: var(--small-space) var(--normal-space);
+    padding: var(--smaller-space);
     color: var(--white-color);
     text-transform: uppercase;
+    min-width: 120px;
+    text-align: center;
 
     &:hover {
         background-color: var(--border-color);

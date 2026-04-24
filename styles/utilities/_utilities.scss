@@ -1,37 +1,12 @@
-/* DISPLAYS */
-.mobile {
-    display: block;
-}
-
 /* FLEX */
-.mobile-flex {
+.flex {
     display: flex;
-}
-
-.proto .desktop, .caption, .username {
-    display: none;
-}
-
-.mobile-flex, .flex {
     gap: 3px;
 }
 
-.button, .about__intro, .project{
+.button, .about__intro {
     flex-direction: column;
-}
-
-@media (min-width: 600px) {
-    .mobile {
-        display: none;
-    }
-
-    .desktop, .proto .desktop, .caption, .username {
-        display: block;
-    }
-
-    .flex {
-        display: flex;
-    }
+    flex: 1;
 }
 
 

@@ -10,7 +10,7 @@
     width: 90%;
     margin: auto;
     padding-block: var(--normal-space);
-    
+
     &__details {
         display: flex;
         justify-content: space-between;
@@ -40,9 +40,13 @@
         display: flex;
         justify-content: space-between;
         padding-block-start: var(--normal-space);
-        
+        border-top: 0.5px solid var(--tertiary-color);
+
         &--bottom {
             padding: var(--normal-space);
+            a {
+                color: var(--primary-color);
+            }
             @media (min-width: 600px) {
                 display: none;
             }
@@ -50,17 +54,66 @@
     }
 }
 
+.projects {
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+}
+
 .switch-btn {
     display: flex;
     gap: var(--normal-space);
-    margin: var(--normal-space);
+    padding: var(--normal-space);
+    border-bottom: 1px solid var(--tertiary-color);
+    @media (min-width: 600px) {
+        padding: var(--normal-space) var(--big-space);
+    }
+
     button {
         text-transform: uppercase;
         background-color: transparent;
-        color: var(--white-color);
     }
     .active {
-            color: var(--secondary-color);
-            font-weight: bold;
+        color: var(--tertiary-color);
+        font-weight: bold;
+    }
+}
+
+.result {
+    img:not(.last-img) {
+        margin-block-end: 0.15rem;
+    }
+}
+
+.process {
+    padding: var(--normal-space);
+    
+    @media (min-width: 600px) {
+        padding: var(--normal-space) var(--big-space);
+    }
+    h2:not(:first-of-type), h3 {
+        padding-block-start: var(--normal-space);
+    }
+    p:not(.process__arrow-down) {
+        width: clamp(35ch, 100%, 60ch);
+    }
+    p:not(:first-of-type) {
+        padding-block-end: 1rem;
+    }
+    img{
+        padding-block-end: 0.2rem;
+    }
+    &__arrow-down {
+        font-size: 3rem;
+        text-align: center;
+    }
+    &__logo {
+        width: clamp(100px, 100%, 500px);
+    }
+    &__banner {
+        display: block;
+        @media (min-width: 600px) {
+            display: flex;
+            gap: 3px;
         }
+    }
 }

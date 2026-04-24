@@ -89,6 +89,7 @@ h1 {
 h2 {
   font-size: var(--step-2);
   font-family: abril-display, serif;
+  line-height: 1.2;
 }
 
 h3 {
@@ -103,6 +104,10 @@ h1, h2, h3 {
 p {
   font-size: var(--step-0);
   margin-block-end: var(--small-space);
+}
+
+.italic {
+  font-style: italic;
 }
 
 a {
@@ -211,11 +216,13 @@ img {
 .button {
   display: inline-block;
   background-color: var(--tertiary-color);
-  border: 0.2rem solid var(--border-color);
+  border: 0.15rem solid var(--border-color);
   border-radius: var(--border-radius);
-  padding: var(--small-space) var(--normal-space);
+  padding: var(--smaller-space);
   color: var(--white-color);
   text-transform: uppercase;
+  min-width: 120px;
+  text-align: center;
 }
 .button:hover {
   background-color: var(--border-color);
@@ -384,7 +391,7 @@ img {
 .navbar__items {
   display: inline-block;
   padding-block: var(--normal-space);
-  margin-inline: var(--mini-space);
+  margin-inline: var(--small-space);
 }
 .navbar__items:hover {
   font-weight: bold;
@@ -614,9 +621,13 @@ img {
   display: flex;
   justify-content: space-between;
   padding-block-start: var(--normal-space);
+  border-top: 0.5px solid var(--tertiary-color);
 }
 .project-info__next--bottom {
   padding: var(--normal-space);
+}
+.project-info__next--bottom a {
+  color: var(--primary-color);
 }
 @media (min-width: 600px) {
   .project-info__next--bottom {
@@ -624,19 +635,70 @@ img {
   }
 }
 
+.projects {
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+}
+
 .switch-btn {
   display: flex;
   gap: var(--normal-space);
-  margin: var(--normal-space);
+  padding: var(--normal-space);
+  border-bottom: 1px solid var(--tertiary-color);
+}
+@media (min-width: 600px) {
+  .switch-btn {
+    padding: var(--normal-space) var(--big-space);
+  }
 }
 .switch-btn button {
   text-transform: uppercase;
   background-color: transparent;
-  color: var(--white-color);
 }
 .switch-btn .active {
-  color: var(--secondary-color);
+  color: var(--tertiary-color);
   font-weight: bold;
+}
+
+.result img:not(.last-img) {
+  margin-block-end: 0.15rem;
+}
+
+.process {
+  padding: var(--normal-space);
+}
+@media (min-width: 600px) {
+  .process {
+    padding: var(--normal-space) var(--big-space);
+  }
+}
+.process h2:not(:first-of-type), .process h3 {
+  padding-block-start: var(--normal-space);
+}
+.process p:not(.process__arrow-down) {
+  width: clamp(35ch, 100%, 60ch);
+}
+.process p:not(:first-of-type) {
+  padding-block-end: 1rem;
+}
+.process img {
+  padding-block-end: 0.2rem;
+}
+.process__arrow-down {
+  font-size: 3rem;
+  text-align: center;
+}
+.process__logo {
+  width: clamp(100px, 100%, 500px);
+}
+.process__banner {
+  display: block;
+}
+@media (min-width: 600px) {
+  .process__banner {
+    display: flex;
+    gap: 3px;
+  }
 }
 
 /* ABOUT ME */
@@ -665,36 +727,13 @@ img {
   padding-block-start: var(--normal-space);
 }
 
-/* DISPLAYS */
-.mobile {
-  display: block;
-}
-
 /* FLEX */
-.mobile-flex {
+.flex {
   display: flex;
-}
-
-.proto .desktop, .caption, .username {
-  display: none;
-}
-
-.mobile-flex, .flex {
   gap: 3px;
 }
 
-.button, .about__intro, .project {
+.button, .about__intro {
   flex-direction: column;
-}
-
-@media (min-width: 600px) {
-  .mobile {
-    display: none;
-  }
-  .desktop, .proto .desktop, .caption, .username {
-    display: block;
-  }
-  .flex {
-    display: flex;
-  }
+  flex: 1;
 }/*# sourceMappingURL=main.css.map */

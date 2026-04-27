@@ -770,13 +770,13 @@ img {
   }
 }
 
-.flex {
+.image-flex {
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
 @media (min-width: 600px) {
-  .flex {
+  .image-flex {
     flex-direction: row;
   }
 }

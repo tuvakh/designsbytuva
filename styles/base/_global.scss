@@ -42,10 +42,15 @@ h2 {
 
 h3 {
     font-size: var(--step-1);
-    font-weight: bold;
+    font-weight: 500;
 }
 
-h1, h2, h3 {
+h4 {
+    color: var(--tertiary-color);
+    font-weight: 500;
+}
+
+h1, h2 {
     text-transform: uppercase;
 }
 
@@ -58,9 +63,18 @@ p {
     font-style: italic;
 }
 
+.bold {
+    font-weight: bold;
+}
+
 a {
     color: var(--white-color);
     text-decoration: none;
+}
+
+p a {
+    color: var(--border-color);
+    font-weight: 500;
 }
 
 figcaption {
@@ -74,6 +88,7 @@ figcaption a {
 img {
     vertical-align: bottom;
     max-width: 100%;
+    width: 100%;
 }
 
 

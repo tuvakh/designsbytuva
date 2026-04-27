@@ -6,11 +6,15 @@
     padding: var(--smaller-space);
     color: var(--white-color);
     text-transform: uppercase;
-    min-width: 120px;
+    min-width: clamp(100px, 50%, 120px);
     text-align: center;
 
     &:hover {
-        background-color: var(--border-color);
+        background-color: var(--secondary-color);
+        border: 0.15rem solid var(--tertiary-color);
+        color: var(--tertiary-color);
+        font-weight: bold;
+
     }
     &--about {
         @media (min-width: 600px) {

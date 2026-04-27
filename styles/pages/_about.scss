@@ -4,10 +4,8 @@
         background-color: var(--secondary-color);
         color: var(--primary-color);
         min-height: 50vh;
-    }
-    &__cv p a {
-        color: var(--border-color);
-        font-weight: 500;
+        flex: 1;
+        flex-direction: column;
     }
 
     h3, p:not(.some__username) {

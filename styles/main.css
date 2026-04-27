@@ -94,10 +94,15 @@ h2 {
 
 h3 {
   font-size: var(--step-1);
-  font-weight: bold;
+  font-weight: 500;
 }
 
-h1, h2, h3 {
+h4 {
+  color: var(--tertiary-color);
+  font-weight: 500;
+}
+
+h1, h2 {
   text-transform: uppercase;
 }
 
@@ -110,9 +115,18 @@ p {
   font-style: italic;
 }
 
+.bold {
+  font-weight: bold;
+}
+
 a {
   color: var(--white-color);
   text-decoration: none;
+}
+
+p a {
+  color: var(--border-color);
+  font-weight: 500;
 }
 
 figcaption {
@@ -126,6 +140,7 @@ figcaption a {
 img {
   vertical-align: bottom;
   max-width: 100%;
+  width: 100%;
 }
 
 :root {
@@ -134,7 +149,7 @@ img {
   --step--2: clamp(0.85rem, 0.5677rem + 0.1836vw, 0.9rem);
   --step--1: clamp(0.85rem, 0.6877rem + 0.2536vw, 0.9rem);
   --step-0: clamp(0.9rem, 0.7754rem + 0.2899vw, 1rem);
-  --step-1: clamp(1.2rem, 1.0739rem + 0.6304vw, 1.5rem);
+  --step-1: clamp(1.2rem, 1.0739rem + 0.6304vw, 1.3rem);
   --step-2: clamp(1.44rem, 1.2615rem + 0.8924vw, 1.7rem);
   --step-3: clamp(1.6rem, 1.6615rem + 1.124vw, 2rem);
   --step-4: clamp(2.8rem, 1.7615rem + 1.4vw, 3rem);
@@ -221,11 +236,14 @@ img {
   padding: var(--smaller-space);
   color: var(--white-color);
   text-transform: uppercase;
-  min-width: 120px;
+  min-width: clamp(100px, 50%, 120px);
   text-align: center;
 }
 .button:hover {
-  background-color: var(--border-color);
+  background-color: var(--secondary-color);
+  border: 0.15rem solid var(--tertiary-color);
+  color: var(--tertiary-color);
+  font-weight: bold;
 }
 @media (min-width: 600px) {
   .button--about {
@@ -574,7 +592,7 @@ img {
 }
 
 .white-img {
-  border: 0.5px solid var(--footer-text);
+  border: 0.5px solid var(--copyright-color);
 }
 
 .project-img {
@@ -640,28 +658,38 @@ img {
   background-color: var(--secondary-color);
 }
 
-.switch-btn {
+.switch {
   display: flex;
-  gap: var(--normal-space);
-  padding: var(--normal-space);
+  align-items: center;
+  justify-content: space-between;
   border-bottom: 1px solid var(--tertiary-color);
+  padding: var(--normal-space);
 }
 @media (min-width: 600px) {
-  .switch-btn {
+  .switch {
     padding: var(--normal-space) var(--big-space);
   }
 }
-.switch-btn button {
+.switch__btn {
+  padding-inline-end: var(--small-space);
   text-transform: uppercase;
   background-color: transparent;
 }
-.switch-btn .active {
+.switch .active {
   color: var(--tertiary-color);
   font-weight: bold;
 }
 
+.proto {
+  display: flex;
+  margin-block-start: var(--normal-space);
+}
+.proto__end {
+  margin: auto;
+}
+
 .result img:not(.last-img) {
-  margin-block-end: 0.15rem;
+  margin-block-end: 0.25rem;
 }
 
 .process {
@@ -672,33 +700,38 @@ img {
     padding: var(--normal-space) var(--big-space);
   }
 }
-.process h2:not(:first-of-type), .process h3 {
+.process h2:not(:first-of-type) {
   padding-block-start: var(--normal-space);
+}
+.process h3 {
+  padding-block-start: var(--small-space);
+}
+.process h4 {
+  padding-block-start: var(--small-space);
 }
 .process p:not(.process__arrow-down) {
   width: clamp(35ch, 100%, 60ch);
 }
-.process p:not(:first-of-type) {
-  padding-block-end: 1rem;
+.process p {
+  padding-block-end: var(--smaller-space);
 }
-.process img {
-  padding-block-end: 0.2rem;
+.process p:has(+ h3), .process p:has(+ h4) {
+  padding: 0;
+}
+.process p a {
+  color: var(--tertiary-color);
+  font-weight: 500;
+}
+.process__img-space {
+  margin-block-end: 0.5rem;
 }
 .process__arrow-down {
-  font-size: 3rem;
+  font-size: 2.5rem;
   text-align: center;
 }
 .process__logo {
   width: clamp(100px, 100%, 500px);
-}
-.process__banner {
-  display: block;
-}
-@media (min-width: 600px) {
-  .process__banner {
-    display: flex;
-    gap: 3px;
-  }
+  margin-block-start: var(--normal-space);
 }
 
 /* ABOUT ME */
@@ -706,10 +739,8 @@ img {
   background-color: var(--secondary-color);
   color: var(--primary-color);
   min-height: 50vh;
-}
-.about__cv p a {
-  color: var(--border-color);
-  font-weight: 500;
+  flex: 1;
+  flex-direction: column;
 }
 .about h3, .about p:not(.some__username) {
   max-width: clamp(35ch, 80%, 52ch);
@@ -727,13 +758,43 @@ img {
   padding-block-start: var(--normal-space);
 }
 
-/* FLEX */
-.flex {
-  display: flex;
-  gap: 3px;
+/* GRID - Usage: <div class="grid" style="--cols-mobile: 2; --cols-desktop: 3;"> */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(var(--cols-mobile, 2), 1fr);
+  gap: 5px;
+}
+@media (min-width: 600px) {
+  .image-grid {
+    grid-template-columns: repeat(var(--cols-desktop, 3), 1fr);
+  }
 }
 
-.button, .about__intro {
+.flex {
+  display: flex;
   flex-direction: column;
-  flex: 1;
+  gap: 5px;
+}
+@media (min-width: 600px) {
+  .flex {
+    flex-direction: row;
+  }
+}
+
+.mobile {
+  display: block;
+}
+@media (min-width: 600px) {
+  .mobile {
+    display: none;
+  }
+}
+
+.desktop {
+  display: none;
+}
+@media (min-width: 600px) {
+  .desktop {
+    display: block;
+  }
 }/*# sourceMappingURL=main.css.map */

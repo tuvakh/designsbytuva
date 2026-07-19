@@ -60,10 +60,10 @@
                     <button class="navbar__menu" aria-controls="navbarMenu" aria-expanded="false">☰</button>
                     <ul id="navbarMenu" class="navbar__list">
                         <li class="navbar__items"><a href="#">Hjem</a></li>
-                        <li class="navbar__items"><a href="pages/graphic-design.html">Grafisk design</a></li>
-                        <li class="navbar__items"><a href="pages/web-development.html">Webutvikling</a></li>
+                        <li class="navbar__items"><a href="pages/design.html">Grafisk design</a></li>
+                        <li class="navbar__items"><a href="pages/web.html">Webutvikling</a></li>
                         <li class="navbar__items"><a href="pages/about.html">Om meg</a></li>
-                        <li class="navbar__items"><a class="button" href="mailto:contact@designsbytuva.no">Kontakt meg</a></li>
+                        <li class="navbar__items"><a class="button" href="pages/contact.html">Kontakt meg</a></li>
                     </ul>
                 </div>
             </nav>
@@ -151,7 +151,7 @@
                         <h2>Kontakt meg</h2>
                         <p>Ta gjerne kontakt med meg for en forpliktende prat!</p>
                     </div>
-                    <form class="contact__form">
+                    <form class="contact__form" action="https://formspree.io/f/mjgjdjjr" method="POST">
                         <label for="name">Navn:</label>
                         <input type="text" id="name" placeholder="Hva heter du?" name="name">
                         <label for="mail">Email:</label>
@@ -166,7 +166,7 @@
                         </select> -->
 
                         <label for="message">Hva trenger du hjelp til?</label>
-                        <textarea id="message" name="message" rows="8" placeholder="Beskriv prosjektet ditt kort"></textarea>
+                        <textarea id="message" name="message" rows="7" placeholder="Beskriv prosjektet ditt kort"></textarea>
                         <input class="button" type="submit" value="Send">
                     </form>
                 </div>

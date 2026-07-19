@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="no">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="author" content="Tuva Konstanse Hansen">
+        <meta name="description" content="Designs by Tuva - My portfolio for Graphic design, Web development and Video editing">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!--         <script defer src="scripts/copyright.js"></script>
+ -->
+        <link href="/styles/main.css" rel="stylesheet">
+        <link rel="icon" href="/assets/images/heart.png">
+        <link rel="stylesheet" href="https://use.typekit.net/ouy2ncs.css">
+
+        <title>Designs by Tuva - Kontakt meg</title>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const menuToggle = document.querySelector('.navbar__menu');
+                const menu = document.querySelector('.navbar__list');
+
+                // Toggle menu on click
+                menuToggle.addEventListener('click', () => {
+                    const isOpen = menu.classList.toggle('open');
+                    menuToggle.setAttribute('aria-expanded', isOpen);
+                });
+
+                // Close menu when clicking a link
+                menu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        menu.classList.remove('open');
+                    });
+                });
+
+                // Toggle menu on keyboard (Enter or Space)
+                menuToggle.addEventListener('keypress', (e) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                        e.preventDefault();
+                        const isOpen = menu.classList.toggle('open');
+                        menuToggle.setAttribute('aria-expanded', isOpen);
+                    }
+                });
+            });
+        </script>
+    </head>
+
+    <body>
+        <header>
+            <a href="#main" class="skip">Skip to main content</a>
+
+            <nav class="navbar navbar--solid">
+                <!-- Logo on all screens -->
+                <div class="navbar__logo">
+                    <a href="/index.html"><img src="/assets/images/logo.png" alt="Logo for designs by Tuva"></a>
+                </div>
+
+                <div>
+                    <button class="navbar__menu" aria-controls="navbarMenu" aria-expanded="false">☰</button>
+                    <ul id="navbarMenu" class="navbar__list">
+                        <li class="navbar__items"><a href="/index.html">Hjem</a></li>
+                        <li class="navbar__items"><a href="/pages/design.html">Grafisk design</a></li>
+                        <li class="navbar__items"><a href="/pages/web.html">Webutvikling</a></li>
+                        <li class="navbar__items"><a href="/pages/about.html">Om meg</a></li>
+                        <li class="navbar__items"><a class="button" href="/pages/contact.html">Kontakt meg</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <main id="main">
+            <section>
+                <div class="contact">
+                    <div>
+                        <h2>Kontakt meg</h2>
+                        <p>Ta gjerne kontakt med meg for en forpliktende prat!</p>
+                    </div>
+                    <form class="contact__form" action="https://formspree.io/f/mjgjdjjr" method="POST">
+                        <label for="name">Navn:</label>
+                        <input type="text" id="name" placeholder="Hva heter du?" name="name">
+                        <label for="mail">Email:</label>
+                        <input type="text" id="mail" placeholder="Hva er mailen din?" name="mail">
+                        
+                        <!-- <label for="cars">Choose a car:</label>
+                        <select id="cars" name="cars" size="4" multiple>
+                            <option value="volvo">Volvo</option>
+                            <option value="saab">Saab</option>
+                            <option value="fiat">Fiat</option>
+                            <option value="audi">Audi</option>
+                        </select> -->
+
+                        <label for="message">Hva trenger du hjelp til?</label>
+                        <textarea id="message" name="message" rows="7" placeholder="Beskriv prosjektet ditt kort"></textarea>
+                        <input class="button" type="submit" value="Send">
+                    </form>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <figure class="some">
+                <div>
+                    <a href="https://www.instagram.com/designsbytuva/" target="_blank" aria-label="Åpner i ny fane"><img class="some__image" src="/assets/images/icons/ig-white.png" alt="Besøk Instagrammen til Designs by tuva"></a>
+                    <p class="some__username">@designsbytuva</p>
+                </div>
+                <div>
+                    <a href="mailto:contact@designsbytuva.no" target="_blank" aria-label="Åpner i ny fane"><img class="some__image" src="/assets/images/icons/mail-white.png" alt="Send meg en epost"></a>
+                    <p class="some__username">contact@designsbytuva.no</p>
+                </div>
+                <div>
+                    <a href="https://www.linkedin.com/in/tuvahansen/" target="_blank" aria-label="Åpner i ny fane"><img class="some__image" src="/assets/images/icons/in-white.png" alt="Besøk LinkedIn profilen min"></a>
+                    <p class="some__username">@tuvahansen</p>
+                </div>
+            </figure>
+            <p class="footer__text">&copy;2024 - Alt laget av Tuva Konstanse Hansen</p>
+        </footer>
+    </body>
+</html>

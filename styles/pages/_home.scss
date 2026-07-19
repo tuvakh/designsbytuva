@@ -68,6 +68,7 @@
             padding: var(--small-space);
             border-radius: var(--border-radius-small);
             background-color: var(--secondary-color);
+            resize: none;
         }
         ::placeholder {
             color: var(--tertiary-color);

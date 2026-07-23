@@ -72,7 +72,7 @@
         <main id="main">
             <article class="grid" aria-label="Informasjon om prosjektet">
                 <div class="grid__aside">
-                    <img class="project-img" src="/assets/images/web/hcai.webp" alt="">
+                    <img class="project-img" src="/assets/images/web/hcai.webp" alt="Prosjektbilde - Blå bakgrunn med mockup av HCAI-lab sin nettside på desktop, iPad og mobil">
                
                     <div class="project-info">
                         <div>
@@ -80,19 +80,21 @@
                                 <p class="project-info__details--type">Fullstack</p>
                                 <p class="project-info__details--payment">Skolearbeid</p>
                             </div>
-                            <h1>Human Centered AI Lab</h1>
+                            <h1>HCAI-Lab</h1>
                         </div>
 
                         <div>
-                            <p>heiheiheiheiheiheiheiheiheiheiheiheiheihei heiheiheiheiheiheiheiheiheihei
-                                heiheiheiheiheiheiheiheiheiheihei heiheiheiheiheiheiheiheiheiheiheiheiheiheiheiheiheiheihei</p>
-                            <p>heiehiheiheiheiheiheiheiheiheiheiheiheihei heiheiheiheiheiheiheiheiheiheihei
-                                heiheiheiheihei heiheiheiheiheiheiheiheiheiheihei</p>
+                            <p><abbr title="Human Centered AI Lab">HCAI-Laben</abbr> til NTNU Gjøvik har ingen offisiell nettside, bare en underside på NTNU sin nettside. Denne oppgaven gikk derfor ut på å lage en informativ nettside der studenter enklere kunne finne fram til booking og informasjon om laben. 
+                                I tillegg skulle vi også lage en display-versjon som vises på en skjerm utenfor laben.</p> 
+                            <p>Vi fikk ingen ferdig oppgavetekst, og måtte selv finne ut hva nettsiden skulle inneholde ved å intervjue en fiktiv produkteier. Et viktig krav var at siden skulle fungere mest mulig automatisk, slik at administrator skulle slippe å kode eller legge inn nye ansatte og prosjekter manuelt for hånd. </p>
+                            <p>Dette prosjektet ble løst gruppevis, og jeg jobbet sammen med <a href="https://github.com/Chanyasbb">Chanya Sanboonsiri</a> og <a href="https://github.com/Nic0Bu">Nicolai Buseth</a></p>
                         </div>
 
                         <div class="project-info__tools">
-                            <p><span>Kodespråk:</span> HTML, SCSS & JavaScript</p>
-                            <p><span>Teknologier:</span> React, Node.js & Express.js</p>
+                            <p><span>Kodespråk:</span> HTML, SCSS og JavaScript</p>
+                            <p><span>Teknologier:</span> React, Vite, Node.js, Express.js og MongoDB</p>
+                            <p><span>Testing:</span> Vitest, Testing Library, Jest, Supertest og Playwright</p>
+                            <p><span>Verktøy:</span> Docker Compose og Git</p>
                         </div>
 
                         <div class="project-info__next">
@@ -109,36 +111,156 @@
                 <div class="grid__main">
                     <section class="projects" role="region" aria-label="Informasjon om prosessen og resultatet til russelogoen">
                         <div class="switch">
-                            <div>
-                                <button id="resultPage" class="switch__btn active">Resultat</button>
-                                <button id="processPage" class="switch__btn">Prosess</button>
-                            </div>
-                            <div>
-                                <a class="button desktop" target="_blank" aria-label="Åpner i ny fane" href="https://github.com/tuvakh/oblig2-new">GitHub</a>
-                            </div>
-                            <div>
-                                <a class="button desktop" target="_blank" aria-label="Åpner i ny fane" href="https://tuvakh.github.io/oblig2-new/">Nettside</a>
+                            <p class="switch__demo">(Dette er en demo. Loading tar rundt 30 sek)</p>
+
+                            <div class="switch__buttons">
+                                <div>
+                                    <button id="resultPage" class="switch__btn active">Resultat</button>
+                                    <button id="processPage" class="switch__btn">Prosess</button>
+                                </div>
+                                <div class="switch__links">
+                                    <a class="button" target="_blank" aria-label="Åpner i ny fane" href="https://github.com/tuvakh/hcai-lab">GitHub</a>
+                                    <a class="button" target="_blank" aria-label="Åpner i ny fane" href="https://hcai-lab.vercel.app/">Nettside</a>
+                                </div>
                             </div>
                         </div>
 
                         <div id="result" class="result">
+                            <img src="/assets/images/web/hcai/result/mobile-mockup.webp" alt="Blå bakgrunn med en mockup av nettsiden til Vardal Turnforening på dektop og mobil">                        
+                            <img src="/assets/images/web/hcai/result/desktop-mockup.webp" alt="Blå bakgrunn med en mockup av nettsiden til Vardal Turnforening på dektop og mobil">                        
+                            <img class="last-img" src="/assets/images/web/hcai/result/display-mockup.webp" alt="Blå bakgrunn med seks telefoner som viser nettsiden til Vardal Turnforening">        
                         </div>
 
                         <div id="process" class="process">
-                            <h2>Original nettside</h2>
-                            <p></p>
+
+                            <h2>Innsiktsarbeid</h2>
+                            <p>Før vi begynte å designe og utvikle nettsiden jobbet vi med å forstå behovene til både brukere og produkteier.
+                                Gjennom analyse av innholdet på den nåværende nettsiden, personas og brukerscenarier fikk vi et tydeligere bilde av hvilken informasjon nettsiden burde formidle, og hvilke funksjoner som var viktigst å prioritere.</p>
+
+                            <h3>Original nettside</h3>
+                            <p>NTNU har to undersider som viser informasjon om HCAI-laben. Disse sidene tok vi utgangspunkt i for å finne informasjon, men vi lagde hele siden vår fra bunnen av, med et helt nytt designsystem, og mer innhold.</p>
+                            <p>Begge bildene viser desktop versjonen av de ulike sidene:</p>
+                            <div class="image-flex">
+                               <div>
+                                    <img class="white-img" src="/assets/images/web/hcai/process/hcai-original-desktop.webp" alt="HCAI-labens opprinnelige underside på NTNU sin nettside, desktop-versjon">
+                                </div> 
+                                <div>
+                                    <img class="white-img" src="/assets/images/web/hcai/process/hcai-original-desktop2.webp" alt="Den andre undersiden om HCAI-laben på NTNU sin nettside, desktop-versjon">
+                                </div>
+                            </div>
+
+                            <h4>Forretningsmål</h4>
+                            <p>Sammen med produkteier definerte vi tre forretningsmål:</p>
+                            <ol>
+                                <li>Laben skal ha en tydelig digital tilstedeværelse</li>
+                                <li>Nettsiden skal kommunisere prosjekter og nyheter på en strukturert måte</li>
+                                <li>Nettsiden skal gjøre det lettere å tiltrekke seg studenter og samarbeidspartnere.</li>
+                            </ol>
+
+                            <h3>Personas & Scenario</h3>
+                            <p>Vi lagde personas i to omganger for å styre designbeslutningene våre. Først tidlig i kravspesifikasjonen, med Emma (IT-student) og Lars (professor):</p>
+                            <div class="image-flex">
+                               <div>
+                                    <img src="/assets/images/web/hcai/process/student.webp" alt="Persona: Emma, IT-student">
+                                </div> 
+                                <div>
+                                    <img src="/assets/images/web/hcai/process/professor.webp" alt="Persona: Lars, professor">
+                                </div>
+                            </div>
+
+                            <p>Senere, i selve <a href="https://acrobat.adobe.com/id/urn:aaid:sc:US:68110fdf-99b0-4ec2-9697-f926c595f785">gruppe-rapporten</a>, valgte vi å gjøre det mer detaljert og skrev ned fire brukerscenarier steg for steg i tillegg: </p>
+                            <ul>
+                                <li>En student som leser AI-nyheter på mobil</li>
+                                <li>En forsker som booker utstyr</li>
+                                <li>En ekstern besøkende som registrerer seg og melder seg på et arrangement</li>
+                                <li>Lab-lederen som legger til nytt innhold i admin-dashbordet. </li>
+                            </ul>
+                            <p>Disse scenarioene hjalp oss å tenke gjennom hele brukerreisen, ikke bare hvordan sidene så ut.</p>
 
                             <h2>Designprosess</h2>
-                            <p></p>
+                            <p>I designfasen utforsket vi hvordan innholdet kunne struktureres på en oversiktlig og brukervennlig måte. Vi jobbet iterativt med wireframes, sitemap og designvalg for å skape en løsning som både er informativ, responsiv og enkel å vedlikeholde.</p>
+                            
+                            <h3>Wireframes & Sitemap</h3>
+                            <p>Før vi begynte å kode laget vi low-fi wireframes for hovedsidene på nettsiden:</p>
+                            <img src="/assets/images/web/hcai/process/low-fi.webp" alt="Low-fi wireframes for home, events and people">
+                            <img src="/assets/images/web/hcai/process/low-fi2.webp" alt="Low-fi wireframes for proojects, equipment, admin dashboard and news">
 
-                            <h3>Wireframes</h3>
-                            <p></p>
+                            <p>I tillegg lagde vi et veldig enkelt sitemap som viser strukturen til nettsiden:</p>
+                            <img src="/assets/images/web/hcai/process/sitemap.webp" alt="Sitemap som viser strukturen til HCAI-nettsiden">
 
-                            <h3>Designmanual</h3>
-                            <p></p>
+                            <h3>Designvalg</h3>
+                            <p>Designsystemet ble utviklet med fokus på lesbarhet, tilgjengelighet og gjenbrukbare komponenter. Målet var å skape et moderne uttrykk som harmonerer med NTNUs visuelle profil, samtidig som nettsiden fremstår som et selvstendig og profesjonelt prosjekt.</p>
 
                             <h2>Ferdig nettside</h2>
-                            <p></p>
+                            <p>Den ferdige løsningen består av både en hovednettside, et administrasjonspanel og en display-versjon som skal vises på skjermen utenfor laben. Innholdet kan oppdateres dynamisk gjennom admin-panelet, slik at lederen for laben kan administrere informasjon uten å måtte gjøre endringer direkte i koden.</p>
+
+                            <h3>Hovednettside</h3>
+                            <p>Disse sidene viser alt man trenger å vite om labben. Her finner man nyheter (både internasjonale og norske), eventer, personer man kan kontakte, prosjekter laben har bidratt med, og utstyr man kan booke.</p>
+                            <p>Hvis man logger inn kan man også lagre nyheter, og booke utstyr og seter på eventer. Alt dette vises på "My profile" (denne siden ble satt sammen raskt, og har forbedringspotensiale)</p>
+                            <img src="/assets/images/web/hcai/process/main.webp" alt="Alle hovedsidene til HCAI-lab nettsiden">
+
+                            <h3>Modals</h3>
+                            <p>På nesten alle sidene våre har vi "modals" som kommer opp når man trykker på boksene for å vise mer informasjon, istedenfor å lage separate sider til hver ting. Under ser man tre eksempler på dette: Book plass på event, info om personer i labben og et av prosjektene.</p>
+                            <div class="image-flex">
+                                <div>
+                                    <img src="/assets/images/web/hcai/process/book-seat.webp" alt="Eksempel på modal for å booke plass på et event">
+                                </div> 
+                                <div>
+                                    <img src="/assets/images/web/hcai/process/people-show.webp" alt="Eksempel på modal med informasjon om en person i laben">
+                                </div>
+                                <div>
+                                    <img src="/assets/images/web/hcai/process/project-show.webp" alt="Eksempel på modal med informasjon om et spesifikt prosjekt">
+                                </div> 
+                            </div>
+
+                            <h3>Login</h3>
+                            <p>Vi har også laget innlogging og registrering for vanlige brukere, og admin login</p>
+                            <div class="image-flex">
+                                <div>
+                                    <img src="/assets/images/web/hcai/process/login.webp" alt="Innloggingssiden for vanlige brukere">
+                                </div> 
+                                <div>
+                                    <img src="/assets/images/web/hcai/process/register.webp" alt="Registreringssiden for nye brukere">
+                                </div>
+                                <div>
+                                    <img src="/assets/images/web/hcai/process/admin-login.webp" alt="Innloggingssiden for admin">
+                                </div> 
+                            </div>
+
+                            <h3>Admin Dashboard</h3>
+                            <p>Prosjekteier ønsket en enkel måte å administrere nettsiden. Derfor lagde vi et admin dashboard hvor man kan se en oversikt over alle ansatte, prosjekter, eventer, utstyr og bookinger. Her kan man også redigere informasjon som allerede er lagt inn, legge til innhold, og slette innhold.</p>
+                            <img src="/assets/images/web/hcai/process/admin.webp" alt="Admin dashboard med oversikt over ansatte, prosjekter, eventer, utstyr og bookinger">
+
+                            <h3>Admin modals</h3>
+                            <p>Vi har brukt modals på admin-siden også for skjemaene man skal fylle ut for å legge til og endre informasjon. For ansatte og prosjekter har vi gjort det mulig å både legge til informasjon manuelt og ved å importere fra andre nettsider. Dette er et eksempel på hvordan det ser ut når man importerer informasjon om en ansatt: </p>
+                            <div class="image-flex">
+                                <div>
+                                    <img src="/assets/images/web/hcai/process/import.webp" alt="Eksempel på modal for å importere en ansatt til admin-siden">
+                                </div> 
+                                <div>
+                                    <img src="/assets/images/web/hcai/process/employee-info.webp" alt="Eksempel på et utfylt skjema med importert informasjon om en ansatt">
+                                </div>
+                            </div>
+
+                            <h3>Display</h3>
+                            <p>Tilslutt utviklet vi en display-versjon av nettsiden som inneholder den viktigste informasjonen. Her ser man en QR-kode til nettsiden, det neste eventet som hostes, hvilke utstyr som er ledig i dag og nyheter som rullerer hvert 10 sekund.</p>
+                            <img class="display" src="/assets/images/web/hcai/process/display.png" alt="Display-versjonen av nettsiden som vises på skjerm utenfor laben">
+
+                            <h2>Mitt bidrag til gruppa</h2>
+                            <p>Jeg jobbet hovedsakelig med bookingsystemene våre, innlogging/registrering av nye brukere, automatisk utfylling av ny informasjon på admin-sidene og displayet. I tillegg lagde jeg hele designmanualen vår alene.</p>
+                            <p>Det jeg er mest stolt av rent kodemessig er kalenderen i bookingsystemet. Jeg brukte mye tid på å style den og få den til å fungere slik vi ønsket med en 7-dagers bookinggrense og automatisk disabling av datoer som allerede var booket.</p>
+                            <p>Jeg er også fornøyd med at jeg refaktorerte modal-koden vår. Den lå opprinnelig kopiert inn i flere ulike filer, men jeg samlet den i én gjenbrukbar komponent, noe som gjorde prosjektet ryddigere og enklere å vedlikeholde. Generelt brukte jeg mye tid på å rydde oppi koden og samle ting mer, så vi slapp så mye gjentakelse.</p>
+
+                            <h3>Ting jeg vet kunne vært bedre</h3>
+                            <ul>
+                                <li>Vi hoppa litt for fort inn i koding uten å planlegge nok først, så vi endte opp med å måtte bytte database-løsning tre ganger (JSON-filer → MongoDB Atlas → lokal MongoDB i Docker), noe vi kunne unngått med bedre planlegging</li>
+                                <li>Vi har tre ulike kort-komponenter som egentlig kunne vært én gjenbrukbar komponent</li>
+                                <li>Branch-strategien vår var ikke helt optimal. Vi jobba på personlige branches gjennom hele prosjektet i stedet for å lage én branch per feature</li>
+                                <li>Rakk ikke å integrere testene i CI/CD-pipelinen, så en feilet test stopper ikke en push slik den burde</li>
+                                <li>Register-endepunktet mangler rate limiting, så i teorien kan man spamme opprettelse av kontoer, som åpenbart ikke er optimalt</li>
+                                <li>JWT lagres i sessionStorage, som fungerer, men HttpOnly cookies hadde vært tryggere</li>
+                                <li>Bookinga på utstyr burde forsvinne automatisk fra hovedsiden når fristen er utløpt</li>
+                            </ul>
                         </div>
                         <div class="project-info__next project-info__next--bottom">
                             <div>

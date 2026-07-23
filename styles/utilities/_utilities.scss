@@ -13,6 +13,9 @@
     display: flex;
     flex-direction: column;
     gap: 5px;
+    &:has(+ p){
+        margin-block-end: var(--small-space);
+    }
     @media (min-width: 600px) {
         flex-direction: row;
     }

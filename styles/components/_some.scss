@@ -15,7 +15,7 @@
         color: var(--tertiary-color);
         font-weight: 500;
 
-        @media (min-width: 600px) {
+        @media (min-width: 1024px) {
             display: flex;
         }
     }
@@ -24,7 +24,7 @@
     }
     &__username {
         display: none;
-        @media (min-width: 600px) {
+        @media (min-width: 1024px) {
             display:block;
             margin: 0;
         }

@@ -60,24 +60,52 @@
 }
 
 .switch {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     border-bottom: 1px solid var(--tertiary-color);
     padding: var(--normal-space);
 
+    &__buttons {
+        display: grid;
+        grid-template-columns: 0.7fr 1fr;
+        grid-template-areas: "b a";
+        align-items: center;
+
+        @media (max-width: 1024px) {
+            grid-template-columns: 1fr;
+            grid-template-areas: "a" "b";
+        }
+    }
+
     @media (min-width: 600px) {
-        padding: var(--normal-space) var(--big-space);
+        padding: var(--small-space) var(--big-space);
     }
 
     &__btn  {
         padding-inline-end: var(--small-space);
         text-transform: uppercase;
         background-color: transparent;
+        grid-area: b;
     }
     .active {
         color: var(--tertiary-color);
         font-weight: bold;
+    }
+    &__links {
+        display: flex;
+        justify-content: right;
+        gap: var(--normal-space);
+        grid-area: a;
+        @media (max-width: 1024px) {
+            justify-content: center;
+            margin-block-end: var(--normal-space);
+        }
+    }
+
+    &__demo {
+        text-align: right;
+        font-size: var(--step--2);
+        @media (max-width: 1024px) {
+            text-align: center;
+        }
     }
 }
 
@@ -111,13 +139,15 @@
     h4 {
         padding-block-start: var(--small-space);
     }
-    p:not(.process__arrow-down) {
+    p:not(.process__arrow-down, .demo) {
         width: clamp(35ch, 100%, 60ch);
     }
     p {
         padding-block-end: var(--smaller-space);
         &:has(+ h3),
-        &:has(+ h4) {
+        &:has(+ h4),
+        &:has(+ ul),
+        &:has(+ ol){
             padding: 0;
         }
     }
@@ -126,15 +156,19 @@
         font-weight: 500;
     }
     &__img-space {
-        margin-block-end: 0.5rem;
+        margin-block-end: var(--mini-space);
     }
     &__arrow-down {
-        font-size: 2.5rem;
+        font-size: var(--big-space);
         text-align: center;
     }
     &__logo {
         width: clamp(100px, 100%, 500px);
         margin-block-start: var(--normal-space);
     }
+}
+
+.display {
+    width: clamp(100px, 100%, 400px);
 }
 

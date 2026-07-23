@@ -16,7 +16,7 @@
         }
     }
     
-    a:hover > div {
+    &__link:hover > div {
         opacity: 1;
         color: var(--primary-color);
     }

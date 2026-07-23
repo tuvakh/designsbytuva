@@ -117,6 +117,7 @@
                                 <div>
                                     <button id="resultPage" class="switch__btn active">Resultat</button>
                                     <button id="processPage" class="switch__btn">Prosess</button>
+                                    <button id="documentPage" class="switch__btn">Dokumenter</button>
                                 </div>
                                 <div class="switch__links">
                                     <a class="button" target="_blank" aria-label="Åpner i ny fane" href="https://github.com/tuvakh/hcai-lab">GitHub</a>
@@ -132,7 +133,6 @@
                         </div>
 
                         <div id="process" class="process">
-
                             <h2>Innsiktsarbeid</h2>
                             <p>Før vi begynte å designe og utvikle nettsiden jobbet vi med å forstå behovene til både brukere og produkteier.
                                 Gjennom analyse av innholdet på den nåværende nettsiden, personas og brukerscenarier fikk vi et tydeligere bilde av hvilken informasjon nettsiden burde formidle, og hvilke funksjoner som var viktigst å prioritere.</p>
@@ -189,8 +189,9 @@
                             <img src="/assets/images/web/hcai/process/sitemap.webp" alt="Sitemap som viser strukturen til HCAI-nettsiden">
 
                             <h3>Designvalg</h3>
-                            <p>Designsystemet ble utviklet med fokus på lesbarhet, tilgjengelighet og gjenbrukbare komponenter. Målet var å skape et moderne uttrykk som harmonerer med NTNUs visuelle profil, samtidig som nettsiden fremstår som et selvstendig og profesjonelt prosjekt.</p>
-
+                            <p>Designet mitt henter inspirasjon fra NTNUs visuelle profil, men jeg ville at nettsiden skulle fremstå som et selvstendig og profesjonelt prosjekt, istedenfor å se ut som en av NTNUs egne infosider.</p>
+                            <p>Når jeg lagde designforslaget vi endte opp med å bruke, valgte jeg en mørk, dyp blåfarge som base, kombinert med flere undertoner av blå og en tykk overskriftsfont med litt teknisk preg. Dette gir siden 
+                                et moderne og seriøst uttrykk som passer til en AI-lab. I tillegg fokuserte vi på å gjenbruke komponenter der det var mulig, slik at nettsiden føles helhetlig, til tross for at innholdet varierer mye fra side til side.</p>
                             <h2>Ferdig nettside</h2>
                             <p>Den ferdige løsningen består av både en hovednettside, et administrasjonspanel og en display-versjon som skal vises på skjermen utenfor laben. Innholdet kan oppdateres dynamisk gjennom admin-panelet, slik at lederen for laben kan administrere informasjon uten å måtte gjøre endringer direkte i koden.</p>
 
@@ -262,6 +263,37 @@
                                 <li>Bookinga på utstyr burde forsvinne automatisk fra hovedsiden når fristen er utløpt</li>
                             </ul>
                         </div>
+                        <div id="documents" class="documents">
+                            <h2>Rapporter</h2>
+                            <p>Her kan du lese alle rapportene som er relatert til oppgaven. Det er to grupperapporter og en individuell rapport skrevet av meg.</p>
+                            <a class="documents__link" href="https://acrobat.adobe.com/id/urn:aaid:sc:US:461ade85-e85d-42dd-bca1-b7c69a04f243" target="_blank">
+                                <div class="documents__box">
+                                    <img class="white-img documents__img" src="/assets/images/web/dokumenter/hcai-individual.webp" alt="HCAI-labens opprinnelige underside på NTNU sin nettside, desktop-versjon">
+                                    <div class="documents__text-box">
+                                        <p class="documents__title">«Contributions and reflections»</p>
+                                        <p class="documents__text">Dette er min individuelle rapport om egne bidrag til prosjektet. Her går jeg gjennom hvilke deler av koden jeg sto for, tekniske utfordringer underveis og refleksjoner rundt teamarbeidet.</p>
+                                    </div> 
+                                </div>
+                            </a>
+                            <a class="documents__link" href="https://acrobat.adobe.com/id/urn:aaid:sc:US:aaf2031f-a980-4b6a-8912-62661fb369f0" target="_blank">
+                                <div class="documents__box">
+                                    <img class="white-img documents__img" src="/assets/images/web/dokumenter/hcai-group.webp" alt="Den andre undersiden om HCAI-laben på NTNU sin nettside, desktop-versjon">
+                                    <div class="documents__text-box">
+                                        <p class="documents__title">«Platform for the Human-Centered AI Lab»</p>
+                                        <p class="documents__text">Dette er gruppe­rapporten vår. Den går gjennom hele prosjektet i detalj og inkluderer forretningsmål, teknisk arkitektur, individuelle bidrag og alle sidene vi bygde.</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="documents__link" href="https://acrobat.adobe.com/id/urn:aaid:sc:US:5152e448-ec44-4db4-96cb-eab4ebca1b95" target="_blank">
+                               <div class="documents__box">
+                                    <img class="white-img documents__img" src="/assets/images/web/dokumenter/hcai-assignment.webp" alt="Den andre undersiden om HCAI-laben på NTNU sin nettside, desktop-versjon">
+                                    <div class="documents__text-box">
+                                        <p class="documents__title">«Product Specification»</p>
+                                        <p class="documents__text">Dette er en produktspesifikasjon vi skrev tidlig i prosjektet. Den definerer forretningsmål, personas, brukerscenarier og funksjonene nettsiden skulle ha.</p>
+                                    </div>
+                                </div>  
+                            </a>                 
+                        </div>
                         <div class="project-info__next project-info__next--bottom">
                             <div>
                                 <a href="converse.html">&#x2190; Converse skopleie</a>
@@ -298,10 +330,12 @@
             const buttons = document.querySelectorAll('.switch__btn');
             const resultDiv = document.getElementById('result');
             const processDiv = document.getElementById('process');
+            const documentsDiv = document.getElementById('documents');
 
                 // Initialize to show 'Resultat' by default
                 resultDiv.style.display = 'block';
                 processDiv.style.display = 'none';
+                documentsDiv.style.display = 'none';
 
                 buttons.forEach(button => {
                     button.addEventListener('click', () => {
@@ -314,9 +348,15 @@
                         if (button.id === 'resultPage') {
                             resultDiv.style.display = 'block';
                             processDiv.style.display = 'none';
+                            documentsDiv.style.display = 'none';
                         } else if (button.id === 'processPage') {
                             resultDiv.style.display = 'none';
                             processDiv.style.display = 'block';
+                            documentsDiv.style.display = 'none';
+                        } else if (button.id === 'documentPage') {
+                            resultDiv.style.display = 'none';
+                            processDiv.style.display = 'none';
+                            documentsDiv.style.display = 'block';
                         }
                     });
                 });
